@@ -113,103 +113,55 @@ class BaseJsonSelector:
 
 # --- 现有子类 1: 风格选择器 (使用 styles.json) ---
 class StyleSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "styles.json"
+    TARGET_JSON_FILE = "json/styles.json"
     NODE_NAME = "Style Selector"
 
 # --- 现有子类 2: 服装选择器 (使用 clothing.json) ---
 class ClothingSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "clothing.json"
+    TARGET_JSON_FILE = "json/clothing.json"
     NODE_NAME = "Clothing Selector"
 
 # --- 现有子类 3: 姿势选择器 (使用 pose.json) ---
 class PoseSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "pose.json"
+    TARGET_JSON_FILE = "json/pose.json"
     NODE_NAME = "Pose Selector"
 
 # --- 新增子类 4: 发型选择器 (使用 hairstyles.json) ---
 class HairstylesSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "hairstyles.json"
+    TARGET_JSON_FILE = "json/hairstyles.json"
     NODE_NAME = "Hairstyles Selector"
 
 # --- 新增子类 5: 眼睛颜色选择器 (使用 eye_colors.json) ---
 class EyeColorsSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "eye_colors.json"
+    TARGET_JSON_FILE = "json/eye_colors.json"
     NODE_NAME = "Eye Colors Selector"
 
 # --- 新增子类 6: 背景选择器 (使用 background.json) ---
 class BackgroundSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "background.json"
+    TARGET_JSON_FILE = "json/background.json"
     NODE_NAME = "Background Selector"
 
 # --- 新增子类 7: 体型选择器 (使用 body_types.json) ---
 class BodyTypesSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "body_types.json"
+    TARGET_JSON_FILE = "json/body_types.json"
     NODE_NAME = "Body Types Selector"
 
 # --- 新增子类 8: 地点选择器 (使用 place.json) ---
 class PlaceSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "place.json"
+    TARGET_JSON_FILE = "json/place.json"
     NODE_NAME = "Place Selector"
 
 # --- 新增子类 9: 头发颜色选择器 (使用 hair_color.json) ---
 class HairColorSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "hair_color.json"
+    TARGET_JSON_FILE = "json/hair_color.json"
     NODE_NAME = "Hair Color Selector"
 
 # --- 新增子类 10: 照片类型选择器 (使用 photo_type.json) ---
 class PhotoTypeSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "photo_type.json"
-    # --- 现有子类 1: 风格选择器 (使用 styles.json) ---
-class StyleSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "styles.json"
-    NODE_NAME = "Style Selector"
-
-# --- 现有子类 2: 服装选择器 (使用 clothing.json) ---
-class ClothingSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "clothing.json"
-    NODE_NAME = "Clothing Selector"
-
-# --- 现有子类 3: 姿势选择器 (使用 pose.json) ---
-class PoseSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "pose.json"
-    NODE_NAME = "Pose Selector"
-
-# --- 新增子类 4: 发型选择器 (使用 hairstyles.json) ---
-class HairstylesSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "hairstyles.json"
-    NODE_NAME = "Hairstyles Selector"
-
-# --- 新增子类 5: 眼睛颜色选择器 (使用 eye_colors.json) ---
-class EyeColorsSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "eye_colors.json"
-    NODE_NAME = "Eye Colors Selector"
-
-# --- 新增子类 6: 背景选择器 (使用 background.json) ---
-class BackgroundSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "background.json"
-    NODE_NAME = "Background Selector"
-
-# --- 新增子类 7: 体型选择器 (使用 body_types.json) ---
-class BodyTypesSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "body_types.json"
-    NODE_NAME = "Body Types Selector"
-
-# --- 新增子类 8: 地点选择器 (使用 place.json) ---
-class PlaceSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "place.json"
-    NODE_NAME = "Place Selector"
-
-# --- 新增子类 9: 头发颜色选择器 (使用 hair_color.json) ---
-class HairColorSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "hair_color.json"
-    NODE_NAME = "Hair Color Selector"
-
-# --- 新增子类 10: 照片类型选择器 (使用 photo_type.json) ---
-class PhotoTypeSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "photo_type.json"
+    TARGET_JSON_FILE = "json/photo_type.json"
     NODE_NAME = "Photo Type Selector"
     
 # --- 新增子类 11: 构图选择器 (使用 composition.json) ---
 class CompositionSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "composition.json"
+    TARGET_JSON_FILE = "json/composition.json"
     NODE_NAME = "Composition Selector"

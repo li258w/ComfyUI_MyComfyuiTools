@@ -161,49 +161,49 @@ class BaseJsonSelector:
 # --- 子类列表 (JSON Selector Nodes) ---
 
 class StyleSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "styles.json"
+    TARGET_JSON_FILE = "json/styles.json"
     NODE_NAME = "Style Selector"
 
 # ... (其余的 Selector 节点保持不变) ...
 
 class ClothingSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "clothing.json"
+    TARGET_JSON_FILE = "json/clothing.json"
     NODE_NAME = "Clothing Selector"
 
 class PoseSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "pose.json"
+    TARGET_JSON_FILE = "json/pose.json"
     NODE_NAME = "Pose Selector"
 
 class HairstylesSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "hairstyles.json"
+    TARGET_JSON_FILE = "json/hairstyles.json"
     NODE_NAME = "Hairstyles Selector"
 
 class EyeColorsSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "eye_colors.json"
+    TARGET_JSON_FILE = "json/eye_colors.json"
     NODE_NAME = "Eye Colors Selector"
 
 class BackgroundSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "background.json"
+    TARGET_JSON_FILE = "json/background.json"
     NODE_NAME = "Background Selector"
 
 class BodyTypesSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "body_types.json"
+    TARGET_JSON_FILE = "json/body_types.json"
     NODE_NAME = "Body Types Selector"
 
 class PlaceSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "place.json"
+    TARGET_JSON_FILE = "json/place.json"
     NODE_NAME = "Place Selector"
 
 class HairColorSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "hair_color.json"
+    TARGET_JSON_FILE = "json/hair_color.json"
     NODE_NAME = "Hair Color Selector"
 
 class PhotoTypeSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "photo_type.json"
+    TARGET_JSON_FILE = "json/photo_type.json"
     NODE_NAME = "Photo Type Selector"
 
 class CompositionSelector(BaseJsonSelector):
-    TARGET_JSON_FILE = "composition.json"
+    TARGET_JSON_FILE = "json/composition.json"
     NODE_NAME = "Composition Selector"
 
 
