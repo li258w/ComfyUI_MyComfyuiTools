@@ -1,0 +1,378 @@
+{
+  "centered subject, eye-level shot, direct perspective": {
+    "描述": "主体居中，平视拍摄，直接视角",
+    "关键词": "主体位于画面中央，镜头与视线平齐，正面直拍，无畸变，突出对称与稳定感，适用于证件照、产品展示或正式人像"
+  },
+  "eye-level shot, natural lighting, clear focus": {
+    "描述": "平视拍摄，自然光，清晰对焦",
+    "关键词": "日光或漫射光环境下，镜头平视，画面整体锐利清晰，呈现真实、无干扰的自然状态"
+  },
+  "eye-level shot, straight angle, balanced framing": {
+    "描述": "平视拍摄，正角度，构图平衡",
+    "关键词": "正面平视，画面左右或上下元素重量均衡，无倾斜，营造稳定、和谐的视觉感受"
+  },
+  "eye-level shot, straight angle, medium shot": {
+    "描述": "平视拍摄，正角度，中景",
+    "关键词": "镜头平视，拍摄人物腰腹以上或全身部分，背景适度可见，常用于对话或日常场景叙事"
+  },
+  "natural daylight, eye-level shot, soft focus": {
+    "描述": "自然日光，平视拍摄，柔焦",
+    "关键词": "日光柔和，镜头平视，整体画面略带朦胧感，营造温柔、梦幻或怀旧氛围"
+  },
+  "rule of thirds, eye-level shot, straight angle, soft lighting": {
+    "描述": "三分法构图，平视拍摄，正角度，柔和照明",
+    "关键词": "主体置于画面1/3交叉点，镜头平视正面，柔光照明无硬阴影，专业摄影标准构图"
+  },
+  "soft focus, shallow depth of field, natural lighting": {
+    "描述": "柔焦，浅景深，自然光",
+    "关键词": "前景主体柔和清晰，背景高度虚化，自然光营造温暖、私密或艺术化氛围"
+  },
+  "vertical orientation, eye-level shot, straight angle, centered subject": {
+    "描述": "竖构图，平视拍摄，正角度，主体居中",
+    "关键词": "手机或人像常用竖屏构图，主体居中，镜头平视，突出垂直线条与人物全身/半身"
+  },
+  "center focus, eye-level shot, shallow depth of field": {
+    "描述": "中心对焦，平视拍摄，浅景深",
+    "关键词": "焦点精准落在画面中心主体，背景虚化，平视角度增强真实感，适用于突出细节"
+  },
+  "center framed, eye-level shot, balanced perspective": {
+    "描述": "中心构图，平视拍摄，平衡透视",
+    "关键词": "主体居中，镜头平视，透视无夸张变形，画面结构稳定，适合建筑、静物或对称人像"
+  },
+  "centered subject, close-up shot, straight angle, eye-level perspective": {
+    "描述": "主体居中，特写镜头，正角度，平视视角",
+    "关键词": "面部或物体细节占满画面，正面平视，无角度变形，强调表情、纹理或产品特征"
+  },
+  "centered subject, eye-level angle, frontal perspective": {
+    "描述": "主体居中，平视角度，正面视角",
+    "关键词": "完全正面平视，主体对称呈现，适用于证件、肖像或UI展示"
+  },
+  "centered subject, eye-level angle, tight framing": {
+    "描述": "主体居中，平视角度，紧凑取景",
+    "关键词": "画面裁剪紧密，仅保留主体必要部分，增强视觉冲击力与沉浸感"
+  },
+  "centered subject, eye-level shot, balanced framing": {
+    "描述": "主体居中，平视拍摄，平衡构图",
+    "关键词": "同 'eye-level shot, straight angle, balanced framing'，强调主体居中下的均衡布局"
+  },
+  "centered subject, eye-level shot, direct angle, full body view": {
+    "描述": "主体居中，平视拍摄，直接角度，全身视图",
+    "关键词": "完整展示人物全身，平视无仰俯，适合服装展示或姿态记录"
+  },
+  "centered subject, eye-level shot, medium close-up": {
+    "描述": "主体居中，平视拍摄，中近景",
+    "关键词": "取景范围从胸部以上至头顶，背景虚化，突出面部表情与上半身姿态"
+  },
+  "centered subject, eye-level shot, portrait orientation": {
+    "描述": "主体居中，平视拍摄，纵向构图",
+    "关键词": "竖屏构图，主体居中，适用于人像、手机摄影或社交媒体"
+  },
+  "centered subject, eye-level shot, shallow depth of field": {
+    "描述": "主体居中，平视拍摄，浅景深",
+    "关键词": "背景高度虚化，主体清晰突出，平视视角增强真实感与亲近感"
+  },
+  "centered subject, eye-level shot, soft focus background": {
+    "描述": "主体居中，平视拍摄，柔焦背景",
+    "关键词": "背景虚化且边缘柔和，无杂乱光斑，突出主体同时保留氛围感"
+  },
+  "centered subject, eye-level shot, soft lighting": {
+    "描述": "主体居中，平视拍摄，柔光",
+    "关键词": "无硬阴影，光线均匀包裹主体，适合表现肤质、情绪或静物质感"
+  },
+  "centered subject, low camera angle, shallow depth of field": {
+    "描述": "主体居中，低机位拍摄，浅景深",
+    "关键词": "镜头仰拍，主体显高大或具威严感，背景虚化强化主体气势"
+  },
+  "centered subject, low camera angle, studio lighting": {
+    "描述": "主体居中，低机位拍摄，影棚灯光",
+    "关键词": "专业布光下低角度仰拍，突出轮廓与力量感，常用于时尚或英雄主题"
+  },
+  "centered subject, medium shot, eye-level angle": {
+    "描述": "主体居中，中景，平视角度",
+    "关键词": "展示人物上半身及部分环境，平视自然，适用于对话或日常记录"
+  },
+  "centered subject, medium shot, natural light, shallow depth of field": {
+    "描述": "主体居中，中景，自然光，浅景深",
+    "关键词": "日光下中景拍摄，背景虚化，突出人物与环境互动，兼具真实与美感"
+  },
+  "centered subject, straight-on angle, full-body shot": {
+    "描述": "主体居中，正面角度，全身照",
+    "关键词": "完全正面全身像，无透视变形，适用于服装、舞蹈或标准姿势参考"
+  },
+  "close-up shot, angled perspective, off-center framing": {
+    "描述": "特写镜头，斜角视角，非居中构图",
+    "关键词": "主体偏离中心，镜头微倾，打破对称，营造动感、紧张或艺术感"
+  },
+  "close-up shot, eye-level angle, candid perspective": {
+    "描述": "特写镜头，平视角度，抓拍视角",
+    "关键词": "自然状态下的近距离捕捉，无摆拍感，强调真实情绪与瞬间"
+  },
+  "close-up shot, eye-level angle, center framed, natural daylight": {
+    "描述": "特写镜头，平视角度，中心构图，自然日光",
+    "关键词": "日光下正面特写，清晰锐利，适合肖像、美妆或产品细节"
+  },
+  "close-up shot, eye-level angle, shallow depth of field": {
+    "描述": "特写镜头，平视角度，浅景深",
+    "关键词": "面部或物体细节清晰，背景完全虚化，突出焦点，弱化干扰"
+  },
+  "close-up shot, eye-level angle, studio lighting": {
+    "描述": "特写镜头，平视角度，影棚灯光",
+    "关键词": "专业布光下特写，光线可控，适合商业人像、珠宝或高精度产品"
+  },
+  "close-up shot, front view, eye-level angle": {
+    "描述": "特写镜头，正面视角，平视角度",
+    "关键词": "完全正面特写，无角度偏移，强调对称与细节"
+  },
+  "close-up shot, high angle, centered subject": {
+    "描述": "特写镜头，高角度，主体居中",
+    "关键词": "俯拍特写，主体显小巧或脆弱，适用于儿童、宠物或俯视静物"
+  },
+  "close-up shot, high resolution, natural light, shallow depth of field": {
+    "描述": "特写镜头，高分辨率，自然光，浅景深",
+    "关键词": "高清细节+自然光+背景虚化，适用于专业摄影或AI图像生成的高质量输入"
+  },
+  "close-up shot, low angle, dramatic lighting": {
+    "描述": "特写镜头，低角度，戏剧性照明",
+    "关键词": "仰拍配合强光阴影，营造紧张、神秘或英雄感"
+  },
+  "close-up shot, off-center framing, natural light": {
+    "描述": "特写镜头，非居中构图，自然光",
+    "关键词": "利用留白与光影引导视线，更具艺术性与电影感"
+  },
+  "close-up shot, selfie angle, natural light": {
+    "描述": "特写镜头，自拍角度，自然光",
+    "关键词": "略带俯角的自拍视角，自然光柔和，适合社交媒体或生活记录"
+  },
+  "close-up, eye-level, frontal view": {
+    "描述": "特写，平视，正面视角",
+    "关键词": "标准人像特写，清晰直接，适用于通用场景"
+  },
+  "daylight shot, eye-level angle, centered framing": {
+    "描述": "日光拍摄，平视角度，中心构图",
+    "关键词": "白天自然光下主体居中，画面明亮清晰，生活化且专业"
+  },
+  "direct lighting, eye-level shot, centered subject": {
+    "描述": "直射光，平视拍摄，主体居中",
+    "关键词": "硬光正面照射，阴影清晰，突出质感与轮廓，适用于强调结构"
+  },
+  "direct view, medium shot, neutral angle": {
+    "描述": "直接视角，中景，中性角度",
+    "关键词": "无特殊构图，平实记录，适用于新闻、纪录片或通用内容"
+  },
+  "eye-level shot, center-framed subject, soft natural lighting": {
+    "描述": "平视拍摄，中心构图主体，柔和自然光",
+    "关键词": "漫射日光下主体居中，光线均匀，氛围温馨自然"
+  },
+  "eye-level shot, centered subjects, shallow depth of field": {
+    "描述": "平视拍摄，多个主体居中，浅景深",
+    "关键词": "双人或小组居中，背景虚化，突出人物关系"
+  },
+  "eye-level shot, central framing, soft lighting": {
+    "描述": "平视拍摄，中央构图，柔光",
+    "关键词": "主体居画面正中，柔光照明，适合表现温柔、宁静情绪"
+  },
+  "eye-level shot, close-up, soft lighting, centered subject": {
+    "描述": "平视拍摄，特写，柔光，主体居中",
+    "关键词": "柔光特写，主体清晰，背景柔和，适用于人像或情感表达"
+  },
+  "eye-level shot, medium close-up, soft natural lighting": {
+    "描述": "平视拍摄，中近景，柔和自然光",
+    "关键词": "自然光中近景，光线柔和，适合日常人像或生活场景"
+  },
+  "eye-level shot, natural lighting, shallow depth of field": {
+    "描述": "平视拍摄，自然光，浅景深",
+    "关键词": "日光下背景虚化，主体突出，兼具真实与美感"
+  },
+  "eye-level shot, off-center framing, soft lighting": {
+    "描述": "平视拍摄，非居中构图，柔光",
+    "关键词": "打破对称，柔光营造氛围，更具艺术表现力"
+  },
+  "eye-level shot, portrait orientation, shallow depth of field": {
+    "描述": "平视拍摄，纵向构图，浅景深",
+    "关键词": "竖屏浅景深，适用于手机人像或社交媒体"
+  },
+  "eye-level shot, shallow depth of field, blurred background": {
+    "描述": "平视拍摄，浅景深，背景模糊",
+    "关键词": "背景完全虚化成色块，主体孤立突出"
+  },
+  "eye-level shot, straight-on angle, shallow depth of field": {
+    "描述": "平视拍摄，正面角度，浅景深",
+    "关键词": "完全正面+背景虚化，强调主体本身，弱化环境"
+  },
+  "eye-level shot, three-quarter view, natural lighting": {
+    "描述": "平视拍摄，四分之三视角，自然光",
+    "关键词": "人物微侧，展现立体感，自然光增强真实氛围，经典人像角度"
+  },
+  "frontal view, eye-level angle, portrait orientation": {
+    "描述": "正面视角，平视角度，纵向构图",
+    "关键词": "竖屏正面人像，适用于证件或标准肖像"
+  },
+  "frontal view, waist-up shot, soft lighting": {
+    "描述": "正面视角，腰上半身照，柔光",
+    "关键词": "上半身正面像，柔光照明，适合商务或社交头像"
+  },
+  "high angle, close-up shot, central framing, soft lighting": {
+    "描述": "高角度，特写镜头，中央构图，柔光",
+    "关键词": "俯拍特写，光线柔和，主体显小巧可爱或脆弱"
+  },
+  "high saturation, direct sunlight, eye-level shot": {
+    "描述": "高饱和度，直射阳光，平视拍摄",
+    "关键词": "正午强光下色彩鲜艳，对比强烈，适合表现活力或热带氛围"
+  },
+  "indoor lighting, eye-level shot, straight angle": {
+    "描述": "室内照明，平视拍摄，正角度",
+    "关键词": "室内人工光下正面平拍，适用于家居、产品或环境人像"
+  },
+  "indoor lighting, mirror reflection, eye-level shot, shallow depth of field": {
+    "描述": "室内照明，镜中反射，平视拍摄，浅景深",
+    "关键词": "利用镜子扩展空间，主体清晰，背景虚化，具艺术感"
+  },
+  "indoor lighting, selfie angle, close-up shot": {
+    "描述": "室内照明，自拍角度，特写镜头",
+    "关键词": "室内自拍，近距离特写，适合社交或美妆内容"
+  },
+  "indoor setting, eye-level shot, straight angle, centered subject, natural lighting": {
+    "描述": "室内场景，平视拍摄，正角度，主体居中，自然光",
+    "关键词": "靠窗自然光下室内正面人像，明亮真实"
+  },
+  "indoors, close-up, selfie perspective": {
+    "描述": "室内，特写，自拍视角",
+    "关键词": "室内自拍特写，略带俯角，生活化记录"
+  },
+  "low angle shot, sharp focus, bokeh effect": {
+    "描述": "低角度拍摄，清晰对焦，散景效果",
+    "关键词": "仰拍主体清晰，背景光斑虚化，突出主体与天空或环境"
+  },
+  "low angle, wide shot, dynamic perspective": {
+    "描述": "低角度，广角镜头，动态透视",
+    "关键词": "仰拍广角，建筑或人物显高大，线条汇聚，具视觉冲击力"
+  },
+  "medium close-up, eye-level angle, centered subject": {
+    "描述": "中近景，平视角度，主体居中",
+    "关键词": "胸以上人像，居中构图，适用于访谈、肖像或视频通话"
+  },
+  "medium shot, eye-level angle, soft focus background": {
+    "描述": "中景，平视角度，柔焦背景",
+    "关键词": "人物全身或半身清晰，背景朦胧，突出主体同时保留环境"
+  },
+  "mid-shot, street level, natural light, shallow depth of field": {
+    "描述": "中景，街拍视角，自然光，浅景深",
+    "关键词": "街头平视中景，背景虚化，突出人物与城市互动"
+  },
+  "natural light, centered subject, shallow depth of field": {
+    "描述": "自然光，主体居中，浅景深",
+    "关键词": "日光下居中构图+背景虚化，通用高质量人像"
+  },
+  "natural lighting, waist-up shot, blurred foreground": {
+    "描述": "自然光，腰上半身照，前景模糊",
+    "关键词": "前景虚化引导视线至主体，增强层次与电影感"
+  },
+  "night shot, street lighting, sharp focus": {
+    "描述": "夜景拍摄，街灯照明，清晰对焦",
+    "关键词": "城市夜景，细节清晰，暖色街灯与冷色建筑对比"
+  },
+  "outdoor lighting, close-up shot, low camera angle": {
+    "描述": "户外照明，特写镜头，低机位拍摄",
+    "关键词": "户外仰拍特写，主体显高大，适用于英雄或力量主题"
+  },
+  "outdoor lighting, rear view, low angle, centered subject": {
+    "描述": "户外照明，背面视角，低角度，主体居中",
+    "关键词": "低角度拍背影，主体居中，突出轮廓与环境，具孤独或探索感"
+  },
+  "outdoor shot, eye-level angle, soft lighting": {
+    "描述": "户外拍摄，平视角度，柔光",
+    "关键词": "阴天或黄金时刻户外平拍，光线柔和，氛围宁静"
+  },
+  "portrait orientation, eye-level shot, close-up, frontal perspective": {
+    "描述": "纵向构图，平视拍摄，特写，正面视角",
+    "关键词": "标准竖屏人像特写，适用于手机或社交平台"
+  },
+  "shallow depth of field, eye-level shot, background blur, centered subject": {
+    "描述": "浅景深，平视拍摄，背景模糊，主体居中",
+    "关键词": "背景高度虚化，主体清晰居中，突出焦点"
+  },
+  "shallow focus, eye-level shot, diagonal orientation": {
+    "描述": "浅对焦，平视拍摄，对角线构图",
+    "关键词": "对角线引导视线，主体部分清晰，背景虚化，具动感与张力"
+  },
+  "sharp focus, eye-level shot, direct perspective": {
+    "描述": "清晰对焦，平视拍摄，直接视角",
+    "关键词": "全画面锐利，无虚化，适用于建筑、产品或纪实摄影"
+  },
+  "soft backlighting, shallow depth of field, eye-level angle": {
+    "描述": "柔和背光，浅景深，平视角度",
+    "关键词": "发丝光效果，主体边缘泛光，背景虚化，浪漫人像经典"
+  },
+  "soft lighting, eye-level shot, center-framed": {
+    "描述": "柔光，平视拍摄，中心构图",
+    "关键词": "柔光居中，无硬阴影，适合表现细腻情绪或女性柔美"
+  },
+  "soft lighting, shallow depth of field, eye-level shot": {
+    "描述": "柔光，浅景深，平视拍摄",
+    "关键词": "柔光+背景虚化，平视视角，营造温柔、私密氛围"
+  },
+  "straight shot, medium close-up, eye-level perspective": {
+    "描述": "正面拍摄，中近景，平视视角",
+    "关键词": "标准中近景，无角度偏移，适用于通用人像"
+  },
+  "street-level shot, medium close-up, eye-level angle": {
+    "描述": "街拍视角，中近景，平视角度",
+    "关键词": "街头平视中近景，自然真实，具生活感"
+  },
+  "tight framing, eye-level angle, soft lighting": {
+    "描述": "紧凑取景，平视角度，柔光",
+    "关键词": "画面裁剪紧密，柔光照明，突出主体细节与情绪"
+  },
+  "vertical orientation, eye-level shot, direct perspective": {
+    "描述": "竖构图，平视拍摄，直接视角",
+    "关键词": "竖屏正面平拍，适用于手机人像或短视频"
+  },
+  "vertical orientation, natural lighting, eye-level shot": {
+    "描述": "竖构图，自然光，平视拍摄",
+    "关键词": "竖屏日光平拍，明亮自然，适合社交媒体内容"
+  },
+  "warm lighting, close-up shot, low angle": {
+    "描述": "暖光，特写镜头，低角度",
+    "关键词": "暖色仰拍特写，营造温馨、力量或亲密感"
+  },
+  "low angle shot, full body view, elongated legs, straight angle": {
+    "描述": "低角度拍摄，全身视图，拉长腿部，正角度",
+    "关键词": "镜头置于地面或极低位置，向上平直拍摄全身，利用透视强制拉长腿部比例，突出模特大长腿，适用于时尚街拍或高跟鞋展示"
+  },
+  "wide shot, low camera angle, full body framing, minimal foreground": {
+    "描述": "广角镜头，低机位拍摄，全身构图，前景简洁",
+    "关键词": "广角+低角度组合，人物全身入画，前景留白避免干扰，腿部在画面中占比最大化，营造高挑修长视觉效果"
+  },
+  "full body shot, eye-level to low angle transition, legs emphasized": {
+    "描述": "全身照，平视至低角度过渡，强调腿部",
+    "关键词": "镜头略低于常规平视角度（如腰部高度），轻微仰拍全身，既保留自然比例又强化腿部长度，适合日常或商业人像"
+  },
+  "vertical framing, full body, subject near bottom third, sky or clean background": {
+    "描述": "纵向构图，全身，主体位于下三分之一，天空或干净背景",
+    "关键词": "竖屏构图中人物脚部贴近画面底边，头顶留出大面积简洁背景（如天空、白墙），通过空间对比凸显腿部修长"
+  },
+  "high heels focus, full body pose, low angle, sharp focus on legs": {
+    "描述": "高跟鞋焦点，全身姿态，低角度，腿部清晰对焦",
+    "关键词": "低机位仰拍全身，焦点精准落在腿部与鞋履，背景适度虚化，突出腿部线条与高跟鞋设计，强化视觉延伸感"
+  },
+  "extreme low angle, full body shot, feet at bottom edge, sky background": {
+    "描述": "极低角度，全身照，脚部位于画面底边，天空背景",
+    "关键词": "镜头几乎贴地，人物脚部紧贴画面下边缘，向上仰拍全身，背景为纯净天空，极致拉长腿部比例，营造超模般修长视觉效果"
+  },
+  "extreme low camera angle, full body view, dramatic perspective, minimal distortion": {
+    "描述": "极低机位拍摄，全身视图，戏剧性透视，最小畸变",
+    "关键词": "使用广角但控制畸变，镜头置于地面仰拍人物全身，腿部显著拉伸而上半身比例自然，突出高挑身材与力量感，适用于高跟鞋或时尚大片"
+  },
+  "diagonal composition, subject off-center, leading lines from architecture": {
+    "描述": "对角线构图，主体偏离中心，建筑引导线",
+    "关键词": "利用楼梯、栏杆或建筑边缘形成对角线，人物位于画面1/3交叉点，视线沿线条延伸，增强动态与空间纵深感"
+  },
+  "leading lines from road or path, off-center subject, natural framing": {
+    "描述": "道路或小径引导线，主体偏离中心，自然取景",
+    "关键词": "弯曲小径或街道形成视觉引导线，人物置于画面左侧或右侧，背景自然虚化，营造故事感与探索氛围"
+  },
+  "rule of thirds with strong vertical lines, subject offset, urban setting": {
+    "描述": "三分法结合强烈垂直线，主体偏移，城市场景",
+    "关键词": "玻璃幕墙、柱子或路灯形成垂直线条，人物位于画面左/右1/3线，打破对称但保持平衡，具现代都市电影感"
+  }
+}

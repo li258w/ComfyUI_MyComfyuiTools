@@ -1,0 +1,898 @@
+{
+  "arm raised, bent elbow, one leg forward, standing pose, confident stance": {
+    "描述": "手臂抬起，肘部弯曲，一条腿向前，站立姿势，自信站姿",
+    "关键词": "人物单臂高举、肘部呈90度弯曲，前腿迈出一步，重心前倾，整体姿态充满力量感与自信，适合表现活力或宣言性画面"
+  },
+  "arm raised, standing straight, looking forward": {
+    "描述": "手臂抬起，站姿笔直，目视前方",
+    "关键词": "身体挺直站立，单臂自然上举，目光坚定平视，构图简洁有力，常用于广告、证件照或动态启动瞬间"
+  },
+  "arms crossed, head slightly tilted, direct gaze": {
+    "描述": "双臂交叉，头部微倾，直视镜头",
+    "关键词": "双臂在胸前交叉，头略向一侧倾斜，眼神直视镜头，传达冷静、自信或略带审视的情绪"
+  },
+  "arms crossed, looking at camera, slight head tilt": {
+    "描述": "双臂交叉，看向镜头，头部微倾",
+    "关键词": "双臂自然交叉于胸前，头部轻偏，目光与镜头对视，营造轻松但有态度的肖像氛围"
+  },
+  "arms crossed, slight smile, looking away": {
+    "描述": "双臂交叉，微微一笑，看向别处",
+    "关键词": "双臂抱胸，嘴角微扬，视线避开镜头，呈现若有所思或内敛温柔的瞬间"
+  },
+  "arms on table, standing straight, slight torso twist": {
+    "描述": "双手撑桌，站姿笔直，躯干微扭",
+    "关键词": "身体直立，双手轻按桌面支撑，上半身微微转向镜头，形成自然的S型曲线，适合办公或休闲场景"
+  },
+  "arms raised, elbows bent, flexing biceps, confident stance": {
+    "描述": "双臂抬起，肘部弯曲，展示二头肌，自信站姿",
+    "关键词": "双臂屈肘上举，肌肉紧绷，展现力量感，双脚分开站稳，充满阳刚或健身主题的自信气场"
+  },
+  "bending forward, one hand on car, looking at camera": {
+    "描述": "身体前倾，一手搭在车上，看向镜头",
+    "关键词": "人物倚靠汽车，单手轻放引擎盖或车顶，上半身前倾，目光直视镜头，营造随性酷感或产品展示场景"
+  },
+  "crouching down, chin resting, looking sideways": {
+    "描述": "蹲下，下巴 resting，看向侧面",
+    "关键词": "人物蹲姿，双手托腮或下巴轻靠手背，视线望向画面一侧，营造沉思、俏皮或观察者视角"
+  },
+  "crouching, looking at camera, hands on knees": {
+    "描述": "蹲姿，看向镜头，双手放在膝盖上",
+    "关键词": "蹲姿稳定，双手轻搭膝盖，背脊微弓，目光平视镜头，常用于儿童互动、街头抓拍或低视角构图"
+  },
+  "crouching, looking forward, left hand on ground, right arm resting on leg": {
+    "描述": "蹲姿，目视前方，左手撑地，右臂 resting 在腿上",
+    "关键词": "左侧手撑地保持平衡，右臂自然搭于大腿，身体前倾但稳定，目光平视，具运动感或探索姿态"
+  },
+  "crouching, smiling, looking forward": {
+    "描述": "蹲姿，微笑，目视前方",
+    "关键词": "蹲姿放松，面带灿烂笑容，双眼注视前方，传递友善、童真或互动感，适合亲子或街头摄影"
+  },
+  "Direct gaze, slight smile, hand in hair": {
+    "描述": "直视眼神，微微一笑，手插进头发",
+    "关键词": "目光直视镜头，嘴角微扬，一手自然插入发间，姿态慵懒随性，常用于时尚或生活化人像"
+  },
+  "facing away, head turned, one hand touching thigh": {
+    "描述": "背对，头转回，一手轻触大腿",
+    "关键词": "人物背对镜头，仅头部回望，一手轻抚大腿外侧，营造神秘感与身体曲线张力"
+  },
+  "facing away, head turned, slight twist": {
+    "描述": "背对，头转回，轻微扭转",
+    "关键词": "全背影中头部回转，肩背线条因扭转而舒展，突出轮廓美与含蓄情绪"
+  },
+  "facing away, looking back, left hand raised": {
+    "描述": "背对，回头，左手抬起",
+    "关键词": "背影回眸，左臂抬高至肩或头顶，形成强烈视觉引导线，具戏剧性或告别感"
+  },
+  "facing camera, arms crossed, slight smile": {
+    "描述": "面对镜头，双臂交叉，微微一笑",
+    "关键词": "正面站立，双臂自然交叉，嘴角含笑，既自信又不疏离，经典肖像姿势"
+  },
+  "facing camera, arms crossed, slight tilt": {
+    "描述": "面对镜头，双臂交叉，头部微倾",
+    "关键词": "正面构图，双臂抱胸，头略偏，打破对称感，增添俏皮或个性表达"
+  },
+  "facing camera, gentle gaze, holding arm": {
+    "描述": "面对镜头，温柔凝视，一手抱住另一手前臂",
+    "关键词": "双手交叠于前臂，目光柔和，姿态略显内敛，适合表现温柔、敏感或文艺气质"
+  },
+  "facing camera, head tilted, relaxed stance": {
+    "描述": "面对镜头，头部微倾，放松站姿",
+    "关键词": "身体自然站立，无刻意摆姿，头部轻偏，整体松弛，营造生活化、真实感肖像"
+  },
+  "facing camera, head tilted, subtle smile": {
+    "描述": "面对镜头，头部微倾，淡淡微笑",
+    "关键词": "轻微歪头配含蓄微笑，眼神柔和，适合展现亲和力或少女感"
+  },
+  "facing camera, relaxed posture, slightly parted lips": {
+    "描述": "面对镜头，放松姿势，嘴唇微张",
+    "关键词": "自然站姿，唇瓣轻启似欲言又止，增添呼吸感与生动性，常用于电影感或情绪人像"
+  },
+  "facing camera, relaxed stance, slight smile": {
+    "描述": "面对镜头，放松站姿，微微一笑",
+    "关键词": "轻松站立，笑容自然，无表演感，适合证件、社交或日常快照风格"
+  },
+  "facing camera, seated position, hands on knees": {
+    "描述": "面对镜头，坐姿，双手放在膝盖上",
+    "关键词": "端正坐姿，双手轻放双膝，背脊挺直，目光平视，体现稳重与专注"
+  },
+  "facing camera, slight head tilt, one arm visible": {
+    "描述": "面对镜头，头部微倾，仅露出一只手臂",
+    "关键词": "构图聚焦上半身，单臂入画，头略偏，突出面部与局部肢体互动，适合半身肖像"
+  },
+  "facing camera, slight head tilt, pouting lips": {
+    "描述": "面对镜头，头部微倾，嘟嘴",
+    "关键词": "歪头配嘟嘴，表情俏皮可爱，常用于潮流、KOL或年轻化视觉内容"
+  },
+  "facing camera, slight head tilt, relaxed shoulders": {
+    "描述": "面对镜头，头部微倾，肩膀放松",
+    "关键词": "肩部无紧张感，头微偏，整体松弛自然，适合生活感或低饱和氛围人像"
+  },
+  "facing camera, slight head tilt, relaxed stance": {
+    "描述": "面对镜头，头部微倾，放松站姿",
+    "关键词": "自然站姿，重心均匀，头略歪，无刻意摆拍感，适合日常或纪实风格"
+  },
+  "facing camera, slight smile, head slightly tilted": {
+    "描述": "面对镜头，微微一笑，头部微倾",
+    "关键词": "经典亲和力姿势，微笑与歪头结合，突出亲和、温柔或女性魅力"
+  },
+  "facing camera, slight smile, head tilted": {
+    "描述": "面对镜头，微微一笑，头部倾斜",
+    "关键词": "同上，强调头部倾斜角度更明显，更具动态与个性"
+  },
+  "facing camera, slight smile, left arm raised": {
+    "描述": "面对镜头，微微一笑，左臂抬起",
+    "关键词": "左臂上举或屈肘于身侧，配合微笑，营造互动感或打招呼的瞬间"
+  },
+  "facing camera, slight smile, relaxed posture, left hand on hip, right hand by side": {
+    "描述": "面对镜头，微微一笑，放松姿势，左手叉腰，右手自然下垂",
+    "关键词": "一手叉腰打破对称，一手放松，微笑自然，体现自信而不失随性"
+  },
+  "facing camera, slight smile, relaxed stance": {
+    "描述": "面对镜头，微微一笑，放松站姿",
+    "关键词": "最基础的友好肖像姿势，适用于通用人像、社交头像或产品代言"
+  },
+  "facing camera, slight smile, straight posture": {
+    "描述": "面对镜头，微微一笑，挺直姿势",
+    "关键词": "背脊挺直，笑容含蓄，体现专业、端庄或正式场合形象"
+  },
+  "facing camera, slight smile, touching neck, hairclips in hair": {
+    "描述": "面对镜头，微微一笑，手触颈部，发夹装饰",
+    "关键词": "手指轻抚颈侧，发间有饰品点缀，姿态柔美，突出女性细节与精致感"
+  },
+  "facing camera, slight tilt head, one hand raised": {
+    "描述": "面对镜头，头部微倾，一只手抬起",
+    "关键词": "单臂上举或挥手，配合歪头，营造互动、活力或动态抓拍感"
+  },
+  "facing camera, slight tilt head, relaxed posture": {
+    "描述": "面对镜头，头部微倾，放松姿势",
+    "关键词": "全身松弛，无僵硬感，头微偏，适合生活化、低饱和或胶片感摄影"
+  },
+  "facing camera, slight tilt, relaxed posture": {
+    "描述": "面对镜头，轻微倾斜，放松姿势",
+    "关键词": "同上，强调整体身体微倾而非仅头部，更具动感平衡"
+  },
+  "facing camera, slight tilt, soft expression": {
+    "描述": "面对镜头，轻微倾斜，柔和表情",
+    "关键词": "表情温婉，眼神柔和，头部或身体微倾，适合文艺、清新或日系风格"
+  },
+  "facing camera, slight tilt, soft gaze": {
+    "描述": "面对镜头，轻微倾斜，温柔凝视",
+    "关键词": "目光不直视镜头而是略偏，结合身体倾斜，营造若即若离的氛围感"
+  },
+  "facing camera, slightly tilted head, one-shoulder visible": {
+    "描述": "面对镜头，头部微倾，仅显一肩",
+    "关键词": "构图聚焦面部与单肩，突出轮廓与层次，适合半身肖像或柔焦人像"
+  },
+  "facing camera, slightly tilted head, relaxed posture": {
+    "描述": "面对镜头，头部微倾，放松姿势",
+    "关键词": "重复但合理，强调不同组合，画面松弛自然"
+  },
+  "facing camera, slightly tilted head, resting arms": {
+    "描述": "面对镜头，头部微倾，手臂 resting",
+    "关键词": "双手自然下垂或轻搭身前，头微歪，整体无张力，适合生活快照"
+  },
+  "facing forward, slight tilt, confident expression": {
+    "描述": "面向前方，轻微倾斜，自信表情",
+    "关键词": "身体微侧或头微偏，眼神坚定，嘴角自信上扬，体现掌控感或领导力"
+  },
+  "facing forward, slight tilt, relaxed stance": {
+    "描述": "面向前方，轻微倾斜，放松站姿",
+    "关键词": "自然站姿，重心稳定，轻微倾斜增添动感，避免呆板"
+  },
+  "facing sideways, slight twist, playful stance": {
+    "描述": "侧身，轻微扭转，俏皮站姿",
+    "关键词": "身体侧对镜头，上半身微转朝向相机，姿态活泼，适合动态或青春题材"
+  },
+  "gazing forward, slight head tilt, hair pulled back": {
+    "描述": "凝视前方，头部微倾，头发束起",
+    "关键词": "发髻或马尾利落，头微歪，目光专注，突出五官与干净线条，适合职场或极简风"
+  },
+  "half-turned, looking back, one arm bent": {
+    "描述": "半转身，回头，一只手臂弯曲",
+    "关键词": "身体45度角，回头凝视，单臂屈肘于腰或胸前，形成S曲线，具电影感与张力"
+  },
+  "hand in hair, arched back, seductive stance": {
+    "描述": "手插头发，背部拱起，性感站姿",
+    "关键词": "一手插入发间，背部反弓突出胸腰曲线，眼神撩人，适合时尚大片或艺术人像"
+  },
+  "hand in hair, facing camera, slight tilt": {
+    "描述": "手插头发，面对镜头，轻微倾斜",
+    "关键词": "自然撩发动作，头微偏，目光直视，兼具随性与精致感"
+  },
+  "hand in hair, kneeling position, direct gaze, left leg bent, confident expression": {
+    "描述": "手插头发，跪姿，直视，左腿弯曲，自信表情",
+    "关键词": "单膝跪地，一手撩发，目光坚定，姿态既有力量又不失柔美，适合运动或高级时尚"
+  },
+  "hand in hair, leaning elbow, direct gaze, slightly parted lips": {
+    "描述": "手插头发，倚靠手肘，直视，嘴唇微张",
+    "关键词": "手肘支撑桌面或墙面，一手撩发，唇微启，眼神直视，营造亲密或私密氛围"
+  },
+  "hand in hair, looking away, slight twist": {
+    "描述": "手插头发，看向别处，轻微扭转",
+    "关键词": "身体微扭，手撩发，视线避开镜头，传递若有所思或内敛情绪"
+  },
+  "hand in hair, slightly turned, standing upright": {
+    "描述": "手插头发，轻微转身，站姿笔直",
+    "关键词": "身体略侧，手自然插入发间，背脊挺直，既优雅又不失自然"
+  },
+  "hand in hair, slight tilt, bending forward": {
+    "描述": "手插头发，轻微倾斜，身体前屈",
+    "关键词": "上半身前倾，一手撩发，头微歪，营造亲昵、俏皮或互动感"
+  },
+  "hand in hair, standing straight, slight smile": {
+    "描述": "手插头发，站姿笔直，微微一笑",
+    "关键词": "经典撩发微笑姿势，突出女性魅力与自信，适用于广告、时尚或KOL内容"
+  },
+  "hand on cheek, sitting down, head slightly tilted": {
+    "描述": "手托脸颊，坐姿，头部微倾",
+    "关键词": "坐姿放松，单手托腮，头微偏，眼神柔和，适合表现思考、温柔或少女感"
+  },
+  "hand on chin, looking forward, slight tilt": {
+    "描述": "手托下巴，目视前方，轻微倾斜",
+    "关键词": "思考者经典姿势，一手托下巴，头微歪，目光平视，体现沉思或专注"
+  },
+  "hand on face, leaning slightly, intense gaze": {
+    "描述": "手扶脸部，轻微倚靠，凝视",
+    "关键词": "手轻触面颊或下颌，身体微倾，眼神锐利，营造强烈情绪张力"
+  },
+  "hand on hat, facing camera, slightly leaning": {
+    "描述": "手扶帽子，面对镜头，轻微倚靠",
+    "关键词": "手轻按帽檐，身体微倾，目光直视，突出帽饰与整体造型，适合复古或户外风格"
+  },
+  "hand on hat, slightly turned, mid-walk stance": {
+    "描述": "手扶帽子，轻微转身，行走中站姿",
+    "关键词": "行走瞬间定格，手扶帽，身体微侧，具动态与叙事感，适合街拍或故事性画面"
+  },
+  "hand on head, facing camera, slightly smiling": {
+    "描述": "手放头上，面对镜头，微微一笑",
+    "关键词": "一手置于头顶或后脑，笑容自然，姿态活泼，适合青春、校园或休闲场景"
+  },
+  "hand on head, slightly turned, standing straight": {
+    "描述": "手放头上，轻微转身，站姿笔直",
+    "关键词": "身体略侧，手放头顶，背脊挺直，兼具俏皮与端正"
+  },
+  "hand on head, standing straight, facing camera, confident stance": {
+    "描述": "手放头上，站姿笔直，面对镜头，自信站姿",
+    "关键词": "正面站立，一手放头顶，姿态开放自信，适合表现活力或年轻态度"
+  },
+  "hand on head, standing straight, slight twist, confident stance": {
+    "描述": "手放头上，站姿笔直，轻微扭转，自信站姿",
+    "关键词": "身体微转打破呆板，手放头顶，笑容或眼神自信，具动感与表现力"
+  },
+  "hand on hip, slight body tilt, chin down, forward-facing": {
+    "描述": "手叉腰，身体微倾，下巴微收，正面朝向",
+    "关键词": "一手叉腰，重心偏移，下巴微收显下颌线，突出自信与轮廓感，经典时尚姿势"
+  },
+  "hands in hair, seated, legs crossed": {
+    "描述": "双手插进头发，坐姿，双腿交叉",
+    "关键词": "坐姿优雅，双腿交叠，双手插入发间，体现慵懒、性感或放松状态"
+  },
+  "hands on face, slight head tilt, looking at camera": {
+    "描述": "双手扶脸，头部微倾，看向镜头",
+    "关键词": "双手轻托双颊，头微歪，眼神直视，可爱或柔美风格，常见于少女写真"
+  },
+  "hands on hips, facing camera, confident stance": {
+    "描述": "双手叉腰，面对镜头，自信站姿",
+    "关键词": "双脚分开，双手叉腰，挺胸收腹，最具力量感与气场的姿势之一"
+  },
+  "hands on hips, slight lean, confident stance": {
+    "描述": "双手叉腰，轻微倚靠，自信站姿",
+    "关键词": "身体微后仰或侧倾，双手叉腰，姿态更具动感与个性张力"
+  },
+  "hands on hips, standing straight, slight body twist": {
+    "描述": "双手叉腰，站姿笔直，身体轻微扭转",
+    "关键词": "上半身微转，突出腰臀曲线，叉腰强化气场，适合人像或广告"
+  },
+  "hands on hips, straight posture, direct gaze": {
+    "描述": "双手叉腰，挺直姿势，直视",
+    "关键词": "完全正面，眼神坚定，姿势端正有力，体现权威或自信"
+  },
+  "hands raised, head tilt, standing straight": {
+    "描述": "双手抬起，头部倾斜，站姿笔直",
+    "关键词": "双臂上举，头微歪，姿态开放活泼，适合表现庆祝、自由或舞蹈感"
+  },
+  "hands raised, slight twist, standing straight": {
+    "描述": "双手抬起，轻微扭转，站姿笔直",
+    "关键词": "双臂高举，身体微侧，形成动态平衡，具舞台感或运动瞬间"
+  },
+  "head cocked, hand on chin, looking at camera, slight smile": {
+    "描述": "歪头，手托下巴，看向镜头，微微一笑",
+    "关键词": "经典思考带笑意姿势，既聪慧又亲切，适合知识类或亲和力人像"
+  },
+  "head tilt, gazing upwards, holding flowers": {
+    "描述": "头部倾斜，仰望，手持鲜花",
+    "关键词": "仰头望天，手捧花朵，姿态浪漫梦幻，适合春日、婚礼或文艺题材"
+  },
+  "head tilt, slight smile, looking at camera": {
+    "描述": "头部倾斜，微微一笑，看向镜头",
+    "关键词": "最经典亲和力组合，用于90%的日常人像与商业摄影"
+  },
+  "head tilted slightly, eyes looking forward, hand touching hair": {
+    "描述": "头部微倾，目视前方，手触头发",
+    "关键词": "自然撩发动作，目光不直视镜头，营造不经意的美感"
+  },
+  "head tilted, hand in hair, facing camera": {
+    "描述": "头部倾斜，手插头发，面对镜头",
+    "关键词": "正面构图，手撩发，头歪，突出五官与发型，时尚感强"
+  },
+  "head tilted, hand in hair, looking at camera, slight smile": {
+    "描述": "头部倾斜，手插头发，看向镜头，微微一笑",
+    "关键词": "撩发+微笑+歪头，三位一体女性魅力姿势，适用于美妆、时尚、KOL"
+  },
+  "head tilted, hand on chin, direct gaze": {
+    "描述": "头部倾斜，手托下巴，直视",
+    "关键词": "思辨感强烈，眼神锐利，适合知识分子、艺术家或剧情片角色"
+  },
+  "head tilted, hand on neck, relaxed demeanor, bare shoulders": {
+    "描述": "头部倾斜，手扶颈部，放松状态，露肩",
+    "关键词": "一手轻抚颈侧，肩部裸露，姿态慵懒性感，适合闺房或艺术人像"
+  },
+  "head tilted, hand raised, playful expression": {
+    "描述": "头部倾斜，手抬起，俏皮表情",
+    "关键词": "挥手或比手势，配合歪头与笑容，传递活泼、年轻、互动感"
+  },
+  "head tilted, looking forward, hair swept aside": {
+    "描述": "头部倾斜，目视前方，头发拨至一侧",
+    "关键词": "一侧头发撩起，露出耳颈，头微歪，突出侧脸与颈部线条"
+  },
+  "head tilted, sitting, hand on neck": {
+    "描述": "头部倾斜，坐姿，手扶颈部",
+    "关键词": "坐姿放松，手轻触颈，头微偏，适合表现内敛、优雅或私密感"
+  },
+  "head turned, gazing upward, flowing hair": {
+    "描述": "头部转向，仰望，长发飘动",
+    "关键词": "回眸仰视，发丝飞扬，具电影感与戏剧张力，适合风、光、自然元素结合"
+  },
+  "head turned, looking back, hand on hip": {
+    "描述": "头部转向，回头，手叉腰",
+    "关键词": "背影回眸，一手叉腰，突出身体曲线与眼神交汇，经典性感姿势"
+  },
+  "holding hair, straight stance, direct gaze": {
+    "描述": "手抓头发，站姿笔直，直视",
+    "关键词": "一手抓握发束，背脊挺直，目光坚定，具个性与张力"
+  },
+  "kneeling down, facing camera, leaning forward": {
+    "描述": "跪姿，面对镜头，身体前倾",
+    "关键词": "双膝跪地，上半身前探，缩短与镜头距离，营造亲密或专注感"
+  },
+  "kneeling position, hand in hair, confident gaze, slight smile": {
+    "描述": "跪姿，手插头发，自信凝视，微微一笑",
+    "关键词": "跪姿中保持上半身挺拔，撩发+微笑，柔中带刚，适合高级人像"
+  },
+  "kneeling, hand on forehead, looking at camera": {
+    "描述": "跪姿，手放额头，看向镜头",
+    "关键词": "一手扶额，跪地凝视，传递疲惫、沉思或戏剧性情绪"
+  },
+  "kneeling, leaning forward, gaze at camera": {
+    "描述": "跪姿，身体前倾，凝视镜头",
+    "关键词": "重心前移，双手或单手支撑，目光锁定镜头，具互动性与张力"
+  },
+  "kneeling, leaning forward, hands on handles": {
+    "描述": "跪姿，身体前倾，双手扶握把手",
+    "关键词": "手握车把、栏杆等物体，跪姿前倾，结合道具增强叙事感"
+  },
+  "Leaning back, angled towards camera, relaxed posture": {
+    "描述": "后仰，朝向镜头倾斜，放松姿势",
+    "关键词": "倚靠墙面或椅背，身体后仰，姿态松弛，适合慵懒、休闲或午后氛围"
+  },
+  "leaning back, one leg bent, one leg extended, confident gaze": {
+    "描述": "后仰，一腿弯曲，一腿伸展，自信凝视",
+    "关键词": "坐姿或倚靠中，双腿一屈一伸，突出腿部线条，目光自信，具时尚感"
+  },
+  "leaning forward, arching back, looking away": {
+    "描述": "身体前倾，背部拱起，看向别处",
+    "关键词": "上半身前探同时反弓背部，视线避开，营造神秘或艺术感"
+  },
+  "leaning forward, hands on thighs, slight smile": {
+    "描述": "身体前倾，双手放大腿，微微一笑",
+    "关键词": "坐姿前倾，手扶大腿，笑容亲切，适合访谈、互动或家庭场景"
+  },
+  "leaning forward, hands under chin, looking at camera": {
+    "描述": "身体前倾，双手托下巴，看向镜头",
+    "关键词": "经典思考姿势，双手托腮，目光直视，突出眼睛与表情"
+  },
+  "leaning forward, knee up, hand on forehead, gazing at camera": {
+    "描述": "身体前倾，一膝抬起，手放额头，凝视镜头",
+    "关键词": "单膝抬高支撑手肘，手扶额，眼神疲惫或专注，具故事性"
+  },
+  "leaning forward, looking to the side, one hand on hip": {
+    "描述": "身体前倾，看向侧面，一手叉腰",
+    "关键词": "上半身前探，一手叉腰，视线偏移，打破对称，增强画面动感"
+  },
+  "leaning forward, one leg raised, playful gesture": {
+    "描述": "身体前倾，一腿抬起，俏皮手势",
+    "关键词": "动态姿势，腿抬手舞，表现活力、童趣或舞蹈瞬间"
+  },
+  "leaning forwards, hand on head, facing camera": {
+    "描述": "身体前倾，手放头上，面对镜头",
+    "关键词": "前倾中手置头顶，姿态夸张活泼，适合表现惊讶、兴奋或互动"
+  },
+  "leaning on railing, facing camera, arms apart, straight posture": {
+    "描述": "倚靠栏杆，面对镜头，双臂分开，挺直姿势",
+    "关键词": "双手搭栏杆两侧，背脊挺直，目光平视，具都市感或旅行场景氛围"
+  },
+  "leaning on railing, facing camera, slight smile": {
+    "描述": "倚靠栏杆，面对镜头，微微一笑",
+    "关键词": "一手或双手轻扶栏杆，笑容自然，适合街拍、旅行或城市人像"
+  },
+  "leaning on tree, gently touching hair, standing pose, eyes closed, relaxed demeanor": {
+    "描述": "倚靠树木，轻触头发，站姿，闭眼，放松状态",
+    "关键词": "闭眼倚树，手撩发，姿态完全松弛，适合自然、治愈或森系摄影"
+  },
+  "leaning on wall, looking at camera, one leg raised": {
+    "描述": "倚靠墙壁，看向镜头，一腿抬起",
+    "关键词": "背靠墙，一腿屈膝抬起贴墙，一手可插袋或撩发，酷感十足"
+  },
+  "left: standing straight, right hand raised, left: standing, hand on hip": {
+    "描述": "左：站姿笔直，右手抬起；右：站姿，手叉腰",
+    "关键词": "双人对比构图，一人抬手一人叉腰，突出姿态差异与互动张力"
+  },
+  "looking at camera, slight head tilt, relaxed posture": {
+    "描述": "看向镜头，头部微倾，放松姿势",
+    "关键词": "基础友好人像，适用于绝大多数日常、商业或社交场景"
+  },
+  "looking at camera, slightly angled, relaxed posture": {
+    "描述": "看向镜头，轻微角度，放松姿势",
+    "关键词": "身体微侧，目光对视，避免正面呆板，更具层次与真实感"
+  },
+  "looking at camera, slightly tilted head, touching hair": {
+    "描述": "看向镜头，头部微倾，触碰头发",
+    "关键词": "手撩发+歪头+对视，三位一体自然美姿势，突出发型与眼神"
+  },
+  "looking back, slight twist, hand on hip": {
+    "描述": "回头，轻微扭转，手叉腰",
+    "关键词": "经典回眸叉腰，突出腰线与眼神交汇，性感与力量兼具"
+  },
+  "looking back, slight twist, right hand resting": {
+    "描述": "回头，轻微扭转，右手 resting",
+    "关键词": "回眸中一手自然下垂或轻扶物，姿态放松，具生活感"
+  },
+  "looking forward, hand on head, slightly tilted head": {
+    "描述": "目视前方，手放头上，头部微倾",
+    "关键词": "手置头顶，头微歪，目光平视，姿态活泼不造作"
+  },
+  "looking forward, slight head tilt, relaxed posture": {
+    "描述": "目视前方，头部微倾，放松姿势",
+    "关键词": "最基础自然站姿，适用于证件、日常或低干预摄影"
+  },
+  "looking forward, slight smile, head tilted": {
+    "描述": "目视前方，微微一笑，头部倾斜",
+    "关键词": "亲和力满分姿势，用于90%的女性人像与广告"
+  },
+  "looking over shoulder, three-quarter turn, hand on hip": {
+    "描述": "肩后回望，四分之三转身，手叉腰",
+    "关键词": "身体3/4侧对，回头凝视，一手叉腰，电影感、性感、张力兼具"
+  },
+  "one arm bent, hip jutted out, direct gaze": {
+    "描述": "一臂弯曲，臀部突出，直视",
+    "关键词": "重心偏移，臀部外推，一手屈肘，眼神坚定，突出曲线与气场"
+  },
+  "one leg extended, leaning back, direct gaze": {
+    "描述": "一腿伸展，后仰，直视",
+    "关键词": "坐姿或倚靠中单腿伸直，身体后仰，目光锁定，具慵懒自信感"
+  },
+  "pouting lips, holding phone, slightly tilted head": {
+    "描述": "嘟嘴，手持手机，头部微倾",
+    "关键词": "自拍经典姿势，手机在手，嘟嘴歪头，突出年轻、潮流与社交感"
+  },
+  "reclining, arms raised, directly facing camera, relaxed demeanor": {
+    "描述": "仰卧，双臂抬起，正对镜头，放松状态",
+    "关键词": "躺姿中双臂上举，完全放松，适合度假、闺房或艺术裸感摄影"
+  },
+  "seated on couch, leaning forward, hands supporting chin, legs crossed, eyes looking upward": {
+    "描述": "坐于沙发，身体前倾，双手托下巴，双腿交叉，眼睛上望",
+    "关键词": "沙发坐姿，手托下巴，目光上扬，传递期待、幻想或文艺情绪"
+  },
+  "seated position, looking forward, slight tilt, relaxed posture": {
+    "描述": "坐姿，目视前方，轻微倾斜，放松姿势",
+    "关键词": "自然坐姿，无僵硬感，头微偏，适合访谈、办公或家庭场景"
+  },
+  "seated position, smiling expression, facing camera": {
+    "描述": "坐姿，微笑表情，面对镜头",
+    "关键词": "端正坐姿配微笑，用于证件、宣传照或正式场合"
+  },
+  "seated, arm raised, head tilted": {
+    "描述": "坐姿，手臂抬起，头部倾斜",
+    "关键词": "坐姿中单臂上举，头微歪，打破静态，增添动态与个性"
+  },
+  "seated, arms crossed, legs bent": {
+    "描述": "坐姿，双臂交叉，双腿弯曲",
+    "关键词": "双臂抱胸，双腿屈起，姿态略显防御或思考，适合情绪人像"
+  },
+  "seated, hand on head, torso twisted": {
+    "描述": "坐姿，手放头上，躯干扭转",
+    "关键词": "坐姿中上半身扭转，手置头顶，突出动态与身体线条"
+  },
+  "seated, legs spread, head tilted down": {
+    "描述": "坐姿，双腿分开，头低垂",
+    "关键词": "双腿自然分开，低头沉思，传递内省、疲惫或脆弱感"
+  },
+  "seated, open-legged, arms resting": {
+    "描述": "坐姿，双腿张开，手臂 resting",
+    "关键词": "放松坐姿，双腿微分，手臂自然下垂，体现自信或中性风格"
+  },
+  "seated, relaxed posture, looking forward": {
+    "描述": "坐姿，放松姿势，目视前方",
+    "关键词": "基础坐姿，适用于大多数日常、办公或生活场景"
+  },
+  "seated, relaxed, looking aside": {
+    "描述": "坐姿，放松，看向旁边",
+    "关键词": "坐姿松弛，视线偏移，营造若有所思或环境融入感"
+  },
+  "seated, slightly leaning, facing camera": {
+    "描述": "坐姿，轻微倚靠，面对镜头",
+    "关键词": "身体微前倾或后靠，面向镜头，平衡放松与互动"
+  },
+  "seated, slightly leaning, soft smile": {
+    "描述": "坐姿，轻微倚靠，柔和微笑",
+    "关键词": "微笑+倚靠，传递温暖、亲切或治愈感"
+  },
+  "Sitting down, facing camera, holding glass": {
+    "描述": "坐姿，面对镜头，手持玻璃杯",
+    "关键词": "手握酒杯或水杯，坐姿端正，适合餐饮、生活方式或社交场景"
+  },
+  "sitting down, arms crossed, facing camera": {
+    "描述": "坐姿，双臂交叉，面对镜头",
+    "关键词": "坐姿叉臂，略显防御或自信，视表情可表现权威或疏离"
+  },
+  "sitting down, arms raised, head tilted": {
+    "描述": "坐姿，双臂抬起，头部倾斜",
+    "关键词": "坐姿中双臂上举，头微歪，表现自由、释放或舞蹈感"
+  },
+  "sitting down, arms rested, legs crossed": {
+    "描述": "坐姿，手臂 resting，双腿交叉",
+    "关键词": "经典优雅坐姿，双腿交叠，手臂自然放置，适合正式或时尚场景"
+  },
+  "sitting down, casual posture": {
+    "描述": "坐姿，休闲姿势",
+    "关键词": "无特定规则，松弛自然，体现生活化或纪实风格"
+  },
+  "sitting down, crossed legs, hands on legs, facing camera": {
+    "描述": "坐姿，双腿交叉，双手放腿上，面对镜头",
+    "关键词": "端正坐姿，手放膝，目光平视，适用于访谈、证件或正式照"
+  },
+  "sitting down, crossed legs, leaning forward": {
+    "描述": "坐姿，双腿交叉，身体前倾",
+    "关键词": "前倾姿态显专注或互动，适合对话、教学或亲密场景"
+  },
+  "sitting down, crossed legs, looking downward, one hand near neck": {
+    "描述": "坐姿，双腿交叉，看向下方，一手靠近颈部",
+    "关键词": "低头+手抚颈，传递害羞、沉思或脆弱情绪"
+  },
+  "sitting down, eyes closed, head slightly tilted, holding dress": {
+    "描述": "坐姿，闭眼，头部微倾，手持连衣裙",
+    "关键词": "闭眼放松，手捏裙摆，突出面料、情绪与女性柔美"
+  },
+  "sitting down, facing camera, one leg bent": {
+    "描述": "坐姿，面对镜头，一腿弯曲",
+    "关键词": "单腿屈起，打破对称，增添动态与随意感"
+  },
+  "sitting down, facing camera, slight smile": {
+    "描述": "坐姿，面对镜头，微微一笑",
+    "关键词": "最通用坐姿人像，适用于广告、社交、证件等"
+  },
+  "sitting down, facing camera, slight tilt": {
+    "描述": "坐姿，面对镜头，轻微倾斜",
+    "关键词": "坐姿中头或身微倾，避免呆板，更具亲和力"
+  },
+  "sitting down, facing camera, slightly tilted head": {
+    "描述": "坐姿，面对镜头，头部微倾",
+    "关键词": "同上，强调头部动作，突出面部轮廓"
+  },
+  "sitting down, hand in hair, looking sideways": {
+    "描述": "坐姿，手插头发，看向侧面",
+    "关键词": "坐姿撩发，视线偏移，营造若即若离的氛围感"
+  },
+  "sitting down, hand on head, legs bent, relaxed posture": {
+    "描述": "坐姿，手放头上，双腿弯曲，放松姿势",
+    "关键词": "双腿屈起，手置头顶，完全松弛，适合居家或休闲场景"
+  },
+  "sitting down, holding phone, legs crossed": {
+    "描述": "坐姿，手持手机，双腿交叉",
+    "关键词": "现代生活经典姿势，突出手机使用与优雅坐姿结合"
+  },
+  "sitting down, leaning back, smiling, leg crossed": {
+    "描述": "坐姿，后仰，微笑，双腿交叉",
+    "关键词": "倚靠椅背，微笑放松，双腿交叠，体现自信与舒适"
+  },
+  "sitting down, legs bent, hands on knee, relaxed demeanor": {
+    "描述": "坐姿，双腿弯曲，双手放膝，放松状态",
+    "关键词": "自然坐姿，手放膝，姿态稳定，适合访谈或日常"
+  },
+  "sitting down, legs crossed, left hand resting, right hand on thigh, direct gaze": {
+    "描述": "坐姿，双腿交叉，左手 resting，右手放大腿，直视",
+    "关键词": "手部不对称放置，目光坚定，具个性与表现力"
+  },
+  "sitting down, legs crossed, looking at phone": {
+    "描述": "坐姿，双腿交叉，看手机",
+    "关键词": "低头看手机，双腿交叠，现代生活真实写照"
+  },
+  "sitting down, one arm resting, head slightly tilted": {
+    "描述": "坐姿，一臂 resting，头部微倾",
+    "关键词": "单臂支撑，头微歪，姿态自然，适合半身肖像"
+  },
+  "sitting down, slightly leaned forward, direct gaze": {
+    "描述": "坐姿，轻微前倾，直视",
+    "关键词": "前倾显专注，目光锁定，适合表现认真或互动"
+  },
+  "sitting down, slightly leaning forward, facing camera": {
+    "描述": "坐姿，轻微前倾，面对镜头",
+    "关键词": "同上，强调面向镜头，适用于人像或产品展示"
+  },
+  "sitting down, touching hat, smiling": {
+    "描述": "坐姿，触碰帽子，微笑",
+    "关键词": "手扶帽檐，笑容灿烂，突出帽饰与愉悦情绪"
+  },
+  "sitting on bench, leaning forward, casually posed": {
+    "描述": "坐于长凳，身体前倾，随意摆姿",
+    "关键词": "街头或公园长凳坐姿，前倾随意，具生活感与叙事性"
+  },
+  "sitting on chair, legs crossed, leaning forward, holding drink, looking at camera": {
+    "描述": "坐于椅子，双腿交叉，身体前倾，手持饮料，看向镜头",
+    "关键词": "手持饮品，前倾坐姿，目光对视，适合生活方式或餐饮摄影"
+  },
+  "sitting on floor, looking at camera, one leg bent": {
+    "描述": "坐于地面，看向镜头，一腿弯曲",
+    "关键词": "地面坐姿，单腿屈起，姿态随性，适合青春、校园或居家场景"
+  },
+  "sitting pose, one hand on chin, legs crossed, head slightly tilted": {
+    "描述": "坐姿，一手托下巴，双腿交叉，头部微倾",
+    "关键词": "经典思考坐姿，兼具优雅与智慧感"
+  },
+  "sitting, arm raised, head tilted": {
+    "描述": "坐姿，手臂抬起，头部倾斜",
+    "关键词": "坐姿中单臂上举，头微歪，打破静态，具动感"
+  },
+  "sitting, arms raised, head tilted": {
+    "描述": "坐姿，双臂抬起，头部倾斜",
+    "关键词": "双臂上举，头微偏，表现自由、释放或互动"
+  },
+  "sitting, arms raised, looking at camera": {
+    "描述": "坐姿，双臂抬起，看向镜头",
+    "关键词": "坐姿高举双臂，目光对视，具庆祝或活力感"
+  },
+  "sitting, crossed legs, relaxed posture, hand on knee": {
+    "描述": "坐姿，双腿交叉，放松姿势，手放膝上",
+    "关键词": "优雅放松坐姿，适用于多数正式或休闲场景"
+  },
+  "sitting, facing away, relaxed posture": {
+    "描述": "坐姿，背对，放松姿势",
+    "关键词": "全背影坐姿，体现孤独、沉思或环境融入"
+  },
+  "sitting, hand gesture, legs crossed": {
+    "描述": "坐姿，手势，双腿交叉",
+    "关键词": "手部有特定动作（如比V、托腮），结合优雅坐姿，增强表现力"
+  },
+  "sitting, hand in hair, facing camera": {
+    "描述": "坐姿，手插头发，面对镜头",
+    "关键词": "坐姿撩发，正面构图，突出发型与眼神"
+  },
+  "sitting, hand on chin, crossed legs": {
+    "描述": "坐姿，手托下巴，双腿交叉",
+    "关键词": "思考者坐姿，体现专注、智慧或内省"
+  },
+  "sitting, hand on face, legs crossed, relaxed demeanor": {
+    "描述": "坐姿，手扶脸部，双腿交叉，放松状态",
+    "关键词": "手触面颊，双腿交叠，姿态柔美，适合女性人像"
+  },
+  "sitting, hand on head, legs crossed": {
+    "描述": "坐姿，手放头上，双腿交叉",
+    "关键词": "手置头顶，双腿优雅交叠，兼具俏皮与端庄"
+  },
+  "sitting, hands on thighs, direct gaze": {
+    "描述": "坐姿，双手放大腿，直视",
+    "关键词": "手放腿上，目光坚定，姿态稳定，适用于正式或权威形象"
+  },
+  "sitting, leaning slightly, smiling": {
+    "描述": "坐姿，轻微倚靠，微笑",
+    "关键词": "微笑+微倾，传递亲切、温暖或治愈感"
+  },
+  "sitting, legs bent, relaxed posture": {
+    "描述": "坐姿，双腿弯曲，放松姿势",
+    "关键词": "自然屈腿坐姿，无刻意摆拍，适合生活化场景"
+  },
+  "sitting, legs crossed, facing camera, relaxed posture": {
+    "描述": "坐姿，双腿交叉，面对镜头，放松姿势",
+    "关键词": "最通用优雅坐姿，适用于广告、人像、社交等"
+  },
+  "sitting, legs crossed, hands on knee": {
+    "描述": "坐姿，双腿交叉，双手放膝",
+    "关键词": "端正坐姿，手放膝，体现礼貌、专注或正式"
+  },
+  "sitting, one hand holding glass, crossed legs": {
+    "描述": "坐姿，一手持玻璃杯，双腿交叉",
+    "关键词": "手持饮品，双腿交叠，适合餐饮、生活方式或休闲场景"
+  },
+  "sitting, one knee raised, looking at camera": {
+    "描述": "坐姿，一膝抬起，看向镜头",
+    "关键词": "单膝屈起，手可扶膝，目光对视，具个性与表现力"
+  },
+  "sitting, one leg bent, one leg extended, leaning forward, arms resting": {
+    "描述": "坐姿，一腿弯曲，一腿伸展，身体前倾，手臂 resting",
+    "关键词": "双腿一屈一伸，前倾放松，适合自然、户外或休闲场景"
+  },
+  "sitting, one leg crossed, looking at camera, confident stance": {
+    "描述": "坐姿，一腿交叉，看向镜头，自信姿势",
+    "关键词": "交叉腿坐姿中保持上半身挺拔，目光自信，体现气场"
+  },
+  "sitting, one leg raised, engaged expression": {
+    "描述": "坐姿，一腿抬起，专注表情",
+    "关键词": "抬腿坐姿，表情生动，适合表现活力或互动"
+  },
+  "sitting, one leg raised, facing camera": {
+    "描述": "坐姿，一腿抬起，面对镜头",
+    "关键词": "单腿屈起朝向镜头，突出腿部线条与动态感"
+  },
+  "sitting, relaxed, facing camera": {
+    "描述": "坐姿，放松，面对镜头",
+    "关键词": "基础坐姿人像，适用于绝大多数场景"
+  },
+  "sitting, right leg bent, left arm raised": {
+    "描述": "坐姿，右腿弯曲，左臂抬起",
+    "关键词": "左右不对称姿态，打破呆板，增添动感与个性"
+  },
+  "sitting, smiling, relaxed posture": {
+    "描述": "坐姿，微笑，放松姿势",
+    "关键词": "微笑+放松坐姿，传递友好、亲切或愉悦情绪"
+  },
+  "smiling faces, direct gaze, group hug": {
+    "描述": "微笑面孔，直视，群体拥抱",
+    "关键词": "多人亲密拥抱，笑容灿烂，目光对视镜头，体现亲情、友情或团队凝聚力"
+  },
+  "smiling, facing camera, relaxed stance": {
+    "描述": "微笑，面对镜头，放松站姿",
+    "关键词": "站姿中自然微笑，无刻意摆拍，适合日常、社交或广告"
+  },
+  "smiling, hugging children, direct gaze": {
+    "描述": "微笑，拥抱孩子，直视",
+    "关键词": "成人与孩童亲密拥抱，笑容温暖，目光对视，体现亲子情感"
+  },
+  "smiling, peace sign, looking forward, head tilted": {
+    "描述": "微笑，比和平手势，目视前方，头部倾斜",
+    "关键词": "V字手势+歪头+微笑，经典日韩系可爱姿势，适用于旅行、自拍或青春题材"
+  },
+  "squatting position, hands in hair, eyes closed": {
+    "描述": "蹲姿，双手插进头发，闭眼",
+    "关键词": "蹲姿中双手插入发间，闭眼放松，传递疲惫、释放或冥想状态"
+  },
+  "squatting position, head tilt, one hand raised": {
+    "描述": "蹲姿，头部倾斜，一只手抬起",
+    "关键词": "蹲姿中单臂上举，头微歪，具动态与表现力"
+  },
+  "squatting position, left arm resting, right hand on waist": {
+    "描述": "蹲姿，左臂 resting，右手叉腰",
+    "关键词": "蹲姿中一手叉腰，一手支撑，突出腰线与平衡感"
+  },
+  "Standing pose, facing camera, slight tilt": {
+    "描述": "站姿，面对镜头，轻微倾斜",
+    "关键词": "身体或头微倾，打破正面呆板，更具亲和力与动感"
+  },
+  "Standing pose, one leg crossed, hand on hip, facing camera": {
+    "描述": "站姿，一腿交叉，手叉腰，面对镜头",
+    "关键词": "交叉腿站姿，一手叉腰，突出曲线与气场，经典时尚姿势"
+  },
+  "standing pose, hands on ledge, facing camera": {
+    "描述": "站姿，双手扶栏杆，面对镜头",
+    "关键词": "手扶窗台、栏杆等，站姿稳定，适合街拍、旅行或城市人像"
+  },
+  "standing pose, leaning on counter, one arm bent, looking at camera": {
+    "描述": "站姿，倚靠柜台，一臂弯曲，看向镜头",
+    "关键词": "倚靠吧台或柜台，单臂屈肘支撑，目光对视，适合餐饮、休闲或生活场景"
+  },
+  "standing pose, one hand raised, facing camera, hip jutted": {
+    "描述": "站姿，一只手抬起，面对镜头，臀部突出",
+    "关键词": "抬手+叉腰或挺胯，突出身体S曲线，具时尚感与表现力"
+  },
+  "standing pose, slightly bent arm, hand touching hair, hip tilted, confident stance, half-turned towards camera, relaxed facial expression": {
+    "描述": "站姿，手臂微弯，手触头发，臀部倾斜，自信站姿，半转身朝向镜头，面部表情放松",
+    "关键词": "全身姿态协调：半转身、手撩发、臀部外推、表情自然，兼具曲线美、自信与松弛感，高级人像经典姿势"
+  },
+  "Standing straight, hands on hips, facing camera": {
+    "描述": "站姿笔直，双手叉腰，面对镜头",
+    "关键词": "最经典力量姿势，体现自信、气场与掌控感"
+  },
+  "Standing straight, hands on hips, slight smile, looking forward": {
+    "描述": "站姿笔直，双手叉腰，微微一笑，目视前方",
+    "关键词": "叉腰+微笑，刚柔并济，适用于广告、时尚或女性力量主题"
+  },
+  "Standing straight, slight smile, looking at camera": {
+    "描述": "站姿笔直，微微一笑，看向镜头",
+    "关键词": "最基础友好站姿，适用于证件、宣传、社交等"
+  },
+  "standing straight, facing camera, hands on hips": {
+    "描述": "站姿笔直，面对镜头，双手叉腰",
+    "关键词": "同上，强调叉腰动作，突出气场"
+  },
+  "standing straight, facing camera, holding phone": {
+    "描述": "站姿笔直，面对镜头，手持手机",
+    "关键词": "现代生活标准姿势，突出手机使用与直视镜头的互动感"
+  },
+  "standing straight, facing camera, leaf in hand": {
+    "描述": "站姿笔直，面对镜头，手持树叶",
+    "关键词": "手持自然物（如叶、花），站姿端正，适合森系、文艺或环保主题"
+  },
+  "standing straight, hand in hair, slight body turn": {
+    "描述": "站姿笔直，手插头发，身体轻微转动",
+    "关键词": "手撩发+微转身，打破正面呆板，突出发型与轮廓"
+  },
+  "standing straight, hand on hip, head slightly tilted": {
+    "描述": "站姿笔直，手叉腰，头部微倾",
+    "关键词": "叉腰+歪头，自信中带俏皮，适合时尚或广告"
+  },
+  "standing straight, hand on hip, looking at camera": {
+    "描述": "站姿笔直，手叉腰，看向镜头",
+    "关键词": "经典叉腰注视，具力量感与互动性"
+  },
+  "standing straight, hand on hip, slight bend in right knee, head tilted": {
+    "描述": "站姿笔直，手叉腰，右膝微弯，头部倾斜",
+    "关键词": "膝微屈打破僵硬，头歪手叉腰，兼具曲线与松弛"
+  },
+  "standing straight, hand on hip, slight smile, head tilted": {
+    "描述": "站姿笔直，手叉腰，微微一笑，头部倾斜",
+    "关键词": "叉腰+微笑+歪头，三位一体女性经典姿势"
+  },
+  "standing straight, hands by side, direct gaze": {
+    "描述": "站姿笔直，双手下垂，直视",
+    "关键词": "最简洁站姿，适用于证件、正式或极简风格"
+  },
+  "standing straight, hands clasping bag, weight on right leg, smiling": {
+    "描述": "站姿笔直，双手握包，重心在右腿，微笑",
+    "关键词": "手持包袋，重心偏移，微笑自然，适合街拍或生活方式"
+  },
+  "standing straight, hands near face, facing camera": {
+    "描述": "站姿笔直，双手靠近脸部，面对镜头",
+    "关键词": "手部动作（如托腮、比心）靠近面部，突出表情与互动"
+  },
+  "standing straight, hands on hips, direct gaze": {
+    "描述": "站姿笔直，双手叉腰，直视",
+    "关键词": "力量感最强姿势，适用于表现自信、权威或时尚"
+  },
+  "standing straight, hands on hips, facing camera": {
+    "描述": "站姿笔直，双手叉腰，面对镜头",
+    "关键词": "同上，强调面向镜头，适用于广告或宣传"
+  },
+  "standing straight, hands on hips, head slightly tilted": {
+    "描述": "站姿笔直，双手叉腰，头部微倾",
+    "关键词": "叉腰+歪头，刚柔并济，适合女性人像"
+  },
+  "standing straight, hands on hips, looking at camera": {
+    "描述": "站姿笔直，双手叉腰，看向镜头",
+    "关键词": "经典互动姿势，具气场与表现力"
+  },
+  "standing straight, hands on hips, slight smile": {
+    "描述": "站姿笔直，双手叉腰，微微一笑",
+    "关键词": "自信+亲和，适用于广告、KOL或品牌代言"
+  },
+  "standing straight, hands on hips, smiling, facing camera": {
+    "描述": "站姿笔直，双手叉腰，微笑，面对镜头",
+    "关键词": "叉腰微笑正面照，传递积极、自信、开放形象"
+  },
+  "standing straight, hands on pads, confident stance": {
+    "描述": "站姿笔直，双手扶护具，自信站姿",
+    "关键词": "手扶运动护具（如守门员垫），站姿稳定，适合体育或专业场景"
+  },
+  "standing straight, hands on pads, front-facing": {
+    "描述": "站姿笔直，双手扶护具，正面朝向",
+    "关键词": "同上，强调正面构图，突出装备与姿态"
+  },
+  "standing straight, hands on shorts, slightly tilted head": {
+    "描述": "站姿笔直，双手放短裤上，头部微倾",
+    "关键词": "手扶裤腰，头微歪，姿态随性，适合运动、休闲或夏日场景"
+  },
+  "standing straight, hands relaxed, confident stance": {
+    "描述": "站姿笔直，双手放松，自信站姿",
+    "关键词": "手自然下垂，姿态开放自信，适用于正式或极简风格"
+  },
+  "standing straight, hands relaxed, facing camera": {
+    "描述": "站姿笔直，双手放松，面对镜头",
+    "关键词": "基础站姿，适用于证件、日常或低干预摄影"
+  },
+  "standing straight, hands resting, slight smile": {
+    "描述": "站姿笔直，双手 resting，微微一笑",
+    "关键词": "手自然放置，微笑含蓄，适合亲和力人像"
+  },
+  "standing straight, hands together, relaxed posture": {
+    "描述": "站姿笔直，双手合放，放松姿势",
+    "关键词": "双手交叠于身前，姿态礼貌松弛，适用于服务、接待或温和形象"
+  }
+}

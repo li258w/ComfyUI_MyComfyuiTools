@@ -1,0 +1,1742 @@
+{
+  "aboard a sprawling interstellar spaceship": {
+    "描述": "在一艘庞大的星际飞船上",
+    "关键词": "内部为金属走廊、全息界面、悬浮控制台与舷窗外星云，充满未来科技感与浩瀚宇宙氛围"
+  },
+  "at a black market cybernetics clinic": {
+    "描述": "在黑市义体诊所",
+    "关键词": "昏暗地下室，闪烁的手术灯、散落的机械义肢、血迹斑斑的操作台，赛博朋克地下感强烈"
+  },
+  "at a bustling galactic trade hub": {
+    "描述": "在繁忙的银河贸易中心",
+    "关键词": "多层空中走道、全息广告、外星种族穿梭、悬浮货柜，融合未来集市与太空港的喧嚣场景"
+  },
+  "at a cafe": {
+    "描述": "在咖啡馆",
+    "关键词": "木质桌椅、咖啡机蒸汽、暖光吊灯、窗外街景，营造温馨、文艺或都市休闲氛围"
+  },
+  "at a clandestine hacker's hideout": {
+    "描述": "在黑客秘密据点",
+    "关键词": "昏暗房间布满多屏显示器、闪烁代码、电路板散落、窗帘紧闭，充满数字阴谋与紧张感"
+  },
+  "at a concert": {
+    "描述": "在音乐会",
+    "关键词": "舞台灯光炫目、人群模糊、烟雾弥漫、主唱剪影，强调动态与音乐能量"
+  },
+  "at a festival": {
+    "描述": "在节日现场",
+    "关键词": "彩旗、灯笼、人群欢庆、小吃摊位、表演舞台，色彩丰富、充满活力与文化气息"
+  },
+  "at a futuristic AI-controlled mega-city": {
+    "描述": "在未来AI控制的超级城市",
+    "关键词": "高耸玻璃建筑、自动驾驶车辆、空中步行道、全息投影广告，秩序井然而冰冷"
+  },
+  "at a gym": {
+    "描述": "在健身房",
+    "关键词": "镜墙、器械排列、汗水反光、自然光从高窗洒入，突出力量与运动感"
+  },
+  "at a hotel": {
+    "描述": "在酒店",
+    "关键词": "大堂水晶吊灯、沙发区、前台、行李箱，或房间内床铺整洁、窗外城市景观"
+  },
+  "at a museum": {
+    "描述": "在博物馆",
+    "关键词": "高挑空间、聚光灯照射展品、大理石地面、人群静默，强调历史感与文化氛围"
+  },
+  "at a party": {
+    "描述": "在派对",
+    "关键词": "彩灯闪烁、酒杯交错、模糊人群、气球与装饰，营造欢乐、亲密或夜店氛围"
+  },
+  "at home": {
+    "描述": "在家",
+    "关键词": "客厅沙发、暖光台灯、书架、窗外自然光，体现舒适、私密与生活气息"
+  },
+  "at night": {
+    "描述": "在夜晚",
+    "关键词": "深蓝或黑色天空、城市灯光或月光照明、长阴影、氛围静谧或神秘"
+  },
+  "at the beach": {
+    "描述": "在海滩",
+    "关键词": "金色沙滩、海浪轻拍、椰子树、日光伞，明亮清新，适合度假或浪漫场景"
+  },
+  "at the lake": {
+    "描述": "在湖边",
+    "关键词": "平静湖面、倒影清晰、木栈道、芦苇丛，宁静自然，适合沉思或写生"
+  },
+  "at the ocean": {
+    "描述": "在海洋",
+    "关键词": "无边海面、深蓝波涛、远处地平线，强调开阔、孤独或冒险感"
+  },
+  "at the river": {
+    "描述": "在河边",
+    "关键词": "流水潺潺、石岸、垂柳、小桥，清新自然，具田园或诗意氛围"
+  },
+  "at the sea": {
+    "描述": "在大海",
+    "关键词": "海岸线、礁石、浪花飞溅、海鸥盘旋，比“海洋”更强调岸边动态与壮阔"
+  },
+  "at the waterfall": {
+    "描述": "在瀑布旁",
+    "关键词": "飞流直下、水雾弥漫、岩石湿润、绿苔覆盖，充满自然能量与清凉感"
+  },
+  "at work": {
+    "描述": "在工作场所",
+    "关键词": "办公桌、电脑、文件、同事模糊背景，体现专业、忙碌或日常职场氛围"
+  },
+  "beside a shimmering fairy pond": {
+    "描述": "在闪烁的精灵池塘旁",
+    "关键词": "水面泛银光、萤火虫飞舞、发光蘑菇、薄雾缭绕，童话般梦幻场景"
+  },
+  "in a castle in the clouds": {
+    "描述": "在云中的城堡",
+    "关键词": "白色石堡悬浮于云海之上，阳光穿透云层，仙气飘渺，如神话或梦境"
+  },
+  "in a crystal cavern": {
+    "描述": "在水晶洞穴",
+    "关键词": "洞壁布满紫色、蓝色或透明水晶簇，光线折射出奇幻色彩，幽深神秘"
+  },
+  "in a cyberpunk city": {
+    "描述": "在赛博朋克城市",
+    "关键词": "霓虹招牌、雨水街道、全息广告、东亚文字、行人稀少，潮湿而高压的未来都市"
+  },
+  "in a digital data fortress": {
+    "描述": "在数字数据堡垒",
+    "关键词": "由代码、防火墙、几何屏障构成的虚拟空间，冷色调、流光数据流，抽象而安全"
+  },
+  "in a dreamlike world": {
+    "描述": "在梦幻世界",
+    "关键词": "不合逻辑的比例、漂浮物体、柔焦光线、超现实色彩，如梦境般虚幻"
+  },
+  "in a fantasy world": {
+    "描述": "在奇幻世界",
+    "关键词": "魔法森林、龙、城堡、巫师塔，融合中世纪与魔法元素，适合史诗叙事"
+  },
+  "in a floating island in the sky": {
+    "描述": "在空中的漂浮岛屿",
+    "关键词": "岛屿边缘瀑布倾泻入云海，植被茂盛，木质小屋，天空湛蓝，充满想象力"
+  },
+  "in a grand castle": {
+    "描述": "在宏伟的城堡",
+    "关键词": "高耸石墙、彩绘玻璃窗、长廊、盔甲陈列，体现王权、历史与庄严"
+  },
+  "in a hidden city": {
+    "描述": "在隐秘的城市",
+    "关键词": "藏于山谷、沙漠或森林中，建筑风格独特，与自然融为一体，神秘而自足"
+  },
+  "in a hidden oasis": {
+    "描述": "在隐秘的绿洲",
+    "关键词": "沙漠中清澈水塘、棕榈树、帐篷，绿意盎然，象征希望与休憩"
+  },
+  "in a hidden paradise": {
+    "描述": "在隐秘的天堂",
+    "关键词": "人迹罕至的热带海滩、瀑布、清澈泻湖，极致宁静与原始自然之美"
+  },
+  "in a hidden valley": {
+    "描述": "在隐秘的山谷",
+    "关键词": "群山环绕、溪流穿行、野花遍地、薄雾缭绕，世外桃源般的静谧"
+  },
+  "in a high-tech orbital station": {
+    "描述": "在高科技轨道站",
+    "关键词": "环形结构、舷窗外地球、零重力实验室、金属与玻璃材质，未来太空感"
+  },
+  "in a lab": {
+    "描述": "在实验室",
+    "关键词": "试管、显微镜、荧光液体、白大褂，冷光照明，突出科学与精密感"
+  },
+  "in a labyrinth": {
+    "描述": "在迷宫",
+    "关键词": "高墙曲折、光影交错、路径复杂，营造迷失、探索或心理隐喻氛围"
+  },
+  "in a lost temple": {
+    "描述": "在失落的神庙",
+    "关键词": "藤蔓覆盖、石像残破、祭坛、神秘符号，热带雨林中的古老遗迹"
+  },
+  "in a magical vortex": {
+    "描述": "在魔法漩涡中",
+    "关键词": "彩色能量流旋转、空间扭曲、粒子飞舞，超自然力量中心"
+  },
+  "in a mystical island": {
+    "描述": "在神秘岛屿",
+    "关键词": "常有雾气、奇异生物、发光植物，文化传说浓厚，如亚特兰蒂斯或蓬莱"
+  },
+  "in a mystical land": {
+    "描述": "在神秘之地",
+    "关键词": "地貌奇异、光线异常、古老遗迹，充满未知与魔法能量"
+  },
+  "in a neon-lit city": {
+    "描述": "在霓虹灯城市",
+    "关键词": "夜晚街道被粉、蓝、紫霓虹照亮，招牌林立，湿润反光，赛博感强"
+  },
+  "in a quantum singularity": {
+    "描述": "在量子奇点中",
+    "关键词": "空间撕裂、时间碎片、抽象几何结构，科幻极致抽象场景"
+  },
+  "in a rain-soaked metropolis": {
+    "描述": "在雨水浸润的大都市",
+    "关键词": "湿滑街道、车灯拉丝、行人撑伞、建筑倒影，忧郁而诗意的都市夜景"
+  },
+  "in a secret garden": {
+    "描述": "在秘密花园",
+    "关键词": "高墙围合、玫瑰盛开、石径蜿蜒、喷泉低语，私密而浪漫"
+  },
+  "in a secret underground city": {
+    "描述": "在秘密地下城",
+    "关键词": "岩洞城市、人工光源、阶梯环绕、市集喧闹，文明藏于地底"
+  },
+  "in a terraformed colony": {
+    "描述": "在地貌改造的殖民地",
+    "关键词": "外星地表有人工大气、绿植、穹顶建筑，科技与自然共存的未来殖民地"
+  },
+  "in a underwater kingdom": {
+    "描述": "在水下王国",
+    "关键词": "珊瑚宫殿、发光水母、美人鱼、气泡上升，蔚蓝梦幻的海洋文明"
+  },
+  "in a virtual reality": {
+    "描述": "在虚拟现实中",
+    "关键词": "像素化边界、数据线缠绕、界面浮动，数字与现实交融的抽象空间"
+  },
+  "in an ancient enchanted forest": {
+    "描述": "在古老的魔法森林",
+    "关键词": "巨树参天、发光苔藓、精灵踪迹、薄雾笼罩，神秘而生机勃勃"
+  },
+  "in an underground world": {
+    "描述": "在地下世界",
+    "关键词": "巨型洞穴、地下河、发光矿物、奇异生态，黑暗而壮丽"
+  },
+  "indoor": {
+    "描述": "室内",
+    "关键词": "封闭空间，人工或自然光照，可包含家居、商业或工业环境，强调内景氛围"
+  },
+  "on a distant planet": {
+    "描述": "在遥远的星球上",
+    "关键词": "异星地表、双月、奇异植物、地平线有飞船，突出外星环境与孤独感"
+  },
+  "on a floating island": {
+    "描述": "在漂浮岛屿上",
+    "关键词": "立足岛屿表面，脚下云海翻涌，四周无陆地，自由与危险并存"
+  },
+  "outdoor": {
+    "描述": "室外",
+    "关键词": "开放空间，自然光照，包含自然或城市外景，强调天空、远景与环境互动"
+  },
+  "studio": {
+    "描述": "摄影棚/工作室",
+    "关键词": "纯色背景（白/灰/蓝）、柔光灯、反光板，无干扰，突出主体"
+  },
+  "suburbs": {
+    "描述": "郊区",
+    "关键词": "独栋住宅、草坪、街道安静、远处高楼，宁静而中产的生活氛围"
+  },
+  "within a biomechanical hive": {
+    "描述": "在生物机械蜂巢内",
+    "关键词": "有机与机械融合的腔室、脉动血管、金属节肢，科幻恐怖风格"
+  },
+  "within a digital utopia": {
+    "描述": "在数字乌托邦内",
+    "关键词": "完美秩序、和谐色彩、无冲突界面、流畅交互，理想化虚拟世界"
+  },
+  "within the virtual realms": {
+    "描述": "在虚拟领域内",
+    "关键词": "抽象数字空间、流动代码、悬浮平台，超越物理规则的网络世界"
+  },
+  "arched structure, blurred foliage, outdoor setting": {
+    "描述": "拱形结构，模糊植被，户外环境",
+    "关键词": "石拱门或廊架前景，后方绿意朦胧，自然与建筑结合，柔焦诗意"
+  },
+  "autumn leaves, picnic setting, carved pumpkins, basket, wine bottle, scattered fruits, woodland scenery": {
+    "描述": "秋叶，野餐场景，雕刻南瓜，篮子，酒瓶，散落水果，林地景观",
+    "关键词": "金红落叶铺地，野餐布上南瓜、水果、酒瓶，温暖秋日家庭聚会氛围"
+  },
+  "autumn leaves, wooded path, blurry foliage, natural setting": {
+    "描述": "秋叶，林间小径，模糊植被，自然环境",
+    "关键词": "小径蜿蜒于红黄树林，远景虚化，阳光斑驳，宁静秋日氛围"
+  },
+  "balcony setting, urban skyline, daytime, green box with letters": {
+    "描述": "阳台场景，城市天际线，白天，带字母的绿色箱子",
+    "关键词": "现代阳台，绿植箱上有文字，远处高楼林立，都市生活一隅"
+  },
+  "balcony setting, water view, boats docked, cloudy sky": {
+    "描述": "阳台场景，水景，停泊船只，多云天空",
+    "关键词": "阳台俯瞰港口，船只静泊，灰蓝天色，宁静海港氛围"
+  },
+  "beach scenery, cloudy sky, sunset lighting, vegetation": {
+    "描述": "海滩景色，多云天空，日落光照，植被",
+    "关键词": "云层透出金光，海面泛红，岸边棕榈剪影，浪漫而柔和"
+  },
+  "beach setting, evening sky, soft focus, ocean horizon, other person blurred": {
+    "描述": "海滩场景，傍晚天空，柔焦，海平线，其他人物模糊",
+    "关键词": "主角清晰，背景人物与海天柔化，强调孤独、沉思或电影感"
+  },
+  "beach view, cloudy sky, calm sea, outdoor setting, blurred horizon": {
+    "描述": "海滩视野，多云天空，平静海面，户外环境，模糊地平线",
+    "关键词": "灰蓝海天交融，海面如镜，氛围静谧忧郁"
+  },
+  "beige walls, outdoor setting, architectural features": {
+    "描述": "米色墙壁，户外环境，建筑特征",
+    "关键词": "现代或地中海风格建筑，米墙简洁，强调几何线条与光影"
+  },
+  "black door, white wall, outdoor lighting, architectural details": {
+    "描述": "黑色门，白墙，户外照明，建筑细节",
+    "关键词": "极简主义门廊，黑白对比强烈，夜间或黄昏灯光突出结构"
+  },
+  "blossoming branches, blurred background, warm tones": {
+    "描述": "盛开的树枝，模糊背景，暖色调",
+    "关键词": "樱花或桃花前景，背景虚化，粉白花朵与柔光，春日柔美"
+  },
+  "blue gradient, studio setting, no visible objects": {
+    "描述": "蓝色渐变，摄影棚环境，无可见物体",
+    "关键词": "纯色蓝渐变背景，无缝接地板，适合产品或人像抠图"
+  },
+  "blue sky, calm sea, boat deck": {
+    "描述": "蓝天，平静海面，船甲板",
+    "关键词": "甲板木纹清晰，海天湛蓝，阳光明媚，游艇休闲场景"
+  },
+  "blue sky, coastal scenery, sparse vegetation, gravel ground": {
+    "描述": "蓝天，海岸景色，稀疏植被，碎石地面",
+    "关键词": "地中海或悬崖海岸，砾石滩、低矮灌木，干净利落的自然景观"
+  },
+  "blue sky, ocean view, yacht in distance, seated pose": {
+    "描述": "蓝天，海景，远处游艇，坐姿",
+    "关键词": "前景人物坐于甲板或岸边，远处白 yacht，开阔海景"
+  },
+  "blue sky, palm trees, sunny day, outdoor setting": {
+    "描述": "蓝天，棕榈树，晴天，户外环境",
+    "关键词": "热带度假经典场景，阳光强烈，棕榈摇曳，色彩明快"
+  },
+  "blurred indoors, muted colors, window visible": {
+    "描述": "模糊室内，低饱和色彩，可见窗户",
+    "关键词": "室内陈设虚化，窗框清晰，光线从外透入，营造窥视或回忆感"
+  },
+  "blurred indoors, warm tones, indistinct shapes": {
+    "描述": "模糊室内，暖色调，形状不清晰",
+    "关键词": "烛光或黄昏室内，物体轮廓柔和，强调氛围而非细节"
+  },
+  "blurred interior, neutral tones, soft lighting": {
+    "描述": "模糊内景，中性色调，柔光",
+    "关键词": "现代家居虚化背景，灰白米色系，光线均匀，适合人像衬托"
+  },
+  "blurred setting, neutral colors, outdoor environment": {
+    "描述": "模糊环境，中性色彩，户外环境",
+    "关键词": "城市或自然远景虚化，色调克制，突出前景主体"
+  },
+  "blurred shelves, indoor setting, warm tones": {
+    "描述": "模糊书架，室内环境，暖色调",
+    "关键词": "书架作为背景虚化，暖光营造温馨、知性氛围"
+  },
+  "bokeh effect, indoor setting, blurred details": {
+    "描述": "散景效果，室内环境，细节模糊",
+    "关键词": "大光圈虚化背景，仅留光斑与色块，营造梦幻或私密感"
+  },
+  "boxing gym, hanging punching bags, scattered newspapers, weight plates": {
+    "描述": "拳击馆，悬挂沙袋，散落报纸，杠铃片",
+    "关键词": "水泥地、镜墙、汗味氛围，体现训练强度与硬核风格"
+  },
+  "bright interior, white walls, open doorways, tiled floor, minimal decor": {
+    "描述": "明亮室内，白墙，开放式门道，瓷砖地板，极简装饰",
+    "关键词": "现代极简住宅，光线充足，空间通透，北欧或日式风格"
+  },
+  "bright room, curtain-draped window, reflected in mirror, soft shadows": {
+    "描述": "明亮房间，窗帘窗，镜中反射，柔和阴影",
+    "关键词": "自然光透过纱帘，镜面延伸空间，静谧优雅"
+  },
+  "bright room, modern furniture, large window": {
+    "描述": "明亮房间，现代家具，大窗户",
+    "关键词": "落地窗引入景观，家具线条简洁，都市生活感"
+  },
+  "car interior, blurred movement, sunlit ambiance": {
+    "描述": "车内，模糊动感，阳光氛围",
+    "关键词": "透过车窗拍摄，背景流动模糊，阳光洒在座椅，旅途感"
+  },
+  "car interior, black leather seats, red stitching, parking garage": {
+    "描述": "车内，黑色皮革座椅，红色缝线，停车场",
+    "关键词": "豪华运动车型，红黑对比，冷光车库环境"
+  },
+  "car interior, daylight, building exterior, reflective window": {
+    "描述": "车内，日光，建筑外观，反光车窗",
+    "关键词": "车窗映出街景，车内细节清晰，城市通勤瞬间"
+  },
+  "car interior, nighttime, blurred lights": {
+    "描述": "车内，夜晚，模糊灯光",
+    "关键词": "车外霓虹或街灯拉丝，车内仪表盘微光，夜行氛围"
+  },
+  "casino setting, slot machines, ambient lighting, blurred background": {
+    "描述": "赌场场景，老虎机，环境照明，模糊背景",
+    "关键词": "彩灯闪烁、金币声效、人群模糊，突出诱惑与风险"
+  },
+  "city lights, blurred background, nighttime, wooden railing, dark ambiance": {
+    "描述": "城市灯光，模糊背景，夜晚，木栏杆，暗调氛围",
+    "关键词": "阳台或露台视角，城市夜景虚化，栏杆前景，孤独或浪漫"
+  },
+  "city lights, bokeh effect, nighttime, wooden surface": {
+    "描述": "城市灯光，散景效果，夜晚，木质表面",
+    "关键词": "桌面或栏杆为前景，背景光斑如星，夜都市梦幻感"
+  },
+  "city skyline, glass window, modern furniture": {
+    "描述": "城市天际线，玻璃窗，现代家具",
+    "关键词": "高层公寓内，窗外摩天楼林立，室内简洁，都市精英生活"
+  },
+  "city skyline, large windows, indoor setting, sunset lighting, high-rise view": {
+    "描述": "城市天际线，大窗户，室内环境，日落光照，高层视野",
+    "关键词": "夕阳染红云层，玻璃幕墙反射金光，室内剪影，电影感强烈"
+  },
+  "city skyline, water, daytime": {
+    "描述": "城市天际线，水面，白天",
+    "关键词": "海滨城市，建筑倒映水中，日光明亮，现代感"
+  },
+  "city skyline, water, daytime, clear skies": {
+    "描述": "城市天际线，水面，白天，晴朗天空",
+    "关键词": "同上，强调天空湛蓝、水面清澈，画面干净开阔"
+  },
+  "city street, cobblestone pavement, street staircase, colorful buildings, overcast sky, European architecture, daylight setting": {
+    "描述": "城市街道，鹅卵石路面，街梯，彩色建筑，阴天，欧式建筑，日间场景",
+    "关键词": "南欧小镇，阶梯蜿蜒，阳台鲜花，阴天柔和光线"
+  },
+  "city street, evening lighting, shopfront windows, parked cars": {
+    "描述": "城市街道，夜晚照明，商店橱窗，停放车辆",
+    "关键词": "暖黄路灯、橱窗亮灯、车灯拉丝，都市夜晚生活气息"
+  },
+  "city street, stone balustrade, cloudy sky, walking people, fluttering flags": {
+    "描述": "城市街道，石栏杆，多云天空，行人，飘扬旗帜",
+    "关键词": "广场或河岸街道，旗帜色彩点缀灰蓝天色，动态生活场景"
+  },
+  "clear blue sky, lush green plants, sunlit ambiance": {
+    "描述": "晴朗蓝天，茂密绿植，阳光氛围",
+    "关键词": "高饱和绿色，强烈阳光，夏日生机勃勃"
+  },
+  "clear sky, coastal view, architectural features": {
+    "描述": "晴朗天空，海岸景观，建筑特征",
+    "关键词": "白色建筑临海而建，蓝白对比，地中海风格"
+  },
+  "clear sky, coastal view, lush landscape, outdoor setting": {
+    "描述": "晴朗天空，海岸景观，茂密景观，户外环境",
+    "关键词": "海崖绿植繁茂，视野开阔，度假胜地"
+  },
+  "cloudy sky, historical monument, bustling plaza, street lamps": {
+    "描述": "多云天空，历史纪念碑，热闹广场，路灯",
+    "关键词": "欧洲古城广场，石雕纪念碑，人群聚集，阴天历史感"
+  },
+  "colored balls, white floor, minimalistic architecture": {
+    "描述": "彩色球，白色地板，极简建筑",
+    "关键词": "儿童空间或艺术装置，纯白环境，色球点缀，活泼抽象"
+  },
+  "concrete stairs, outdoor setting, sunlit, shadowed areas": {
+    "描述": "混凝土楼梯，户外环境，阳光照射，阴影区域",
+    "关键词": "工业风楼梯，光影对比强烈，几何结构感"
+  },
+  "concrete structure, shadow patterns, sunlit area": {
+    "描述": "混凝土结构，阴影图案，阳光区域",
+    "关键词": "建筑表皮因开孔形成光影，现代主义美学"
+  },
+  "concrete structure, underpass, soft shadows, daylight": {
+    "描述": "混凝土结构，地下通道，柔和阴影，日光",
+    "关键词": "桥下或隧道入口，安全但略带压抑，城市边缘感"
+  },
+  "dark backdrop, blue accents, subtle texture, illuminated base": {
+    "描述": "深色背景，蓝色点缀，细微纹理，发光底座",
+    "关键词": "产品展示或舞台设计，神秘而科技感"
+  },
+  "dark room, black and white wall art, contrast lighting, minimalistic decor": {
+    "描述": "暗室，黑白墙艺，对比照明，极简装饰",
+    "关键词": "画廊或现代家居，灯光聚焦艺术品，低调奢华"
+  },
+  "dark room, graphic door sign, purple wall accents, pink lighting effect": {
+    "描述": "暗室，图形门牌，紫色墙面点缀，粉色灯光效果",
+    "关键词": "夜店、实验室或科幻场景，霓虹感强烈"
+  },
+  "desert landscape, clear skies, distant camel": {
+    "描述": "沙漠景观，晴朗天空，远处骆驼",
+    "关键词": "沙丘连绵，蓝天无云，孤驼剪影，苍凉壮美"
+  },
+  "desert terrain, clear sky, ATV vehicle": {
+    "描述": "沙漠地形，晴朗天空，全地形车",
+    "关键词": "越野车扬沙而行，动感十足，冒险主题"
+  },
+  "dim lighting, indoor setting, blurred plants, warm tones": {
+    "描述": "昏暗照明，室内环境，模糊植物，暖色调",
+    "关键词": "酒吧、餐厅或卧室，温馨私密氛围"
+  },
+  "dimly lit room, blurred decor, warm tones, ambient lighting": {
+    "描述": "昏暗房间，模糊装饰，暖色调，环境照明",
+    "关键词": "同上，强调氛围光而非主光源"
+  },
+  "event backdrop, logo patterns, green carpet": {
+    "描述": "活动背景，logo图案，绿毯",
+    "关键词": "发布会或展会，品牌视觉突出，专业活动场景"
+  },
+  "evening sky, blurred greenery, distant water view": {
+    "描述": "傍晚天空，模糊绿植，远处水景",
+    "关键词": "湖边或河边黄昏，色彩渐变，宁静致远"
+  },
+  "floral surroundings, blurred greens, natural setting": {
+    "描述": "花卉环境，模糊绿意，自然环境",
+    "关键词": "花丛前景，背景虚化，柔美自然"
+  },
+  "fruit stand, hanging bananas, assorted fruits, daylight, outdoor market": {
+    "描述": "水果摊，悬挂香蕉，各类水果，日光，户外市场",
+    "关键词": "色彩鲜艳，生活气息浓厚，市井烟火气"
+  },
+  "fuzzy pink blanket, blue-green tinted background, smartphone present, indoors, comfortable setting": {
+    "描述": "毛绒粉毯，蓝绿色调背景，智能手机，室内，舒适环境",
+    "关键词": "居家休闲场景，慵懒放松，现代生活细节"
+  },
+  "garage setting, parked car, concrete floor": {
+    "描述": "车库场景，停放车辆，混凝土地板",
+    "关键词": "家庭或修车车库，工具架、轮胎，实用主义"
+  },
+  "gas station pumps, red bricks building, clear sky, daytime": {
+    "描述": "加油站油泵，红砖建筑，晴朗天空，白天",
+    "关键词": "公路旅行经典场景，美式怀旧风"
+  },
+  "geometric tiles, circular mirror, bright lighting, hexagonal patterns": {
+    "描述": "几何瓷砖，圆形镜子，明亮照明，六边形图案",
+    "关键词": "现代浴室或更衣室，设计感强，反射空间"
+  },
+  "glass door, indoor setting, patterned rug, hardwood floors": {
+    "描述": "玻璃门，室内环境，图案地毯，硬木地板",
+    "关键词": "现代住宅入口，通透与温暖材质结合"
+  },
+  "glass door, reflection visible, outdoor setting, plants, overcast sky": {
+    "描述": "玻璃门，可见反射，户外环境，植物，阴天",
+    "关键词": "门面反射绿植，光影柔和，室内外交融"
+  },
+  "glass doors, tropical trees, clear sky, outdoor setting": {
+    "描述": "玻璃门，热带树木，晴朗天空，户外环境",
+    "关键词": "度假别墅，室内外无缝连接，明亮通透"
+  },
+  "glass reflection, blurred greenery, outdoor setting": {
+    "描述": "玻璃反射，模糊绿植，户外环境",
+    "关键词": "建筑玻璃幕墙映出树木，抽象而现代"
+  },
+  "graffiti on door, urban setting, dark tones, metallic door handle": {
+    "描述": "门上涂鸦，城市环境，暗色调，金属门把手",
+    "关键词": "街头文化，叛逆与艺术结合，都市边缘感"
+  },
+  "grassy field, urban skyline, overcast sky": {
+    "描述": "草地，城市天际线，阴天",
+    "关键词": "城市公园，远眺高楼，自然与都市对比"
+  },
+  "green curtains, window blinds, indoor setting, golden hour light": {
+    "描述": "绿色窗帘，百叶窗，室内环境，黄金时刻光线",
+    "关键词": "暖光透入，绿调柔化，私密温馨"
+  },
+  "green field, wooden fence, grazing horse, trees, dusk sky": {
+    "描述": "绿地，木栅栏，吃草马，树木，黄昏天空",
+    "关键词": "田园牧歌，宁静乡村傍晚"
+  },
+  "green foliage, blurred foliage, natural setting": {
+    "描述": "绿植，模糊植被，自然环境",
+    "关键词": "森林或公园，前景清晰，背景虚化，层次丰富"
+  },
+  "green foliage, blurred leaves, natural setting": {
+    "描述": "绿植，模糊树叶，自然环境",
+    "关键词": "同上，强调叶片细节与虚化对比"
+  },
+  "green foliage, blurred plants, sunny day": {
+    "描述": "绿植，模糊植物，晴天",
+    "关键词": "阳光穿透树叶，光斑闪烁，夏日生机"
+  },
+  "green foliage, residential area, sunny day, clear sky": {
+    "描述": "绿植，住宅区，晴天，晴朗天空",
+    "关键词": "社区花园，生活化自然场景"
+  },
+  "green hedge, clear sky, outdoor setting, daytime, concrete path": {
+    "描述": "绿篱，晴朗天空，户外环境，白天，混凝土小径",
+    "关键词": "规整园林，路径引导视线，干净利落"
+  },
+  "green hedge, evenly lit, shadow on ground, outdoor setting": {
+    "描述": "绿篱，均匀照明，地面阴影，户外环境",
+    "关键词": "正午阳光，几何阴影，强调秩序感"
+  },
+  "green trees, sunlit path, daytime, blurred background": {
+    "描述": "绿树，阳光小径，白天，模糊背景",
+    "关键词": "林荫道，光路引导，前景清晰背景虚化"
+  },
+  "green van, sunlit trees, parked vehicle, daytime": {
+    "描述": "绿色面包车，阳光树木，停放车辆，白天",
+    "关键词": "公路旅行或市郊停车，复古或实用主义"
+  },
+  "grey couch, floral wallpaper, subdued lighting, large blooms, dark tones": {
+    "描述": "灰色沙发，花卉壁纸，低调照明，大花图案，暗色调",
+    "关键词": "复古客厅，浓郁花卉与灰沙发对比，怀旧氛围"
+  },
+  "grey walls, pumpkin decorations, lit jack-o'-lantern, indoor setting, halloween theme": {
+    "描述": "灰墙，南瓜装饰，点亮的杰克灯，室内环境，万圣节主题",
+    "关键词": "节日布置，橙黑配色，神秘趣味"
+  },
+  "gym equipment, blurred lights, reflective surfaces": {
+    "描述": "健身器材，模糊灯光，反光表面",
+    "关键词": "器械金属反光，灯光拉丝，动感与力量"
+  },
+  "gym setting, blurred equipment, blue lighting, dark ambiance": {
+    "描述": "健身房场景，模糊器材，蓝色照明，暗调氛围",
+    "关键词": "夜场健身，冷光科技感，聚焦训练者"
+  },
+  "gym setting, blurred weights, indoor environment, clear windows, green foliage outside": {
+    "描述": "健身房场景，模糊杠铃，室内环境，清晰窗户，室外绿植",
+    "关键词": "现代健身房，自然光与绿意引入，健康活力"
+  },
+  "gym setting, cardio machines, large windows, snowy outdoors, urban environment": {
+    "描述": "健身房场景，有氧器械，大窗户，室外雪景，城市环境",
+    "关键词": "冬日健身，窗外雪景，室内温暖，对比强烈"
+  },
+  "high-rise view, glass window, modern furniture": {
+    "描述": "高层视野，玻璃窗，现代家具",
+    "关键词": "同“city skyline”类，强调高度与现代感"
+  },
+  "hockey rink boards, indoor lighting, sporty environment": {
+    "描述": "冰球场挡板，室内照明，运动环境",
+    "关键词": "比赛或训练场景，冰面反光，动态激烈"
+  },
+  "hockey rink, empty stands, protective netting, overhead lighting": {
+    "描述": "冰球场，空看台，防护网，顶灯照明",
+    "关键词": "赛后或训练间隙，空旷冷清，专注场地"
+  },
+  "house entrance, evening lighting, brick column, window": {
+    "描述": "房屋入口，夜晚照明，砖柱，窗户",
+    "关键词": "家庭住宅，温馨灯光，归家氛围"
+  },
+  "ice hockey rink, empty stands, neutral lighting": {
+    "描述": "冰球场，空看台，中性照明",
+    "关键词": "同上，强调中性光下的冰面质感"
+  },
+  "illuminated buildings, urban setting, nighttime ambiance": {
+    "描述": "照明建筑，城市环境，夜晚氛围",
+    "关键词": "城市夜景，建筑轮廓灯，繁华或孤独"
+  },
+  "illuminated pool, purple lighting, night time, outdoor setting, landscaped garden": {
+    "描述": "照明泳池，紫色灯光，夜晚，户外环境，园林景观",
+    "关键词": "派对或高端住宅，紫光神秘梦幻"
+  },
+  "indoor lighting, eye-level shot, straight angle": {
+    "描述": "室内照明，平视拍摄，正面角度",
+    "关键词": "标准人像或产品拍摄，无畸变，清晰直接"
+  },
+  "indoor lighting, mirror reflection, eye-level shot, shallow depth of field": {
+    "描述": "室内照明，镜中反射，平视拍摄，浅景深",
+    "关键词": "利用镜子扩展空间，虚化背景，艺术感强"
+  },
+  "indoor room, potted plants, textured floor": {
+    "描述": "室内房间，盆栽植物，纹理地板",
+    "关键词": "自然元素融入家居，温馨生活感"
+  },
+  "indoor room, sheer curtains, soft shadows": {
+    "描述": "室内房间，薄纱窗帘，柔和阴影",
+    "关键词": "光线过滤，温柔静谧，适合肖像或静物"
+  },
+  "indoor setting, blurred bedding, neutral colors": {
+    "描述": "室内环境，模糊床品，中性色彩",
+    "关键词": "卧室背景虚化，突出人物或物品"
+  },
+  "indoor setting, blurred details, bokeh effect": {
+    "描述": "室内环境，模糊细节，散景效果",
+    "关键词": "同上，强调氛围光斑"
+  },
+  "indoor setting, blurred room details": {
+    "描述": "室内环境，模糊房间细节",
+    "关键词": "背景虚化，主体突出"
+  },
+  "indoor setting, blurred surroundings": {
+    "描述": "室内环境，模糊周围",
+    "关键词": "同上"
+  },
+  "indoor setting, crowded venue, blurred figures": {
+    "描述": "室内环境，拥挤场地，模糊人物",
+    "关键词": "派对、展会等，突出主角在人群中"
+  },
+  "indoor setting, doorway, minimal decor": {
+    "描述": "室内环境，门道，极简装饰",
+    "关键词": "通道视角，引导视线，简洁现代"
+  },
+  "indoor setting, gray sofa, sliding door": {
+    "描述": "室内环境，灰色沙发，推拉门",
+    "关键词": "现代客厅，连接室内外"
+  },
+  "indoor setting, large windows, daylight, minimalistic decor, outdoor view": {
+    "描述": "室内环境，大窗户，日光，极简装饰，户外视野",
+    "关键词": "同前，强调自然光与简洁"
+  },
+  "indoor setting, mirrored walls, soft lighting": {
+    "描述": "室内环境，镜面墙，柔光",
+    "关键词": "舞蹈室、试衣间或现代设计，空间感扩展"
+  },
+  "indoor setting, natural light, decorative mirror, neutral tones, floral arrangement, contemporary decor": {
+    "描述": "室内环境，自然光，装饰镜，中性色调，花卉布置，现代装饰",
+    "关键词": "精致家居，平衡自然与设计"
+  },
+  "indoor setting, neutral colors, ambient lighting": {
+    "描述": "室内环境，中性色彩，环境照明",
+    "关键词": "低调背景，适合多种主体"
+  },
+  "indoor setting, neutral colors, blurred decor": {
+    "描述": "室内环境，中性色彩，模糊装饰",
+    "关键词": "同上"
+  },
+  "indoor setting, neutral colors, minimalistic decor": {
+    "描述": "室内环境，中性色彩，极简装饰",
+    "关键词": "北欧或日式风格，干净克制"
+  },
+  "indoor setting, patio, sliding door": {
+    "描述": "室内环境，露台，推拉门",
+    "关键词": "室内外过渡空间，休闲生活"
+  },
+  "indoor setting, sheer curtains, diffused lighting, soft color palette": {
+    "描述": "室内环境，薄纱窗帘，漫射光，柔和色系",
+    "关键词": "温柔女性化空间，适合人像"
+  },
+  "indoor setting, television on, modern decor, blurred details": {
+    "描述": "室内环境，电视开启，现代装饰，模糊细节",
+    "关键词": "家庭生活瞬间，屏幕光为唯一光源"
+  },
+  "indoor setting, white walls, minimal decor": {
+    "描述": "室内环境，白墙，极简装饰",
+    "关键词": "摄影棚感，突出主体"
+  },
+  "indoor setting, windows, blurred room details": {
+    "描述": "室内环境，窗户，模糊房间细节",
+    "关键词": "窗为焦点，室内虚化"
+  },
+  "indoor setting, wooden floor, ornate furniture": {
+    "描述": "室内环境，木地板，华丽家具",
+    "关键词": "古典或复古风格，厚重质感"
+  },
+  "indoor setting, wooden staircase, sunlit doorway": {
+    "描述": "室内环境，木楼梯，阳光门道",
+    "关键词": "光影引导，空间纵深感"
+  },
+  "indoors, close-up, selfie perspective": {
+    "描述": "室内，特写，自拍视角",
+    "关键词": "手机自拍，近景，背景虚化"
+  },
+  "industrial setting, daylight, weathered building, concrete ground, overgrown vegetation": {
+    "描述": "工业环境，日光，风化建筑，混凝土地面，野生植被",
+    "关键词": "废弃工厂，荒凉与重生，废土美学"
+  },
+  "industrial setting, metal window, concrete wall, moss-covered ground": {
+    "描述": "工业环境，金属窗，混凝土墙，苔藓覆盖地面",
+    "关键词": "同上，强调自然侵蚀"
+  },
+  "industrial setting, nighttime, artificial lighting, parking area": {
+    "描述": "工业环境，夜晚，人工照明，停车场",
+    "关键词": "冷光、空旷、孤独，都市边缘"
+  },
+  "interior setting, yacht cabin, neutral colors": {
+    "描述": "内景，游艇舱室，中性色彩",
+    "关键词": "豪华游艇内部，木质与皮革，海洋度假感"
+  },
+  "kitchen setting, espresso machine, white cabinets, decorative items": {
+    "描述": "厨房场景，意式咖啡机，白橱柜，装饰品",
+    "关键词": "现代厨房，生活精致感"
+  },
+  "light-colored building, dark doorway, minimalistic, urban setting": {
+    "描述": "浅色建筑，深色门道，极简，城市环境",
+    "关键词": "现代建筑，对比与几何感"
+  },
+  "lush greenery, blurred foliage, natural lighting": {
+    "描述": "茂密绿植，模糊植被，自然光照",
+    "关键词": "森林或公园，层次丰富"
+  },
+  "lush greenery, blurred foliage, outdoor setting": {
+    "描述": "茂密绿植，模糊植被，户外环境",
+    "关键词": "同上"
+  },
+  "lush greenery, flowering shrubs, paved path, outdoor setting, soft-focus plants": {
+    "描述": "茂密绿植，开花灌木，铺砌小径，户外环境，柔焦植物",
+    "关键词": "花园小径，色彩与虚实结合"
+  },
+  "lush greenery, purple flowers, blurred details": {
+    "描述": "茂密绿植，紫色花朵，模糊细节",
+    "关键词": "色彩点缀，梦幻自然"
+  },
+  "lush greenery, terracotta roofs, coastal view, hazy skyline": {
+    "描述": "茂密绿植，陶土屋顶，海岸景观，朦胧天际线",
+    "关键词": "地中海小镇，色彩温暖，远景朦胧"
+  },
+  "marble countertop, wooden slats, pink cabinets, makeup brushes": {
+    "描述": "大理石台面，木条，粉色橱柜，化妆刷",
+    "关键词": "化妆台场景，少女或时尚风格"
+  },
+  "marble interior, bath tub, luxury decor, neutral colors": {
+    "描述": "大理石内饰，浴缸，奢华装饰，中性色彩",
+    "关键词": "高端浴室，SPA或酒店感"
+  },
+  "marble steps, clear sky, architectural structure": {
+    "描述": "大理石台阶，晴朗天空，建筑结构",
+    "关键词": "古典或现代建筑入口，庄严感"
+  },
+  "marble tiles, shower heads, indoor lighting, shower knobs": {
+    "描述": "大理石瓷砖，淋浴喷头，室内照明，淋浴旋钮",
+    "关键词": "浴室细节，现代奢华"
+  },
+  "marina setting, high-rise buildings, clear sky": {
+    "描述": "码头场景，高层建筑，晴朗天空",
+    "关键词": "现代海滨城市，游艇与高楼对比"
+  },
+  "marina setting, yachts docked, clear sky, wooden pier": {
+    "描述": "码头场景，游艇停泊，晴朗天空，木制码头",
+    "关键词": "度假港口，悠闲奢华"
+  },
+  "metal staircase, blue hues, outdoor location, clear sky": {
+    "描述": "金属楼梯，蓝色调，户外地点，晴朗天空",
+    "关键词": "工业风或现代建筑，色彩点缀"
+  },
+  "modern interior, large window, daytime, urban skyline, minimal furniture": {
+    "描述": "现代内景，大窗户，白天，城市天际线，极简家具",
+    "关键词": "都市精英住宅，通透简洁"
+  },
+  "modern interior, white walls, wooden floor, potted plant, bar stools": {
+    "描述": "现代内景，白墙，木地板，盆栽，吧台椅",
+    "关键词": "开放式厨房或客厅，生活化现代"
+  },
+  "modern room, large window, green plant, white sofa, coffee table, beige pillows, gray walls": {
+    "描述": "现代房间，大窗户，绿植，白沙发，咖啡桌，米色靠垫，灰墙",
+    "关键词": "理想家居样板间，和谐舒适"
+  },
+  "modern structure, blue sections, clear sky, urban setting, old building": {
+    "描述": "现代建筑，蓝色部分，晴朗天空，城市环境，老建筑",
+    "关键词": "新旧建筑对比，城市更新主题"
+  },
+  "monochromatic hues, blurred setting, dark ambiance": {
+    "描述": "单色调，模糊环境，暗调氛围",
+    "关键词": "黑白或单一色系，情绪深沉"
+  },
+  "mural art, painted wings, indoor setting, casual ambience": {
+    "描述": "壁画艺术，绘制翅膀，室内环境，休闲氛围",
+    "关键词": "网红打卡墙，互动人像背景"
+  },
+  "narrow alleyway, beige walls, soft focus, daylight": {
+    "描述": "狭窄小巷，米色墙，柔焦，日光",
+    "关键词": "南欧或亚洲老城，静谧生活"
+  },
+  "natural daylight, eye-level shot, centered subject": {
+    "描述": "自然日光，平视拍摄，居中主体",
+    "关键词": "标准人像构图，清晰自然"
+  },
+  "neon lights, Chinese characters, urban feel, dark ambiance": {
+    "描述": "霓虹灯，中文字，城市感，暗调氛围",
+    "关键词": "亚洲夜市或赛博朋克，文化符号强烈"
+  },
+  "neutral colors, indoor setting, minimalist decor": {
+    "描述": "中性色彩，室内环境，极简装饰",
+    "关键词": "重复但合理，强调风格"
+  },
+  "neutral colors, indoor setting, soft furnishings, blurred textures": {
+    "描述": "中性色彩，室内环境，柔软家具，模糊纹理",
+    "关键词": "温馨舒适家居"
+  },
+  "neutral tones, indoor setting, minimalistic decor": {
+    "描述": "中性色调，室内环境，极简装饰",
+    "关键词": "同上"
+  },
+  "neutral tones, minimalistic decor, plain walls": {
+    "描述": "中性色调，极简装饰，素墙",
+    "关键词": "摄影或展示背景"
+  },
+  "neutral wall, indoor setting, minimal detail": {
+    "描述": "中性墙，室内环境，细节极少",
+    "关键词": "同上"
+  },
+  "neutral walls, indoor setting, minimalistic decor, potted plant": {
+    "描述": "中性墙，室内环境，极简装饰，盆栽",
+    "关键词": "一点绿意打破单调"
+  },
+  "neutral walls, indoor setting, minimalistic style": {
+    "描述": "中性墙，室内环境，极简风格",
+    "关键词": "同上"
+  },
+  "neutral-colored wall, indoor setting, minimalistic decor": {
+    "描述": "中性色墙，室内环境，极简装饰",
+    "关键词": "同上"
+  },
+  "night shot, street lighting, sharp focus": {
+    "描述": "夜景拍摄，街灯照明，清晰对焦",
+    "关键词": "城市夜景，细节清晰，冷暖光对比"
+  },
+  "nighttime cityscape, blurred lights, outdoor setting": {
+    "描述": "夜间城市景观，模糊灯光，户外环境",
+    "关键词": "车灯拉丝，建筑轮廓，梦幻夜都市"
+  },
+  "nighttime cityscape, window reflections, indoor setting": {
+    "描述": "夜间城市景观，窗上反射，室内环境",
+    "关键词": "室内人物与窗外夜景双重曝光感"
+  },
+  "open doorway, bright lighting, indoor setting, blurred background": {
+    "描述": "敞开的门道，明亮照明，室内环境，模糊背景",
+    "关键词": "从暗处看亮处，神秘或欢迎感"
+  },
+  "open road, clear sky, desert landscape": {
+    "描述": "开阔公路，晴朗天空，沙漠景观",
+    "关键词": "公路电影经典，自由与孤独"
+  },
+  "open road, clear sky, mountainous terrain, daylight": {
+    "描述": "开阔公路，晴朗天空，山地地形，日光",
+    "关键词": "自驾旅行，壮丽山景"
+  },
+  "ornate iron gate, stone building facade, urban environment, clear skies": {
+    "描述": "华丽铁门，石砌建筑立面，城市环境，晴朗天空",
+    "关键词": "历史建筑入口，庄严精致"
+  },
+  "ornate mirror, floral wallpaper, neutral tones, indoor setting": {
+    "描述": "华丽镜子，花卉壁纸，中性色调，室内环境",
+    "关键词": "复古卧室或更衣室，浪漫怀旧"
+  },
+  "outdoor cafe, green plants, tropical setting": {
+    "描述": "户外咖啡馆，绿植，热带环境",
+    "关键词": "度假休闲，轻松惬意"
+  },
+  "outdoor gathering, blurred people, canopy structure, natural light": {
+    "描述": "户外聚会，模糊人群，遮阳棚，自然光",
+    "关键词": "婚礼或庆典，主角清晰，氛围热烈"
+  },
+  "outdoor light, blurred marina, overcast sky": {
+    "描述": "户外光线，模糊码头，阴天",
+    "关键词": "海港阴天，柔和静谧"
+  },
+  "outdoor lighting, close-up shot, low camera angle": {
+    "描述": "户外照明，特写，低角度拍摄",
+    "关键词": "强调主体高度或力量感"
+  },
+  "outdoor lighting, eye-level shot, direct perspective": {
+    "描述": "户外照明，平视拍摄，直接视角",
+    "关键词": "标准人像，真实自然"
+  },
+  "outdoor lighting, eye-level shot, natural background": {
+    "描述": "户外照明，平视拍摄，自然背景",
+    "关键词": "同上"
+  },
+  "outdoor lighting, eye-level shot, shallow depth of field, central framing": {
+    "描述": "户外照明，平视拍摄，浅景深，居中构图",
+    "关键词": "经典人像，背景虚化突出"
+  },
+  "outdoor lighting, rear view, low angle, centered subject": {
+    "描述": "户外照明，背面视角，低角度，居中主体",
+    "关键词": "剪影或轮廓，神秘或英雄感"
+  },
+  "outdoor pool, white building, tropical vegetation, poolside furniture": {
+    "描述": "户外泳池，白色建筑，热带植被，池边家具",
+    "关键词": "度假别墅标配，明亮奢华"
+  },
+  "outdoor seating, blurred plants, neutral colors": {
+    "描述": "户外座椅，模糊植物，中性色彩",
+    "关键词": "餐厅或庭院，舒适自然"
+  },
+  "outdoor setting, basketball hoop, lush greenery, bright sunlight, colorful flowers": {
+    "描述": "户外环境，篮球框，茂密绿植，强烈阳光，彩色花朵",
+    "关键词": "社区或校园，活力四射"
+  },
+  "outdoor setting, blooming flowers, wooden structure": {
+    "描述": "户外环境，盛开花朵，木结构",
+    "关键词": "花园凉亭或围栏，春日浪漫"
+  },
+  "outdoor setting, brightly lit, foliage, hexagonal tiles, architectural features": {
+    "描述": "户外环境，明亮照明，植被，六边形地砖，建筑特征",
+    "关键词": "现代景观设计，几何与自然结合"
+  },
+  "outdoor setting, clear sky, poolside, tropical vegetation": {
+    "描述": "户外环境，晴朗天空，泳池边，热带植被",
+    "关键词": "同前泳池场景"
+  },
+  "outdoor setting, green plants, restaurant ambiance, daylight conditions": {
+    "描述": "户外环境，绿植，餐厅氛围，日光条件",
+    "关键词": "露天餐饮，生活气息"
+  },
+  "outdoor setting, greenery, trees, blurred foliage": {
+    "描述": "户外环境，绿植，树木，模糊植被",
+    "关键词": "自然背景，层次丰富"
+  },
+  "outdoor setting, patio, sliding door": {
+    "描述": "户外环境，露台，推拉门",
+    "关键词": "室内外连接"
+  },
+  "outdoor setting, running track, greenery, trees, sunlight": {
+    "描述": "户外环境，跑道，绿植，树木，阳光",
+    "关键词": "校园或公园，运动健康"
+  },
+  "outdoor setting, sports car, lush greenery": {
+    "描述": "户外环境，跑车，茂密绿植",
+    "关键词": "车辆广告，自然与速度对比"
+  },
+  "outdoor setting, stone structure, hanging lanterns, foliage, ceramic pottery": {
+    "描述": "户外环境，石结构，悬挂灯笼，植被，陶瓷器皿",
+    "关键词": "中式或日式庭院，文化氛围"
+  },
+  "outdoor setting, tree branches, bright sunlight": {
+    "描述": "户外环境，树枝，强烈阳光",
+    "关键词": "光斑透过树叶，夏日生机"
+  },
+  "outdoor setting, waterfront, architectural columns, tropical plants": {
+    "描述": "户外环境，水边，建筑柱廊，热带植物",
+    "关键词": "地中海或度假村，古典与自然"
+  },
+  "outdoor setting, waterfront view, glass panes, bar counter, citrus drinks, clear skies": {
+    "描述": "户外环境，水景视野，玻璃面板，吧台，柑橘饮品，晴朗天空",
+    "关键词": "高端酒吧露台，休闲奢华"
+  },
+  "outdoor setting, white umbrellas, patio chairs, Moet & Chandon bottle, green plants": {
+    "描述": "户外环境，白伞，露台椅，酩悦香槟瓶，绿植",
+    "关键词": "奢侈度假，庆祝氛围"
+  },
+  "outdoor stairs, building facade, flowering plants": {
+    "描述": "户外楼梯，建筑立面，开花植物",
+    "关键词": "老城或花园，生活美学"
+  },
+  "overlooking ocean, tropical foliage, distant islands, clear sky, stone wall": {
+    "描述": "俯瞰海洋，热带植被，远处岛屿，晴朗天空，石墙",
+    "关键词": "悬崖别墅视野，极致度假感"
+  },
+  "palm tree, tropical foliage, blurred greenery": {
+    "描述": "棕榈树，热带植被，模糊绿意",
+    "关键词": "度假经典元素，背景虚化"
+  },
+  "palm trees, beach huts, clear sky, sandy ground": {
+    "描述": "棕榈树，海滩小屋，晴朗天空，沙地",
+    "关键词": "热带海滩，简朴休闲"
+  },
+  "palm trees, blue sky, outdoor furniture, patio setting": {
+    "描述": "棕榈树，蓝天，户外家具，露台场景",
+    "关键词": "同上"
+  },
+  "palm trees, blue sky, white building, parked cars": {
+    "描述": "棕榈树，蓝天，白色建筑，停放车辆",
+    "关键词": "南加州或度假城市，现代生活"
+  },
+  "palm trees, clear sky, tropical setting, paved path": {
+    "描述": "棕榈树，晴朗天空，热带环境，铺砌小径",
+    "关键词": "度假村路径，干净舒适"
+  },
+  "palm trees, sunny skies, floral bushes": {
+    "描述": "棕榈树，晴朗天空，花卉灌木",
+    "关键词": "色彩丰富，热带花园"
+  },
+  "parking garage, concrete pillars, EXIT sign, diffused daylight": {
+    "描述": "停车场，混凝土柱，EXIT标志，漫射日光",
+    "关键词": "城市基础设施，冷峻实用"
+  },
+  "parking garage, concrete pillars, shadow patterns": {
+    "描述": "停车场，混凝土柱，阴影图案",
+    "关键词": "光影几何，工业美学"
+  },
+  "paved sidewalk, green bushes, white picket fence, clear sky, distant people": {
+    "描述": "铺砌人行道，绿篱，白栅栏，晴朗天空，远处人物",
+    "关键词": "美式郊区，理想社区"
+  },
+  "paved walkway, potted plants, building facade, daytime": {
+    "描述": "铺砌步道，盆栽，建筑立面，白天",
+    "关键词": "城市街道，生活细节"
+  },
+  "pink chair, white wall, 'VILLAGE' sign, outdoor setting": {
+    "描述": "粉色椅子，白墙，'VILLAGE'标志，户外环境",
+    "关键词": "网红打卡点，色彩与文字结合"
+  },
+  "pink patterned chair, wooden furniture, cream carpet, floor lamp": {
+    "描述": "粉色图案椅，木家具，米色地毯，落地灯",
+    "关键词": "复古客厅，温馨舒适"
+  },
+  "plain wall, neutral color, minimal shadows, soft lighting": {
+    "描述": "素墙，中性色，阴影极少，柔光",
+    "关键词": "人像或产品纯背景"
+  },
+  "plain wall, neutral colors, indoor lighting": {
+    "描述": "素墙，中性色，室内照明",
+    "关键词": "同上"
+  },
+  "plain wall, neutral colors, indoor setting": {
+    "描述": "素墙，中性色，室内环境",
+    "关键词": "同上"
+  },
+  "plain wall, wooden floor, indoor lighting, potted plant": {
+    "描述": "素墙，木地板，室内照明，盆栽",
+    "关键词": "极简但有生气"
+  },
+  "plain white, no distractions": {
+    "描述": "纯白，无干扰",
+    "关键词": "绝对纯白背景，用于抠图或极简主义"
+  },
+  "plain white, soft shadow, minimalistic": {
+    "描述": "纯白，柔和阴影，极简",
+    "关键词": "带一点立体感的白背景"
+  },
+  "poolside, sunset sky, tropical trees, water reflections": {
+    "描述": "泳池边，日落天空，热带树木，水面倒影",
+    "关键词": "浪漫黄昏，色彩绚烂"
+  },
+  "red chairs, wooden panels, natural light, yellow rose, white plate, silverware": {
+    "描述": "红色椅子，木饰板，自然光，黄玫瑰，白盘，餐具",
+    "关键词": "餐厅场景，温暖精致"
+  },
+  "red wall, green foliage, natural daylight": {
+    "描述": "红墙，绿植，自然日光",
+    "关键词": "色彩对比强烈，视觉冲击"
+  },
+  "red wallpaper, ornate chair, vintage phone, patterned carpet": {
+    "描述": "红色壁纸，华丽椅子，复古电话，图案地毯",
+    "关键词": "怀旧室内，戏剧感强"
+  },
+  "residential area, paved road, clear sky, daytime": {
+    "描述": "住宅区，铺砌道路，晴朗天空，白天",
+    "关键词": "宁静社区，日常生活"
+  },
+  "rocky terrain, blurred foliage, natural setting": {
+    "描述": "岩石地形，模糊植被，自然环境",
+    "关键词": "山地或海岸，粗犷自然"
+  },
+  "rocky terrain, calm sea, clear sky, daylight": {
+    "描述": "岩石地形，平静海面，晴朗天空，日光",
+    "关键词": "海崖景观，壮丽宁静"
+  },
+  "sandy beach, blurred foliage, white towel, printed design, scattered flowers": {
+    "描述": "沙滩，模糊植被，白毛巾，印花，散落花朵",
+    "关键词": "度假细节，浪漫休闲"
+  },
+  "sandy beach, cloudy sky, distant mountains, beachgoers, paragliders, natural setting": {
+    "描述": "沙滩，多云天空，远处山脉，海滩游客，滑翔伞，自然环境",
+    "关键词": "动态与静态结合，丰富场景"
+  },
+  "sandy beach, ocean horizon, clear sky": {
+    "描述": "沙滩，海平线，晴朗天空",
+    "关键词": "经典海景，开阔简洁"
+  },
+  "sandy beach, ocean horizon, clear sky, distant figures": {
+    "描述": "沙滩，海平线，晴朗天空，远处人物",
+    "关键词": "强调孤独或广阔"
+  },
+  "sandy beach, ocean waves, clear sky": {
+    "描述": "沙滩，海浪，晴朗天空",
+    "关键词": "动态海浪，夏日活力"
+  },
+  "sandy beach, ocean waves, clear sky, pier structure": {
+    "描述": "沙滩，海浪，晴朗天空，码头结构",
+    "关键词": "海滨小镇，经典元素"
+  },
+  "sandy beach, ocean waves, clear sky, surfboard": {
+    "描述": "沙滩，海浪，晴朗天空，冲浪板",
+    "关键词": "冲浪文化，运动休闲"
+  },
+  "sandy beach, overturned boat, green foliage": {
+    "描述": "沙滩，翻覆船只，绿植",
+    "关键词": "废弃感，诗意或废土"
+  },
+  "sandy beach, rocky terrain, calm sea, clear sky": {
+    "描述": "沙滩，岩石地形，平静海面，晴朗天空",
+    "关键词": "混合海岸，层次丰富"
+  },
+  "sandy beach, sunset lighting, coastal vegetation, wooden post": {
+    "描述": "沙滩，日落光照，海岸植被，木桩",
+    "关键词": "黄昏温暖，剪影构图"
+  },
+  "sandy ground, wooden equipment, blurred buildings": {
+    "描述": "沙地，木制设备，模糊建筑",
+    "关键词": "游乐场或工地，生活片段"
+  },
+  "sandy terrain, rocky formations, clear sky, picnic setup": {
+    "描述": "沙地，岩石构造，晴朗天空，野餐布置",
+    "关键词": "沙漠野餐，冒险与休闲"
+  },
+  "sheer curtains, soft backlight, indoor room, muted colors, minimalist style, peaceful atmosphere": {
+    "描述": "薄纱窗帘，柔和背光，室内房间，低饱和色彩，极简风格，宁静氛围",
+    "关键词": "温柔私密，适合情绪人像"
+  },
+  "skyscrapers, palm trees, clear sky, balcony railing": {
+    "描述": "摩天楼，棕榈树，晴朗天空，阳台栏杆",
+    "关键词": "现代都市与自然共存"
+  },
+  "snowy landscape, pine trees, outdoor setting, daytime, wooden structure": {
+    "描述": "雪景，松树，户外环境，白天，木结构",
+    "关键词": "冬日 cabin，宁静纯洁"
+  },
+  "snowy setting, blurred trees, natural light": {
+    "描述": "雪景，模糊树木，自然光",
+    "关键词": "柔焦雪景，氛围感强"
+  },
+  "soft backlighting, shallow depth of field, eye-level angle": {
+    "描述": "柔和背光，浅景深，平视角度",
+    "关键词": "发丝光，浪漫人像"
+  },
+  "soft backlighting, shallow depth of field, eye-level shot": {
+    "描述": "柔和背光，浅景深，平视拍摄",
+    "关键词": "同上"
+  },
+  "soft lighting, indoor setting, center-framed": {
+    "描述": "柔光，室内环境，居中构图",
+    "关键词": "标准人像"
+  },
+  "soft lighting, indoor setting, soft focus background": {
+    "描述": "柔光，室内环境，柔焦背景",
+    "关键词": "突出主体"
+  },
+  "soft lighting, shallow depth of field, eye-level shot": {
+    "描述": "柔光，浅景深，平视拍摄",
+    "关键词": "经典人像"
+  },
+  "soft lighting, shallow depth of field, three-quarter rear view": {
+    "描述": "柔光，浅景深，四分之三背面视角",
+    "关键词": "神秘或优雅"
+  },
+  "soft lighting, shallow focus, three-quarter shot": {
+    "描述": "柔光，浅对焦，四分之三视角",
+    "关键词": "自然立体感"
+  },
+  "soft-focused, dark hues, subtle shadows": {
+    "描述": "柔焦，深色调，细微阴影",
+    "关键词": "情绪深沉，艺术感"
+  },
+  "solid dark, indoors, soft lighting": {
+    "描述": "纯黑，室内，柔光",
+    "关键词": "舞台或戏剧感"
+  },
+  "solid teal backdrop, soft shadows, no other subjects": {
+    "描述": "纯青绿色背景，柔和阴影，无其他主体",
+    "关键词": "彩色纯背景，用于创意抠图"
+  },
+  "space setting, starry sky, Earth visible, metallic floor, hexagonal pattern": {
+    "描述": "太空场景，星空，可见地球，金属地板，六边形图案",
+    "关键词": "空间站内部，科幻宏大"
+  },
+  "stage structures, greenery, daytime, speakers, cables, yellow tennis balls": {
+    "描述": "舞台结构，绿植，白天，音箱，线缆，黄色网球",
+    "关键词": "音乐节后台，混乱与秩序"
+  },
+  "staircase behind, indoor lighting, neutral colors": {
+    "描述": "后方楼梯，室内照明，中性色彩",
+    "关键词": "纵深空间，引导视线"
+  },
+  "starry space, distant Earth, hexagonal pattern floor, metallic surface": {
+    "描述": "星空，遥远地球，六边形地板，金属表面",
+    "关键词": "同上"
+  },
+  "stone wall, dappled sunlight, outdoor setting, foliage": {
+    "描述": "石墙，斑驳阳光，户外环境，植被",
+    "关键词": "自然光影，古老感"
+  },
+  "stone wall, draped curtains, indoor lighting": {
+    "描述": "石墙，垂挂窗帘，室内照明",
+    "关键词": "工业风住宅，粗犷与柔软"
+  },
+  "stone wall, narrow pathway, natural light": {
+    "描述": "石墙，狭窄小径，自然光",
+    "关键词": "古城小巷，探索感"
+  },
+  "stone wall, white railing, sunny day, shadow patterns": {
+    "描述": "石墙，白栏杆，晴天，阴影图案",
+    "关键词": "地中海风格，光影美学"
+  },
+  "stone wall, wrought iron gate, urban setting, neat pavements, subtle shadows": {
+    "描述": "石墙，锻铁门，城市环境，整洁人行道，细微阴影",
+    "关键词": "欧洲老城，精致生活"
+  },
+  "stone walls, green plants, hanging utensils, cobblestone ground, outdoor setting, narrow alley": {
+    "描述": "石墙，绿植，悬挂厨具，鹅卵石地面，户外环境，狭窄小巷",
+    "关键词": "南欧或中东市集，生活气息"
+  },
+  "sunlit building, green grass, shadow patterns, late afternoon": {
+    "描述": "阳光建筑，绿草，阴影图案，下午晚些时候",
+    "关键词": "黄金时刻，温暖长影"
+  },
+  "sunlit setting, waterfront, architectural columns, tropical plants": {
+    "描述": "阳光场景，水边，建筑柱廊，热带植物",
+    "关键词": "同前"
+  },
+  "sunlit street, blurred foliage, warm tones": {
+    "描述": "阳光街道，模糊植被，暖色调",
+    "关键词": "城市生活，温馨日常"
+  },
+  "sunlit trees, blurred foliage, outdoor setting": {
+    "描述": "阳光树木，模糊植被，户外环境",
+    "关键词": "自然光斑，生动"
+  },
+  "swimming pool, blue surface, white lines, tennis racket, yellow tennis balls, net partial view": {
+    "描述": "游泳池，蓝色水面，白线，网球拍，黄色网球，球网局部",
+    "关键词": "泳池与网球场结合，度假村娱乐"
+  },
+  "swimming pool, clear water, blurred blue, outdoor setting": {
+    "描述": "游泳池，清澈水，模糊蓝色，户外环境",
+    "关键词": "水的透明感，清凉"
+  },
+  "swimming pool, green lawn, outdoor setting, blue sky, daytime": {
+    "描述": "游泳池，绿草坪，户外环境，蓝天，白天",
+    "关键词": "标准度假场景"
+  },
+  "swimming pool, lounge chairs, palm trees, clear skies": {
+    "描述": "游泳池，躺椅，棕榈树，晴朗天空",
+    "关键词": "同上"
+  },
+  "tennis court, blue surface, white lines, tennis racket, yellow tennis balls, net partial view": {
+    "描述": "网球场，蓝色场地，白线，网球拍，黄色网球，球网局部",
+    "关键词": "运动场景，动态瞬间"
+  },
+  "tennis court, hard surface, painted lines, no other people": {
+    "描述": "网球场，硬地，画线，无人",
+    "关键词": "空旷场地，宁静或赛前"
+  },
+  "textured wall, concrete texture, muted colors, indoor setting, wooden stool": {
+    "描述": "纹理墙，混凝土质感，低饱和色彩，室内环境，木凳",
+    "关键词": "工业风或极简，粗犷与温暖"
+  },
+  "theater setting, plush seating, ambient lighting, popcorn spilled, circular patterns on carpet": {
+    "描述": "剧院场景，绒面座椅，环境照明，洒落爆米花，地毯圆形图案",
+    "关键词": "电影文化，生活细节"
+  },
+  "tropical beach setting, palm trees, blue water, clear sky, wooden structure": {
+    "描述": "热带海滩场景，棕榈树，蓝水，晴朗天空，木结构",
+    "关键词": "完美度假，色彩明快"
+  },
+  "tropical beach, green foliage, kayaks, clear sky": {
+    "描述": "热带海滩，绿植，皮划艇，晴朗天空",
+    "关键词": "水上活动，冒险休闲"
+  },
+  "tropical foliage, blurred greenery, wooden structure, bright atmosphere": {
+    "描述": "热带植被，模糊绿意，木结构，明亮氛围",
+    "关键词": "度假村或别墅"
+  },
+  "tropical plants, blurred greenery, wooden structure, bright atmosphere": {
+    "描述": "热带植物，模糊绿意，木结构，明亮氛围",
+    "关键词": "同上"
+  },
+  "tropical setting, bar counter, patterned tiles, green cushioned chair, beverage visible": {
+    "描述": "热带环境，吧台，图案地砖，绿垫椅子，可见饮品",
+    "关键词": "度假酒吧，轻松享乐"
+  },
+  "tropical setting, blurred greenery, open-air structure, beverage on table": {
+    "描述": "热带环境，模糊绿植，开放式建筑，桌上饮品",
+    "关键词": "同上"
+  },
+  "underpass structure, concrete columns, shadow patterns": {
+    "描述": "地下通道结构，混凝土柱，阴影图案",
+    "关键词": "城市边缘，几何光影"
+  },
+  "urban landscape, balcony railing, overcast sky, flowering shrubs, distant buildings": {
+    "描述": "城市景观，阳台栏杆，阴天，开花灌木，远处建筑",
+    "关键词": "都市生活，自然点缀"
+  },
+  "urban landscape, skyscrapers, overcast sky, greenery, empty lot": {
+    "描述": "城市景观，摩天楼，阴天，绿植，空地",
+    "关键词": "城市发展与荒芜对比"
+  },
+  "urban setting, blurred fountain, clear sky, buildings in distance": {
+    "描述": "城市环境，模糊喷泉，晴朗天空，远处建筑",
+    "关键词": "广场场景，动态水景"
+  },
+  "urban setting, blurred vehicles, soft focus, evening light": {
+    "描述": "城市环境，模糊车辆，柔焦，夜晚光线",
+    "关键词": "都市夜行，流动感"
+  },
+  "urban setting, covered walkway, architectural columns, clear sky": {
+    "描述": "城市环境，有顶步道，建筑柱廊，晴朗天空",
+    "关键词": "现代城市设计，遮阳避雨"
+  },
+  "urban setting, white buildings, overcast sky": {
+    "描述": "城市环境，白色建筑，阴天",
+    "关键词": "干净克制，现代都市"
+  },
+  "urban skyline, grassy field, overcast sky": {
+    "描述": "城市天际线，草地，阴天",
+    "关键词": "公园远眺，自然与城市"
+  },
+  "urban skyline, water reflections, soft lighting, distant buildings": {
+    "描述": "城市天际线，水面倒影，柔光，远处建筑",
+    "关键词": "河岸或湖畔，宁静夜景"
+  },
+  "vehicle interior, blurred windows, soft lighting": {
+    "描述": "车内，模糊车窗，柔光",
+    "关键词": "私密空间，旅途感"
+  },
+  "vehicle interior, leather seats, car door window, slightly blurred": {
+    "描述": "车内，皮革座椅，车门窗，轻微模糊",
+    "关键词": "豪华车型，细节质感"
+  },
+  "vintage car, car wash setting, soapy water, overcast sky": {
+    "描述": "复古车，洗车场景，肥皂水，阴天",
+    "关键词": "怀旧生活，日常瞬间"
+  },
+  "water body, hills, clear sky": {
+    "描述": "水体，山丘，晴朗天空",
+    "关键词": "湖光山色，宁静开阔"
+  },
+  "water feature, blue tiles, blurred buildings, outdoor setting": {
+    "描述": "水景，蓝色瓷砖，模糊建筑，户外环境",
+    "关键词": "现代景观设计，色彩与反射"
+  },
+  "white bathtub, blurred surroundings, indoor setting": {
+    "描述": "白浴缸，模糊周围，室内环境",
+    "关键词": "浴室焦点，私密放松"
+  },
+  "white boat, clear skies, sunlit, outdoor setting": {
+    "描述": "白船，晴朗天空，阳光照射，户外环境",
+    "关键词": "游艇或帆船，度假感"
+  },
+  "white brick wall, soft shadows, neutral tones": {
+    "描述": "白砖墙，柔和阴影，中性色调",
+    "关键词": "现代建筑，纹理与光影"
+  },
+  "white curved walls, arch-like alcoves, simple white stools": {
+    "描述": "白色弧形墙，拱形壁龛，简约白凳",
+    "关键词": "极简主义空间，雕塑感"
+  },
+  "white cyclorama, minimalist setting, studio environment": {
+    "描述": "白色无缝背景，极简环境，摄影棚",
+    "关键词": "专业摄影，无干扰"
+  },
+  "white picket fence, green foliage, sunlit scene": {
+    "描述": "白栅栏，绿植，阳光场景",
+    "关键词": "理想家园象征"
+  },
+  "white structure, arch details, outdoor setting, other subjects": {
+    "描述": "白色建筑，拱形细节，户外环境，其他主体",
+    "关键词": "古典或现代建筑，优雅背景"
+  },
+  "white textured wall, architectural details, indirect lighting": {
+    "描述": "白色纹理墙，建筑细节，间接照明",
+    "关键词": "高级住宅，质感与光影"
+  },
+  "white wall, indoor setting, minimal decor": {
+    "描述": "白墙，室内环境，极简装饰",
+    "关键词": "重复合理，强调风格"
+  },
+  "white wall, indoor setting, natural light, door frame, glass reflection": {
+    "描述": "白墙，室内环境，自然光，门框，玻璃反射",
+    "关键词": "空间层次，光影互动"
+  },
+  "white wall, minimalistic, shadow patterns": {
+    "描述": "白墙，极简，阴影图案",
+    "关键词": "几何光影，艺术感"
+  },
+  "white walls, large window, indoor setting": {
+    "描述": "白墙，大窗户，室内环境",
+    "关键词": "明亮通透，现代生活"
+  },
+  "white walls, minimalistic design, clear sky, architectural details": {
+    "描述": "白墙，极简设计，晴朗天空，建筑细节",
+    "关键词": "建筑摄影，干净利落"
+  },
+  "white walls, smooth texture, architectural lines, minimalistic style": {
+    "描述": "白墙，光滑纹理，建筑线条，极简风格",
+    "关键词": "同上"
+  },
+  "white walls, soft lighting, indoor setting": {
+    "描述": "白墙，柔光，室内环境",
+    "关键词": "温馨极简"
+  },
+  "window curtains, indoor setting, neutral colors": {
+    "描述": "窗 curtains，室内环境，中性色彩",
+    "关键词": "家居细节，生活感"
+  },
+  "window frame, white wall, pipe visible": {
+    "描述": "窗框，白墙，可见管道",
+    "关键词": "工业风或老建筑，真实感"
+  },
+  "window with sheer curtain, soft natural light, blurred food tray, couch corner": {
+    "描述": "带薄纱窗帘的窗，柔和自然光，模糊餐盘，沙发角落",
+    "关键词": "居家休闲，慵懒午后"
+  },
+  "wooden boardwalk, blurred pedestrians, warm lighting": {
+    "描述": "木栈道，模糊行人，暖光",
+    "关键词": "海滨或湿地，黄昏氛围"
+  },
+  "wooden cabinetry, metallic handles, indoor lighting, blurred marina": {
+    "描述": "木橱柜，金属把手，室内照明，模糊码头",
+    "关键词": "游艇或海景住宅厨房"
+  },
+  "wooden door frame, snow-covered ground, pine trees": {
+    "描述": "木门框，积雪地面，松树",
+    "关键词": "冬日 cabin，童话感"
+  },
+  "wooden panels, modern architecture, outdoor setting, bright daylight": {
+    "描述": "木饰板，现代建筑，户外环境，明亮日光",
+    "关键词": "自然材质与现代设计"
+  },
+  "wooden pergola, hanging lights, green plants, twilight ambiance, outdoor setting": {
+    "描述": "木 pergola，悬挂灯，绿植，暮光氛围，户外环境",
+    "关键词": "浪漫晚餐，庭院生活"
+  },
+  "wooden railing, green foliage, blurred scenery, outdoor environment": {
+    "描述": "木栏杆，绿植，模糊风景，户外环境",
+    "关键词": "阳台或观景台，自然融入"
+  },
+  "wooden structure, blurred foliage, natural daylight": {
+    "描述": "木结构，模糊植被，自然日光",
+    "关键词": "林间小屋，质朴自然"
+  },
+  "wooden structure, blurred greenery, natural light, out of focus greenery": {
+    "描述": "木结构，模糊绿意，自然光，失焦绿植",
+    "关键词": "同上"
+  },
+  "wooden structures, blurred furnishings, indoor setting, natural light": {
+    "描述": "木结构，模糊家具，室内环境，自然光",
+    "关键词": "木屋或乡村住宅，温暖"
+  },
+  "yacht interior, sunset skies, calm water, moored boats": {
+    "描述": "游艇内景，日落天空，平静水面，停泊船只",
+    "关键词": "奢华度假，海天一色"
+  },
+  "yellow couch, pink wall, white pillow, floral arrangement, indoor setting": {
+    "描述": "黄色沙发，粉墙，白靠垫，花卉布置，室内环境",
+    "关键词": "活泼家居，色彩碰撞"
+  },
+  "geometric patterns, bright lighting, circular mirror, hexagonal tiles": {
+    "描述": "几何图案，明亮照明，圆形镜子，六角砖",
+    "关键词": "现代空间内六边形地砖铺陈，中央悬挂圆形镜面，几何线条与光影交织，明亮通透，具设计感与反射趣味"
+  },
+  "golden hour lighting, window curtains, indoor setting": {
+    "描述": "金色时光照明，窗帘，室内场景",
+    "关键词": "夕阳斜射入室，薄纱窗帘透出暖金色光晕，室内沐浴在柔和长影中，氛围温馨静谧"
+  },
+  "graffiti wall, urban setting, dark tones, metallic details": {
+    "描述": "涂鸦墙，城市场景，暗色调，金属细节",
+    "关键词": "深灰墙面布满喷漆涂鸦，金属水管、栏杆穿插其中，街头文化与工业感并存，冷峻而富有张力"
+  },
+  "gym setting, cardio machines, large windows, urban environment": {
+    "描述": "健身房场景，有氧器械，大窗户，城市环境",
+    "关键词": "跑步机与椭圆机排列整齐，窗外高楼林立，自然光与城市景观引入，健康与都市生活融合"
+  },
+  "indoor lighting, neutral colors, staircase behind": {
+    "描述": "室内照明，中性色调，后方楼梯",
+    "关键词": "前景主体清晰，后方楼梯以灰、米、白等中性色呈现，灯光均匀，空间纵深感强"
+  },
+  "indoor setting, blurred furnishings, natural light": {
+    "描述": "室内场景，虚化家具，自然光",
+    "关键词": "家具轮廓柔和虚化，自然光从窗户洒入，突出前景人物或物品，背景仅作氛围衬托"
+  },
+  "indoor setting, doorway, minimal decor": {
+    "描述": "室内场景，门口，极简装饰",
+    "关键词": "空旷门道无多余装饰，白墙或素色，光线从门内外渗透，强调结构与留白美学"
+  },
+  "indoor setting, large windows, minimalistic decor": {
+    "描述": "室内场景，大窗户，极简装饰",
+    "关键词": "落地窗引入户外景观，室内仅保留必要家具，线条简洁，突出光、空间与材质"
+  },
+  "indoor setting, mirrored walls, soft lighting": {
+    "描述": "室内场景，镜面墙，柔和照明",
+    "关键词": "墙面大面积镜面反射空间，柔光消除眩光，营造无限延伸感，常见于舞蹈室或现代住宅"
+  },
+  "indoor setting, neutral colors, minimalistic style": {
+    "描述": "室内场景，中性色调，极简风格",
+    "关键词": "灰、白、米、棕为主调，无鲜艳色彩，家具低饱和，强调质感与留白，北欧或日式极简风"
+  },
+  "indoor setting, patio, sliding door": {
+    "描述": "室内场景，露台，推拉门",
+    "关键词": "室内通过玻璃推拉门无缝连接露台，模糊室内外界限，适合度假或现代生活场景"
+  },
+  "indoor setting, wooden floor, ornate furniture": {
+    "描述": "室内场景，木地板，华丽家具",
+    "关键词": "深色实木地板搭配雕花沙发、水晶吊灯等复古家具，体现古典、奢华或欧式风格"
+  },
+  "industrial setting, metal window, concrete wall, moss-covered ground": {
+    "描述": "工业场景，金属窗，混凝土墙，苔藓地面",
+    "关键词": "废弃工厂或仓库，金属窗框锈迹斑斑，混凝土墙粗犷，地面苔藓暗示时间流逝，废土美学"
+  },
+  "lush greenery, blurred foliage, natural setting": {
+    "描述": "郁郁葱葱的绿色植物，虚化叶片，自然场景",
+    "关键词": "前景绿植清晰，背景植被柔焦，层次丰富，突出自然生机与空间深度"
+  },
+  "marble interior, luxury decor, neutral colors, bath tub": {
+    "描述": "大理石室内，奢华装饰，中性色调，浴缸",
+    "关键词": "浴室采用白、灰大理石，独立浴缸居中，五金件为哑光金，整体低调奢华，如高端酒店"
+  },
+  "minimalistic design, clear sky, white walls": {
+    "描述": "极简设计，晴朗天空，白色墙壁",
+    "关键词": "建筑外立面为纯白墙体，无装饰，晴空湛蓝，强调纯净几何与光影变化"
+  },
+  "modern furniture, bright room, large window": {
+    "描述": "现代家具，明亮房间，大窗户",
+    "关键词": "浅色模块化沙发、玻璃茶几，大窗引入自然光，空间通透明亮，都市现代生活感"
+  },
+  "natural daylight, eye-level shot, soft focus": {
+    "描述": "自然日光，平视拍摄，柔焦",
+    "关键词": "日光均匀柔和，镜头平视，整体画面略带柔焦，营造自然、生活化、非摆拍感"
+  },
+  "natural lighting, eye-level shot, soft focus background": {
+    "描述": "自然光，平视拍摄，柔焦背景",
+    "关键词": "主体清晰对焦，背景因大光圈或距离虚化，自然光营造真实人像或静物氛围"
+  },
+  "natural lighting, indoor setting, decorative mirror": {
+    "描述": "自然光，室内场景，装饰镜子",
+    "关键词": "窗边墙面挂有雕花或异形镜，自然光反射增强空间感，兼具功能与装饰性"
+  },
+  "neutral colors, indoor setting, minimalistic decor": {
+    "描述": "中性色调，室内场景，极简装饰",
+    "关键词": "重复但合理，强调中性色与极简的组合，适用于通用背景描述"
+  },
+  "neutral tones, white brick wall, soft shadows": {
+    "描述": "中性色调，白色砖墙，柔和阴影",
+    "关键词": "白砖墙面肌理清晰，自然光斜射形成柔和投影，工业风与温馨感结合"
+  },
+  "nighttime cityscape, window reflections, indoor setting": {
+    "描述": "夜间城市景观，窗户反射，室内场景",
+    "关键词": "窗玻璃映出室内人物与室外霓虹，双重曝光效果，都市孤独或浪漫氛围"
+  },
+  "outdoor lighting, architectural details, black door, white wall": {
+    "描述": "户外照明，建筑细节，黑色门，白墙",
+    "关键词": "夜灯聚焦于黑白对比强烈的门墙结构，突出材质、比例与光影，现代建筑摄影风格"
+  },
+  "outdoor setting, blurred foliage, natural light": {
+    "描述": "户外场景，虚化叶片，自然光",
+    "关键词": "自然光下背景植被柔焦，前景清晰，适用于人像、产品或自然主题"
+  },
+  "outdoor setting, clear sky, swimming pool": {
+    "描述": "户外场景，晴朗天空，游泳池",
+    "关键词": "湛蓝天空下泳池水面反光，水波粼粼，度假或高端住宅典型场景"
+  },
+  "outdoor setting, sports car, lush greenery": {
+    "描述": "户外场景，跑车，郁郁葱葱的绿色植物",
+    "关键词": "流线型跑车停于林间或草坪，绿植环绕，机械与自然对比，突出速度与奢华"
+  },
+  "outdoor setting, waterfront view, architectural columns": {
+    "描述": "户外场景，滨水景观，建筑柱子",
+    "关键词": "水岸边古典或现代柱廊延伸，水面倒影清晰，融合建筑、水景与光影"
+  },
+  "overcast sky, urban landscape, skyscrapers": {
+    "描述": "阴天，城市景观，摩天大楼",
+    "关键词": "灰蓝天幕下摩天楼群轮廓柔和，无强烈阴影，城市显得冷静、秩序或略带压抑"
+  },
+  "palm trees, clear sky, tropical setting": {
+    "描述": "棕榈树，晴朗天空，热带场景",
+    "关键词": "蓝天无云，高大棕榈摇曳，典型热带度假氛围，色彩明快，充满阳光感"
+  },
+  "parking garage, concrete pillars, shadow patterns": {
+    "描述": "停车场，混凝土柱子，阴影图案",
+    "关键词": "地下或地面停车场，混凝土柱规律排列，日光或灯光形成几何阴影，冷峻工业感"
+  },
+  "plain wall, minimal shadows, neutral colors": {
+    "描述": "素墙，极少阴影，中性色调",
+    "关键词": "墙面平整无装饰，光线均匀，几乎无投影，适合极简人像或产品展示"
+  },
+  "pool area, illuminated, purple lighting, night time": {
+    "描述": "泳池区，灯光照明，紫色灯光，夜晚",
+    "关键词": "夜间泳池底部或周边嵌入紫色LED灯，水面泛紫光，神秘梦幻，常见于派对或高端住宅"
+  },
+  "rule of thirds, eye-level shot, straight angle, soft lighting": {
+    "描述": "三分法构图，平视拍摄，正角度，柔和照明",
+    "关键词": "主体位于画面1/3线，镜头平视无畸变，柔光均匀照明，专业摄影标准构图"
+  },
+  "sandy beach, ocean waves, clear sky": {
+    "描述": "沙滩，海浪，晴朗天空",
+    "关键词": "金黄沙滩与湛蓝海浪相接，天空澄澈，动态浪花与静态沙滩对比，充满夏日活力"
+  },
+  "shallow depth of field, natural lighting": {
+    "描述": "浅景深，自然光",
+    "关键词": "大光圈虚化背景，自然光营造柔和过渡，突出主体，适用于人像或特写"
+  },
+  "soft focus, shallow depth of field, natural lighting": {
+    "描述": "柔焦，浅景深，自然光",
+    "关键词": "整体略带朦胧感，背景高度虚化，自然光营造梦幻、温柔或复古氛围"
+  },
+  "soft lighting, indoor setting, neutral colors": {
+    "描述": "柔和照明，室内场景，中性色调",
+    "关键词": "无硬阴影，光线漫射，墙面与家具为灰、米、白等色，舒适、宁静、专业感"
+  },
+  "studio environment, white cyclorama, minimalist setting": {
+    "描述": "影棚环境，白色无影墙，极简布景",
+    "关键词": "无缝白墙与地板衔接，无任何装饰，专业摄影棚标准配置，用于高精度抠图或产品拍摄"
+  },
+  "sunlit setting, waterfront, architectural columns": {
+    "描述": "阳光场景，滨水，建筑柱子",
+    "关键词": "日光强烈，水面波光粼粼，柱廊投下清晰阴影，古典与自然结合，具地中海或新古典风格"
+  },
+  "tropical foliage, blurred greenery, wooden structure": {
+    "描述": "热带植物，虚化绿色植物，木结构",
+    "关键词": "前景木亭或栏杆清晰，背景热带绿植柔焦，色彩浓郁，度假村或生态建筑氛围"
+  },
+  "urban setting, covered walkway, architectural columns": {
+    "描述": "城市场景，有顶走道，建筑柱子",
+    "关键词": "现代城市连廊或拱廊，混凝土或石材柱支撑顶棚，行人穿梭，兼具功能与美学"
+  },
+  "vertical orientation, eye-level shot, straight angle": {
+    "描述": "竖构图，平视拍摄，正角度",
+    "关键词": "画面纵向构图，镜头平视无倾斜，主体居中或按三分法，适用于手机人像或社交媒体"
+  },
+  "white structure, arch details, outdoor setting": {
+    "描述": "白色建筑，拱形细节，户外场景",
+    "关键词": "白色墙体或亭台带有拱门、拱窗，阳光照射下光影柔和，具地中海或古典复兴风格"
+  },
+  "white walls, minimalistic design, architectural details": {
+    "描述": "白色墙壁，极简设计，建筑细节",
+    "关键词": "白墙强调线脚、开窗、材质交接等细节，无多余装饰，现代建筑纯粹主义美学"
+  },
+  "window reflections, nighttime cityscape, indoor setting": {
+    "描述": "窗户反射，夜间城市景观，室内场景",
+    "关键词": "同 'nighttime cityscape, window reflections...'，强调玻璃作为媒介，内外空间交融"
+  },
+  "wooden cabinetry, indoor lighting, blurred marina": {
+    "描述": "木制橱柜，室内照明，虚化码头",
+    "关键词": "厨房或客厅橱柜为暖色实木，室内灯光柔和，窗外码头夜景虚化，海景住宅生活感"
+  },
+  "wooden structure, blurred greenery, natural light": {
+    "描述": "木结构，虚化绿色植物，自然光",
+    "关键词": "木亭、栈道或小屋为前景，背景森林或花园柔焦，自然光营造宁静、质朴氛围"
+  },
+  "ambient lighting, indoor setting, blurred plants, warm tones": {
+    "描述": "环境光，室内场景，虚化植物，暖色调",
+    "关键词": "室内采用间接暖光照明，背景绿植柔焦虚化，营造温馨、放松且富有生活气息的居家或咖啡馆氛围"
+  },
+  "architectural details, indirect lighting, white textured wall": {
+    "描述": "建筑细节，间接照明，白色纹理墙",
+    "关键词": "墙面为白色肌理涂料或微水泥，间接光源从顶部或底部洗亮墙面，突出材质层次与现代建筑细节"
+  },
+  "architectural features, outdoor setting, brightly lit, foliage, hexagonal tiles": {
+    "描述": "建筑特征，户外场景，明亮光线，绿叶，六角砖",
+    "关键词": "阳光充足的户外庭院，六边形地砖铺地，周边环绕绿植，建筑立面有几何线条或拱廊，兼具设计感与自然气息"
+  },
+  "beach setting, evening sky, soft focus, ocean horizon": {
+    "描述": "海滩场景，傍晚天空，柔焦，海平线",
+    "关键词": "日落时分的海滩，天空呈橙粉渐变，海平线柔焦处理，整体画面朦胧浪漫，适合情绪人像或电影感构图"
+  },
+  "blurred background, nighttime, wooden railing, city lights": {
+    "描述": "虚化背景，夜晚，木栏杆，城市灯光",
+    "关键词": "前景为清晰木栏杆，背景城市夜景高度虚化，灯光化作光斑，营造都市高处的孤独、静谧或浪漫氛围"
+  },
+  "blurred details, bokeh effect, indoor setting": {
+    "描述": "细节虚化，散景效果，室内场景",
+    "关键词": "室内背景因大光圈完全虚化，仅留色块与光斑，突出前景主体，适用于人像、静物或产品特写"
+  },
+  "blurred foliage, natural lighting, lush greenery": {
+    "描述": "虚化绿叶，自然光，郁郁葱葱的绿色植物",
+    "关键词": "前景人物或物体清晰，背景热带或温带绿植柔焦，自然光从叶隙洒入，层次丰富且生机盎然"
+  },
+  "blurred greenery, outdoor setting, natural light": {
+    "描述": "虚化绿色植物，户外场景，自然光",
+    "关键词": "户外日光下背景植被虚化，突出前景焦点，适用于人像、时尚或自然主题摄影"
+  },
+  "blurred marina, overcast sky, outdoor light": {
+    "描述": "虚化码头，阴天，户外光线",
+    "关键词": "阴天柔和光线下，远处游艇码头虚化成蓝灰色块，前景可置人物或静物，宁静而富有海港诗意"
+  },
+  "blurred room details, indoor setting, windows": {
+    "描述": "虚化房间细节，室内场景，窗户",
+    "关键词": "窗户作为构图元素清晰或半清晰，室内家具与装饰柔焦，强调光影与空间纵深感"
+  },
+  "blurred surroundings, indoor setting": {
+    "描述": "虚化环境，室内场景",
+    "关键词": "室内整体背景虚化，仅保留主体清晰，适用于突出人物、产品或特定物品的通用布景"
+  },
+  "bright lighting, indoor setting, open doorways, tiled floor, minimal decor": {
+    "描述": "明亮照明，室内场景，敞开门口，瓷砖地面，极简装饰",
+    "关键词": "自然光与人工光结合，空间通透，白瓷砖反射光线，无多余家具，体现北欧或现代极简主义美学"
+  },
+  "calm sea, overcast sky, sandy beach, distant sunshades, tranquil setting": {
+    "描述": "平静大海，阴天，沙滩，远处遮阳伞，宁静氛围",
+    "关键词": "灰蓝海面如镜，细沙延展，远处彩色遮阳伞点缀，阴天消去强烈阴影，整体宁静、空旷、治愈"
+  },
+  "clear sky, architectural features, coastal view": {
+    "描述": "晴朗天空，建筑特征，海岸景观",
+    "关键词": "湛蓝无云天空下，白色或彩色建筑临海而建，线条简洁，融合地中海或现代滨海风格"
+  },
+  "clear sky, coastal view, lush landscape": {
+    "描述": "晴朗天空，海岸景观，郁郁葱葱的风景",
+    "关键词": "海岸悬崖或山坡绿意盎然，海天湛蓝，阳光强烈，植被色彩饱和，充满生机与度假感"
+  },
+  "concrete structure, underpass, soft shadows, daylight": {
+    "描述": "混凝土结构，地下通道，柔和阴影，日光",
+    "关键词": "桥下或立交通道内，混凝土墙面粗犷，日光从开口斜射形成柔和投影，冷静、疏离，具城市边缘感"
+  },
+  "dark ambiance, gym setting, blurred equipment, blue lighting": {
+    "描述": "昏暗氛围，健身房场景，虚化器械，蓝色灯光",
+    "关键词": "健身房以冷调LED蓝光为主，器械轮廓虚化，突出训练者剪影或汗水细节，营造未来感或深夜训练氛围"
+  },
+  "daylight conditions, outdoor setting, green plants, restaurant ambiance": {
+    "描述": "日光条件，户外场景，绿色植物，餐厅氛围",
+    "关键词": "露天咖啡馆或餐厅，绿植环绕桌椅，自然光充足，餐具与饮品清晰，生活气息浓郁"
+  },
+  "diffused lighting, indoor setting, sheer curtains, soft color palette": {
+    "描述": "漫射光，室内场景，薄纱窗帘，柔和色调",
+    "关键词": "自然光透过薄纱窗帘均匀漫射，墙面与家具采用米、灰、粉等低饱和色，氛围温柔、宁静、女性化"
+  }
+}
