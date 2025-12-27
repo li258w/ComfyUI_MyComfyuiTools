@@ -118,5 +118,30 @@
   "rainy_city": {
     "描述": "雨中城市风格，湿街道反光、霓虹倒影",
     "关键词": "湿反光, 高饱和霓虹, 夜景, 雨伞元素"
-  }
+  },
+  "Forest-Cinematic Soft Natural Light": {
+    "描述": "柔和光线, 低饱和度, 大地色系, 浅景深, 照片般真实",
+    "关键词": "专业户外摄影的真实质感，色彩柔和、偏灰，整体偏暖不鲜艳并带有低饱和度的复古色调（大地色系），光线柔和，采用浅景深突出主体"
+  },
+  "dreamy_pastel_elegance": {
+  "描述": "极致美学和超高细节的幻想风格，以柔和的马卡龙/淡雅色彩为主，强调体积光、深度场和发光背景等梦幻光影效果，构图动态且细节丰富。",
+  "关键词": "极致美学, 梦幻光影, 淡雅色调, 动态构图, 体积光, 深度场, 超高细节, 发光背景, 柔和微光"
+  },
+  "ForestCinematicSoftLight": {
+    "描述": "绿色电影色调、软自然光、轻胶片感、低饱和背景、人像肤色自然暖调，浅景深，中长焦镜头。",
+    "关键词": [
+      "greenish-gray cinematic tone",
+      "soft natural light",
+      "diffused daylight",
+      "shallow depth of field",
+      "cinematic bokeh",
+      "matte skin",
+      "subtle film texture",
+      "cool color temperature",
+      "desaturated background",
+      "outdoor portrait",
+      "calm atmosphere"
+    ]
+  }   
+
 }

@@ -6,7 +6,7 @@ from .selector_nodes import (
     StringJoiner
 )
 
-# 【已移除 WEB_DIRECTORY = "./js"】
+WEB_DIRECTORY = "./js"
 
 # 注册所有节点类
 NODE_CLASS_MAPPINGS = {

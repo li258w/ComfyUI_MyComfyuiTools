@@ -51,7 +51,7 @@ class BaseJsonSelector:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("text_output",)
     FUNCTION = "process_text"
-    CATEGORY = "MyCustomNodes"
+    CATEGORY = "MyCustomNodes/prompt"
 
     def check_and_add_comma(self, text):
         if not text:
@@ -65,7 +65,13 @@ class BaseJsonSelector:
         
         return stripped_text
 
-    def process_text(self, prefix, style_select, output_mode, random_filter, custom_text, seed): 
+    def process_text(self, prefix, style_select, output_mode, random_filter, custom_text, seed):
+        # 跳过分类标题行（以"--- "开头）
+        if style_select.startswith("--- "):
+            # 当作"无"处理
+            final_output = self.check_and_add_comma(prefix)
+            return (final_output,)
+
         target_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), self.TARGET_JSON_FILE)
 
         selected_content = ""
@@ -78,9 +84,9 @@ class BaseJsonSelector:
             return (f"Error loading JSON file at {self.TARGET_JSON_FILE}: {e}",)
 
         selected_key = ""
-        
+
         # --- 逻辑分支 (省略) ---
-        
+
         # 1. 选择 "无"
         if style_select == "无 (None)":
             final_output = self.check_and_add_comma(prefix)
@@ -169,6 +175,123 @@ class StyleSelector(BaseJsonSelector):
 class ClothingSelector(BaseJsonSelector):
     TARGET_JSON_FILE = "json/clothing.json"
     NODE_NAME = "Clothing Selector"
+
+    @classmethod
+    def INPUT_TYPES(s):
+        current_dir = os.path.dirname(os.path.realpath(__file__))
+        default_json_path = os.path.join(current_dir, s.TARGET_JSON_FILE)
+
+        # 分类列表（基础选项 + 所有分类）
+        category_options = ["无 (None)", "随机 (Random)", "自定义 (Custom)"]
+
+        # 所有项目列表（按分类分组，用于JavaScript过滤）
+        all_items = []
+        s._category_items_map = {}  # 类属性存储分类到项目的映射
+
+        if os.path.exists(default_json_path):
+            try:
+                with open(default_json_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+
+                # 收集分类和项目
+                categories = {}
+                uncategorized = []
+
+                for key, content in data.items():
+                    if isinstance(content, dict) and "描述" in content:
+                        description = content["描述"]
+                        item_categories = content.get("分类", [])
+
+                        if item_categories:
+                            # 添加到每个分类下
+                            for category in item_categories:
+                                if category not in categories:
+                                    categories[category] = []
+                                categories[category].append(description)
+                        else:
+                            uncategorized.append(description)
+
+                # 按分类名称排序
+                sorted_categories = sorted(categories.items(), key=lambda x: x[0])
+
+                # 构建分类选项（不包含分组标题）
+                for category, items in sorted_categories:
+                    category_options.append(category)
+                    s._category_items_map[category] = sorted(items)
+                    # 添加分类标题和项目到all_items（用于JavaScript）
+                    all_items.append(f"--- {category} ---")
+                    all_items.append("*全部* (随机)")
+                    all_items.extend(sorted(items))
+
+                # 处理未分类的项目
+                if uncategorized:
+                    category_options.append("其他")
+                    s._category_items_map["其他"] = sorted(uncategorized)
+                    all_items.append("--- 其他 ---")
+                    all_items.append("*全部* (随机)")
+                    all_items.extend(sorted(uncategorized))
+
+            except Exception as e:
+                print(f"[Node: {s.NODE_NAME}] Error loading JSON file '{s.TARGET_JSON_FILE}': {e}")
+
+        return {
+            "required": {
+                "prefix": ("STRING", {"multiline": False, "default": "", "placeholder": "前置文本 (例如: style: )"}),
+                "category_select": (category_options, {"default": "无 (None)"}),
+                "item_select": (all_items, {"default": ""}),
+                "output_mode": (["Key", "关键词", "描述+关键词"], {"default": "Key"}),
+                "random_filter": ("STRING", {"multiline": False, "default": "", "placeholder": "随机模式筛选词 (逗号分隔, 例如: 裙子, 红色)"}),
+                "custom_text": ("STRING", {"multiline": False, "default": "", "placeholder": "当上方选择'自定义'时，使用此文本"}),
+                "seed": ("INT", {
+                    "default": 0,
+                    "min": 0,
+                    "max": 0xffffffffffffffff,
+                    "control_after_generate": True
+                }),
+            },
+            "optional": {}
+        }
+
+    def process_text(self, prefix, category_select, item_select, output_mode, random_filter, custom_text, seed):
+        """
+        重写process_text方法，处理分类和项目选择
+        支持在特定分类内随机选择（当item_select为"*全部* (随机)"时）
+        """
+        # 设置随机种子
+        if seed != 0:
+            random.seed(seed)
+
+        # 根据category_select和item_select确定style_select的值
+        if category_select == "无 (None)":
+            style_select = "无 (None)"
+        elif category_select == "随机 (Random)":
+            style_select = "随机 (Random)"
+        elif category_select == "自定义 (Custom)":
+            style_select = "自定义 (Custom)"
+        else:
+            # 具体分类选择
+            if not item_select or item_select.startswith("--- "):
+                # 如果item_select为空或为分类标题，使用该分类下的第一个项目
+                category_items = self.__class__._category_items_map.get(category_select, [])
+                if category_items:
+                    style_select = category_items[0]
+                else:
+                    # 没有项目，当作"无"处理
+                    style_select = "无 (None)"
+            elif item_select == "*全部* (随机)":
+                # 在该分类内随机选择一个项目
+                category_items = self.__class__._category_items_map.get(category_select, [])
+                if category_items:
+                    style_select = random.choice(category_items)
+                else:
+                    # 没有项目，当作"无"处理
+                    style_select = "无 (None)"
+            else:
+                # 具体项目选择
+                style_select = item_select
+
+        # 调用基类的process_text方法
+        return super().process_text(prefix, style_select, output_mode, random_filter, custom_text, seed)
 
 class PoseSelector(BaseJsonSelector):
     TARGET_JSON_FILE = "json/pose.json"
