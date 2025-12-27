@@ -3487,6 +3487,36 @@
       "居家休闲"
     ]
   },
+  "white blouse, pleated navy skirt, brown loafers, minimal watch": {
+  "描述": "白色衬衫，藏青色百褶裙，棕色乐福鞋，简约腕表",
+  "关键词": "经典校园搭配：挺括白衬衫搭配藏青高腰百褶裙，棕色皮质乐福鞋增添学院气息，配以极简金属腕表，干净利落又青春洋溢",
+  "分类": [
+    "学院风",
+    "清新",
+    "简约",
+    "青春"
+  ]
+},
+"striped sweater vest, white collared shirt, khaki skirt, knee-high socks": {
+  "描述": "条纹针织背心，白色立领衬衫，卡其色短裙，及膝袜",
+  "关键词": "条纹V领针织背心叠穿白衬衫，下搭卡其A字短裙与深色及膝袜，复古英伦学院风十足，充满书卷气与少女感",
+  "分类": [
+    "学院风",
+    "复古",
+    "青春",
+    "英伦"
+  ]
+},
+"light blue denim jacket, white t-shirt, high-waisted jeans, white sneakers": {
+  "描述": "浅蓝色牛仔外套，白色T恤，高腰牛仔裤，白色运动鞋",
+  "关键词": "休闲校园风代表：浅蓝牛仔外套内搭纯白T恤，高腰直筒牛仔裤拉长比例，搭配干净小白鞋，随性自然又活力四射",
+  "分类": [
+    "居家休闲",
+    "青春",
+    "街头",
+    "极简"
+  ]
+},
   "silk cheongsam, sheer fabric, cool-toned black-green, low saturation, high brightness pattern, high slit on side, high neck, deep V-neck, traditional Chinese clothing, transparent black silk stockings, embroidered 'Xiuya' characters on front placket": {
     "描述": "丝绸旗袍，薄纱质地，冷调黑青属性、低饱和度倾向、高明亮度图案旗袍，侧边高开衩，高领，深V领，传统中式服装，透明黑色丝袜。衣服的前襟处绣着“秀雅”字样。",
     "关键词": "旗袍形制，丝绸材质与薄纱叠加形成半透明质感，冷调黑青底色呈现低饱和度视觉效果，表面带有高明亮度图案，高领与深V领结合的剪裁设计，侧边高开衩的结构细节，前襟处有“秀雅”刺绣字样，搭配透明黑色丝袜，整体呈现垂坠感与修身廓形，保留中式服装的立领、盘扣对应结构特征",
@@ -3496,5 +3526,62 @@
       "性感",
       "民族风情"
     ]
-  }
+  },
+  "emerald green silk cheongsam, gold floral embroidery, high slit, jade pendant": {
+  "描述": "翠绿色真丝旗袍，金色花卉刺绣，高开衩，翡翠吊坠",
+  "关键词": "翠绿缎面旗袍勾勒优雅身形，金色牡丹刺绣点缀其间，侧边高开衩增添灵动感，搭配小巧翡翠吊坠，古典华美中透出东方含蓄性感",
+  "分类": [
+    "中式",
+    "复古",
+    "浪漫",
+    "性感",
+    "晚宴红毯"
+  ]
+},
+"ivory lace cheongsam, cap sleeves, mandarin collar, pearl hairpin": {
+  "描述": "象牙色蕾丝旗袍，短袖，立领，珍珠发簪",
+  "关键词": "象牙白蕾丝旗袍融合民国剪裁，短袖与立领保留传统元素，通透质感柔化轮廓，配以珍珠发簪，温婉娴静如旧时光中的闺秀",
+  "分类": [
+    "中式",
+    "复古",
+    "浪漫",
+    "晚宴红毯"
+  ]
+},
+"black satin cheongsam, red piping trim, side buttons, red lipstick": {
+  "描述": "黑色缎面旗袍，红色滚边，侧扣盘扣，正红色口红",
+  "关键词": "经典黑底红边旗袍以高级缎面呈现，侧襟传统盘扣与红唇呼应，极简线条凸显东方女性曲线，神秘端庄又极具气场",
+  "分类": [
+    "中式",
+    "复古",
+    "性感",
+    "晚宴红毯"
+  ]
+},
+"navy blue sailor-style uniform, white collar, red ribbon, pleated skirt": {
+  "描述": "深蓝色水手服，白色大翻领，红色领结，百褶短裙",
+  "关键词": "经典日漫高中女生制服：深蓝水手服配白色宽领与红色丝带，高腰百褶短裙展现青春活力，干净利落又充满少女感",
+  "分类": [
+    "学院风",
+    "复古",
+    "浪漫"
+  ]
+},
+"black gakuran, brass buttons, stand-up collar, matching trousers": {
+  "描述": "黑色立领学生装（诘襟），黄铜纽扣，配套长裤",
+  "关键词": "日式男高中生经典诘襟制服，黑色立领上衣配一排醒目黄铜纽扣，搭配同色长裤，庄重整洁，散发昭和年代的纪律感与少年英气",
+  "分类": [
+    "学院风",
+    "复古",
+    "极简"
+  ]
+},
+"gray blazer with school crest, white shirt, tartan skirt, knee-high socks": {
+  "描述": "灰色学院西装外套（带校徽），白衬衫，格纹短裙，及膝袜",
+  "关键词": "英伦风高中制服：灰色修身西装绣有校徽，内搭白衬衫，下穿红黑格纹百褶裙与深色及膝袜，书卷气与青春感并存",
+  "分类": [
+    "学院风",
+    "复古"
+  ]
+}
 }

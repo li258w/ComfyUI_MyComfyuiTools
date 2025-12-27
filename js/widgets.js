@@ -77,7 +77,7 @@ app.registerExtension({
                 } else {
                     // 对于"无"、"随机"、"自定义"选项，隐藏item_widget
                     itemWidget.options.values = [];
-                    itemWidget.value = ""; // 重置值避免验证错误
+                    itemWidget.value = "[隐藏]"; // 重置值避免验证错误
 
                     // 隐藏widget
                     if (itemWidget.parentEl) {

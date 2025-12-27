@@ -185,7 +185,7 @@ class ClothingSelector(BaseJsonSelector):
         category_options = ["无 (None)", "随机 (Random)", "自定义 (Custom)"]
 
         # 所有项目列表（按分类分组，用于JavaScript过滤）
-        all_items = []
+        all_items = ["[隐藏]"]  # 添加特殊选项，用于验证当category_select为"随机"等情况时
         s._category_items_map = {}  # 类属性存储分类到项目的映射
 
         if os.path.exists(default_json_path):
@@ -238,7 +238,7 @@ class ClothingSelector(BaseJsonSelector):
             "required": {
                 "prefix": ("STRING", {"multiline": False, "default": "", "placeholder": "前置文本 (例如: style: )"}),
                 "category_select": (category_options, {"default": "无 (None)"}),
-                "item_select": (all_items, {"default": ""}),
+                "item_select": (all_items, {"default": "[隐藏]"}),
                 "output_mode": (["Key", "关键词", "描述+关键词"], {"default": "Key"}),
                 "random_filter": ("STRING", {"multiline": False, "default": "", "placeholder": "随机模式筛选词 (逗号分隔, 例如: 裙子, 红色)"}),
                 "custom_text": ("STRING", {"multiline": False, "default": "", "placeholder": "当上方选择'自定义'时，使用此文本"}),
@@ -270,7 +270,7 @@ class ClothingSelector(BaseJsonSelector):
             style_select = "自定义 (Custom)"
         else:
             # 具体分类选择
-            if not item_select or item_select.startswith("--- "):
+            if not item_select or item_select == "[隐藏]" or item_select.startswith("--- "):
                 # 如果item_select为空或为分类标题，使用该分类下的第一个项目
                 category_items = self.__class__._category_items_map.get(category_select, [])
                 if category_items:
