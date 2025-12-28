@@ -114,6 +114,10 @@ ComfyUI_MyComfyuiTools/
 9. **JsonHairColorSelector** - 头发颜色 (`hair_color.json`)
 10. **JsonPhotoTypeSelector** - 照片类型 (`photo_type.json`)
 11. **JsonCompositionSelector** - 构图 (`composition.json`)
+   - **特殊功能**：支持10个构图风格分类，双级下拉菜单界面
+   - **分类系统**：使用 `classify_composition.py` 脚本自动分类，支持多标签
+   - **前端联动**：通过 `js/widgets.js` 实现分类到项目的动态过滤（与服装选择器共享逻辑）
+   - **随机选项**：支持分类内随机选择（"*全部* (随机)"选项）
 
 ### 工具节点
 - **StringJoiner**: 多字符串联结工具，支持多种分隔符
@@ -122,7 +126,7 @@ ComfyUI_MyComfyuiTools/
 
 ### 版本管理
 - `selector_nodes.py` 是当前主版本（v1.7+）
-- **v1.7 新增功能**：服装分类系统、双级下拉菜单、分类内随机选择、前端JavaScript联动
+- **v1.7 新增功能**：服装分类系统、双级下拉菜单、分类内随机选择、前端JavaScript联动（后续扩展了构图分类系统）
 - **v1.6 新增功能**：随机筛选器、自定义模式、描述+关键词输出模式
 
 ### 代码修改

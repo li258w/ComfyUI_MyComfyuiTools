@@ -1,13 +1,13 @@
 // ComfyUI自定义widget实现分类和项目的联动下拉菜单
 import { app } from "../../../scripts/app.js";
 
-// 扩展ClothingSelector节点
+// 扩展ClothingSelector和CompositionSelector节点（双级下拉菜单联动）
 app.registerExtension({
     name: "ComfyUI_MyComfyuiTools.CategoryItemWidget",
 
     async beforeRegisterNodeDef(nodeType, nodeData, app) {
-        // 只处理ClothingSelector节点
-        if (nodeData.name !== "JsonClothingSelector") {
+        // 处理ClothingSelector和CompositionSelector节点
+        if (nodeData.name !== "JsonClothingSelector" && nodeData.name !== "JsonCompositionSelector") {
             return;
         }
 

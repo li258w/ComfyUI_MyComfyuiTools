@@ -36,6 +36,9 @@
 9.  **Hair Color Selector** (`hair_color.json`) - 头发颜色
 10. **Photo Type Selector** (`photo_type.json`) - 照片类型/胶片
 11. **Composition Selector** (`composition.json`) - 构图
+    * **特别功能**：支持10个构图风格分类，双级下拉菜单界面
+    * **分类内随机**：可选择"*全部* (随机)"在特定分类内随机选择
+    * **分类列表**：经典人像、商业摄影、风景建筑、夜景摄影、电影感构图、时尚大片、街头纪实、艺术创作、自拍生活、其他
 
 ## 📝 JSON 数据格式 (JSON Format)
 
@@ -81,6 +84,23 @@ custom_text: (仅在自定义模式下生效) 也就是手动输入框。
 seed: 随机种子。控制随机选择的结果，支持“生成后控制（Fixed/Randomize/Increment）”。
 
 📅 更新日志 (Changelog)
+[2025-12-28] v1.8 - Composition Category System
+新增功能：为 Composition Selector 节点添加构图分类系统和双级下拉菜单。
+
+**自动分类系统**：
+- 使用 AI 辅助脚本将 94 个构图条目自动分类到 10 个风格主题
+- 分类包括：经典人像、商业摄影、风景建筑、夜景摄影、电影感构图、时尚大片、街头纪实、艺术创作、自拍生活、其他
+
+**双级下拉菜单**：
+- 第一级：选择构图风格分类（category_select）
+- 第二级：选择具体构图项目（item_select），根据第一级选择动态过滤
+- 支持分类内随机选择：在 item_select 中添加 "*全部* (随机)" 选项，可在所选分类内随机选择项目
+
+**技术实现**：
+- 前端：复用现有 JavaScript 联动逻辑（js/widgets.js），同时支持 Clothing 和 Composition 节点
+- 后端：Python 处理分类映射和随机逻辑，与服装选择器共享架构
+- 自动隐藏/显示：当选择"无"、"随机"、"自定义"时隐藏项目选择框
+
 [2025-12-27] v1.7 - Clothing Category & Two-level Dropdown
 新增功能：为 Clothing Selector 节点添加服装分类系统和双级下拉菜单。
 
