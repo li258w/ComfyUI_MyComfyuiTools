@@ -47,7 +47,7 @@ ComfyUI_MyComfyuiTools/
 }
 ```
 
-**clothing.json 特殊字段**：
+**支持分类的JSON文件特殊字段**（clothing.json、pose.json、composition.json）：
 ```json
 {
   "unique_key_name": {
@@ -69,7 +69,7 @@ ComfyUI_MyComfyuiTools/
 - `custom_text`: 自定义模式下的输入文本
 - `seed`: 随机种子（支持 Fixed/Randomize/Increment）
 
-**ClothingSelector 特殊参数**：
+**支持分类系统的选择器特殊参数**（ClothingSelector、PoseSelector、CompositionSelector）：
 - `category_select`: 分类选择菜单（包含"无"、"随机"、"自定义"和所有分类）
 - `item_select`: 项目选择菜单，根据 `category_select` 动态过滤
   - 包含特殊选项 "*全部* (随机)"：在所选分类内随机选择
@@ -81,7 +81,7 @@ ComfyUI_MyComfyuiTools/
 3. **随机 (Random)**: 从JSON中随机选择，支持关键词筛选
 4. **具体选项**: 输出对应JSON条目的内容
 
-**ClothingSelector 特殊输出逻辑**：
+**支持分类系统的选择器特殊输出逻辑**（ClothingSelector、PoseSelector、CompositionSelector）：
 1. **分类选择流程**：
    - `category_select` 和 `item_select` 共同决定最终选择的项目
    - 当 `item_select` 为 "*全部* (随机)" 时，在 `category_select` 指定的分类内随机选择
@@ -106,6 +106,10 @@ ComfyUI_MyComfyuiTools/
    - **前端联动**：通过 `js/widgets.js` 实现分类到项目的动态过滤
    - **随机选项**：支持分类内随机选择（"*全部* (随机)"选项）
 3. **JsonPoseSelector** - 姿势 (`pose.json`)
+   - **特殊功能**：支持10个姿势类型分类，双级下拉菜单界面
+   - **分类系统**：为所有姿势条目添加分类标签，支持多标签
+   - **前端联动**：通过 `js/widgets.js` 实现分类到项目的动态过滤（与服装和构图选择器共享逻辑）
+   - **随机选项**：支持分类内随机选择（"*全部* (随机)"选项）
 4. **JsonHairstylesSelector** - 发型 (`hairstyles.json`)
 5. **JsonEyeColorsSelector** - 眼睛颜色 (`eye_colors.json`)
 6. **JsonBackgroundSelector** - 背景 (`background.json`)
@@ -125,8 +129,10 @@ ComfyUI_MyComfyuiTools/
 ## 开发注意事项
 
 ### 版本管理
-- `selector_nodes.py` 是当前主版本（v1.7+）
-- **v1.7 新增功能**：服装分类系统、双级下拉菜单、分类内随机选择、前端JavaScript联动（后续扩展了构图分类系统）
+- `selector_nodes.py` 是当前主版本（v1.9+）
+- **v1.9 新增功能**：姿势分类系统、双级下拉菜单、分类内随机选择、前端JavaScript扩展（支持Pose节点）
+- **v1.8 新增功能**：构图分类系统、双级下拉菜单、分类内随机选择、前端JavaScript扩展（支持Composition节点）
+- **v1.7 新增功能**：服装分类系统、双级下拉菜单、分类内随机选择、前端JavaScript联动
 - **v1.6 新增功能**：随机筛选器、自定义模式、描述+关键词输出模式
 
 ### 代码修改
