@@ -6,8 +6,8 @@ app.registerExtension({
     name: "ComfyUI_MyComfyuiTools.CategoryItemWidget",
 
     async beforeRegisterNodeDef(nodeType, nodeData, app) {
-        // 处理ClothingSelector、CompositionSelector和ShoesSelector节点
-        if (nodeData.name !== "JsonClothingSelector" && nodeData.name !== "JsonCompositionSelector" && nodeData.name !== "JsonShoesSelector") {
+        // 处理ClothingSelector、CompositionSelector、PoseSelector和ShoesSelector节点
+        if (nodeData.name !== "JsonClothingSelector" && nodeData.name !== "JsonCompositionSelector" && nodeData.name !== "JsonPoseSelector" && nodeData.name !== "JsonShoesSelector") {
             return;
         }
 
