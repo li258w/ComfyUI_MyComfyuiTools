@@ -7,7 +7,7 @@ app.registerExtension({
 
     async beforeRegisterNodeDef(nodeType, nodeData, app) {
         // 处理ClothingSelector、CompositionSelector、PoseSelector和ShoesSelector节点
-        if (nodeData.name !== "JsonClothingSelector" && nodeData.name !== "JsonCompositionSelector" && nodeData.name !== "JsonPoseSelector" && nodeData.name !== "JsonShoesSelector") {
+        if (nodeData.name !== "JsonClothingSelector" && nodeData.name !== "JsonCompositionSelector" && nodeData.name !== "JsonPoseSelector" && nodeData.name !== "JsonShoesSelector" && nodeData.name !== "JsonHairstylesSelector") {
             return;
         }
 

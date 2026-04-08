@@ -14,6 +14,7 @@
     * **Clothing Selector**：12个功能分类（上装、连衣裙等）
     * **Pose Selector**：13个姿势类型分类（站姿、坐姿、蹲跪姿等）
     * **Composition Selector**：10个构图风格分类（经典人像、商业摄影等）
+    * **Body Types Selector**：多类别体型分类
     * **双级下拉菜单**：先选分类，再选具体项目，界面更清晰
     * **动态过滤**：第二级菜单根据第一级选择动态更新
 * **自定义模式**：可以直接在节点内输入自定义文本，跳过 JSON 选择。
@@ -37,6 +38,9 @@
 5.  **Eye Colors Selector** (`eye_colors.json`) - 眼睛颜色
 6.  **Background Selector** (`background.json`) - 背景
 7.  **Body Types Selector** (`body_types.json`) - 体型
+    * **特别功能**：支持多类别分类，双级下拉菜单界面
+    * **分类内随机**：可选择"*全部* (随机)"在特定分类内随机选择
+    * **分类列表**：纤细/瘦小、丰满/曲线、运动/健美、强壮/敦实、中性/其他、极端/夸张、其他/状态
 8.  **Place Selector** (`place.json`) - 地点
 9.  **Hair Color Selector** (`hair_color.json`) - 头发颜色
 10. **Photo Type Selector** (`photo_type.json`) - 照片类型/胶片
@@ -89,6 +93,23 @@ custom_text: (仅在自定义模式下生效) 也就是手动输入框。
 seed: 随机种子。控制随机选择的结果，支持“生成后控制（Fixed/Randomize/Increment）”。
 
 📅 更新日志 (Changelog)
+[2026-04-08] v2.0 - Body Types Category System
+新增功能：为 Body Types Selector 节点添加体型分类系统和双级下拉菜单。
+
+**自动分类系统**：
+- 为所有体型条目添加分类标签，支持多个体型分类维度
+- 分类包括：纤细/瘦小、丰满/曲线、运动/健美、强壮/敦实、中性/其他、极端/夸张、其他/状态等
+
+**双级下拉菜单**：
+- 第一级：选择体型分类（category_select）
+- 第二级：选择具体体型项目（item_select），根据第一级选择动态过滤
+- 支持分类内随机选择：在 item_select 中添加 "*全部* (随机)" 选项，可在所选分类内随机选择项目
+
+**技术实现**：
+- 前端：复用现有 JavaScript 联动逻辑（js/widgets.js）
+- 后端：Python 处理分类映射和随机逻辑，与服装、姿势、构图选择器共享架构
+- 自动隐藏/显示：当选择"无"、"随机"、"自定义"时隐藏项目选择框
+
 [2026-01-12] v1.9 - Pose Category System
 新增功能：为 Pose Selector 节点添加姿势分类系统和双级下拉菜单。
 
