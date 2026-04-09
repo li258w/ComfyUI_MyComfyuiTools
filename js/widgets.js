@@ -40,7 +40,8 @@ app.registerExtension({
                     currentCategory = option.replace("--- ", "").replace(" ---", "");
                     categoryItemMap[currentCategory] = [];
                 } else if (currentCategory) {
-                    // 跳过"*全部* (随机)"选项，它将在前端动态添加
+                    // 跳过"*全部* (随机)"选项，它已经包含在后端的选项中
+                    // 但我们需要在categoryItemMap中排除它，因为它是特殊选项
                     if (option === "*全部* (随机)") {
                         continue;
                     }

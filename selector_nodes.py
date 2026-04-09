@@ -277,8 +277,9 @@ class BaseCategorizedJsonSelector(BaseJsonSelector):
                     sorted_items = sorted(items)
                     category_items_map[category] = sorted_items
                     # 添加分类标题和项目到all_items（用于JavaScript）
-                    # 注意：不添加"*全部* (随机)"选项，前端会动态添加
+                    # 注意：需要添加"*全部* (随机)"选项，否则前端添加后后端验证会失败
                     all_items.append(f"--- {category} ---")
+                    all_items.append("*全部* (随机)")
                     all_items.extend(sorted_items)
 
                 # 处理未分类的项目
@@ -287,6 +288,7 @@ class BaseCategorizedJsonSelector(BaseJsonSelector):
                     sorted_uncategorized = sorted(uncategorized)
                     category_items_map["其他"] = sorted_uncategorized
                     all_items.append("--- 其他 ---")
+                    all_items.append("*全部* (随机)")
                     all_items.extend(sorted_uncategorized)
 
                 # 一次性设置类属性，减少在循环中修改类属性的风险
