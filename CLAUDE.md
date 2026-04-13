@@ -81,7 +81,7 @@ ComfyUI_MyComfyuiTools/
 3. **随机 (Random)**: 从JSON中随机选择，支持关键词筛选
 4. **具体选项**: 输出对应JSON条目的内容
 
-**支持分类系统的选择器特殊输出逻辑**（ClothingSelector、PoseSelector、CompositionSelector）：
+**支持分类系统的选择器特殊输出逻辑**（ClothingSelector、PoseSelector、CompositionSelector、BodyTypesSelector、BackgroundSelector）：
 1. **分类选择流程**：
    - `category_select` 和 `item_select` 共同决定最终选择的项目
    - 当 `item_select` 为 "*全部* (随机)" 时，在 `category_select` 指定的分类内随机选择
@@ -113,6 +113,13 @@ ComfyUI_MyComfyuiTools/
 4. **JsonHairstylesSelector** - 发型 (`hairstyles.json`)
 5. **JsonEyeColorsSelector** - 眼睛颜色 (`eye_colors.json`)
 6. **JsonBackgroundSelector** - 背景 (`background.json`)
+   - **特殊功能**：支持2层简化分类系统，双级下拉菜单界面
+   - **分类系统**：使用极度简化的2标签分类（环境基调 + 场景类型）
+     - **第一层（环境基调）**：室内 / 室外
+     - **第二层（场景类型）**：科幻 / 奇幻 / 日常/生活 / 娱乐/活动 / 运动 / 人群 / 自然景观
+   - **前端联动**：通过 `js/widgets.js` 实现分类到项目的动态过滤（与其他分类选择器共享逻辑）
+   - **随机选项**：支持分类内随机选择（"*全部* (随机)"选项）
+   - **设计理念**：极度简化、聚焦核心、高效率分组，用两个标签快速定位场景的物理位置和核心主题
 7. **JsonBodyTypesSelector** - 体型 (`body_types.json`)
 8. **JsonPlaceSelector** - 地点 (`place.json`)
 9. **JsonHairColorSelector** - 头发颜色 (`hair_color.json`)
@@ -129,7 +136,12 @@ ComfyUI_MyComfyuiTools/
 ## 开发注意事项
 
 ### 版本管理
-- `selector_nodes.py` 是当前主版本（v1.9+）
+- `selector_nodes.py` 是当前主版本（v2.1+）
+- **v2.1 新增功能**：背景分类系统、双级下拉菜单、分类内随机选择、前端JavaScript扩展（支持Background节点）
+  - **简化分类系统**：采用2层标签（环境基调 + 场景类型），极度简化、聚焦核心
+  - **分类标签**：室内/室外 + 科幻/奇幻/日常/生活/娱乐/活动/运动/人群/自然景观
+  - **前端联动**：通过 `js/widgets.js` 实现分类到项目的动态过滤
+- **v2.0 新增功能**：体型分类系统、双级下拉菜单、分类内随机选择、前端JavaScript扩展（支持BodyTypes节点）
 - **v1.9 新增功能**：姿势分类系统、双级下拉菜单、分类内随机选择、前端JavaScript扩展（支持Pose节点）
 - **v1.8 新增功能**：构图分类系统、双级下拉菜单、分类内随机选择、前端JavaScript扩展（支持Composition节点）
 - **v1.7 新增功能**：服装分类系统、双级下拉菜单、分类内随机选择、前端JavaScript联动

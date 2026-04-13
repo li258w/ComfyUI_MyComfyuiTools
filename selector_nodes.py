@@ -381,7 +381,7 @@ class EyeColorsSelector(BaseJsonSelector):
     TARGET_JSON_FILE = "json/eye_colors.json"
     NODE_NAME = "Eye Colors Selector"
 
-class BackgroundSelector(BaseJsonSelector):
+class BackgroundSelector(BaseCategorizedJsonSelector):
     TARGET_JSON_FILE = "json/background.json"
     NODE_NAME = "Background Selector"
 
