@@ -411,6 +411,11 @@ class ShoesSelector(BaseCategorizedJsonSelector):
     NODE_NAME = "Shoes Selector"
 
 
+class ExpressionSelector(BaseJsonSelector):
+    TARGET_JSON_FILE = "json/expressions.json"
+    NODE_NAME = "Expression Selector"
+
+
 # --- 工具节点：多字符串联结 ---
 class StringJoiner:
     # 保持 StringJoiner 稳定不变

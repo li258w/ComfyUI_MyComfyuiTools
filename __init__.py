@@ -1,9 +1,10 @@
 from .selector_nodes import (
     StyleSelector, ClothingSelector, PoseSelector,
-    HairstylesSelector, EyeColorsSelector, BackgroundSelector, 
+    HairstylesSelector, EyeColorsSelector, BackgroundSelector,
     BodyTypesSelector, PlaceSelector, HairColorSelector, PhotoTypeSelector,
     CompositionSelector,
     ShoesSelector,
+    ExpressionSelector,
     StringJoiner
 )
 
@@ -23,6 +24,7 @@ NODE_CLASS_MAPPINGS = {
     "JsonPhotoTypeSelector": PhotoTypeSelector,
     "JsonCompositionSelector": CompositionSelector,
     "JsonShoesSelector": ShoesSelector,
+    "JsonExpressionSelector": ExpressionSelector,
     "StringJoiner": StringJoiner,
 }
 
@@ -40,6 +42,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "JsonPhotoTypeSelector": "Photo Type Selector",
     "JsonCompositionSelector": "Composition Selector",
     "JsonShoesSelector": "Shoes Selector",
+    "JsonExpressionSelector": "Expression Selector",
     "StringJoiner": "String Joiner",
 }
 
