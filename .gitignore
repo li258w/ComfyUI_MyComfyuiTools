@@ -17,3 +17,5 @@ __pycache__/
 .idea/
 *.log
 backup/
+.qoder/
+CLAUDE.md
