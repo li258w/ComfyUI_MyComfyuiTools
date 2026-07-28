@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "ComfyUI Style & Asset Selector",
+    "subtitle": "Runtime Architecture of the Custom Node Plugin",
+    "output": "comfyui-selector-architecture.html",
+    "quality_profile": "standard",
+    "views": [
+      {
+        "id": "main-path",
+        "label": "Node Selection Flow",
+        "focus": [
+          "comfyui",
+          "init",
+          "base-simple",
+          "base-cat",
+          "selectors-simple",
+          "selectors-cat",
+          "json-files",
+          "js-widgets",
+          "output"
+        ],
+        "note": "End-to-end path from ComfyUI launch to prompt text output."
+      },
+      {
+        "id": "categorized-flow",
+        "label": "Categorized Selector Flow",
+        "focus": [
+          "base-cat",
+          "selectors-cat",
+          "json-files",
+          "js-widgets",
+          "output"
+        ],
+        "note": "Dual-dropdown: back-end category filtering + front-end widget interaction."
+      },
+      {
+        "id": "simple-flow",
+        "label": "Simple Selector Flow",
+        "focus": [
+          "base-simple",
+          "selectors-simple",
+          "json-files",
+          "output"
+        ],
+        "note": "Flat-list single-dropdown selectors without front-end involvement."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "comfyui",
+      "type": "external",
+      "label": "ComfyUI Runtime",
+      "sublabel": "Node-based workflow engine",
+      "pos": [
+        40,
+        160
+      ],
+      "size": [
+        140,
+        70
+      ]
+    },
+    {
+      "id": "init",
+      "type": "backend",
+      "label": "__init__.py",
+      "sublabel": "NODE_CLASS_MAPPINGS",
+      "pos": [
+        250,
+        60
+      ],
+      "size": [
+        150,
+        60
+      ]
+    },
+    {
+      "id": "base-simple",
+      "type": "backend",
+      "label": "BaseJsonSelector",
+      "sublabel": "Generic INPUT_TYPES",
+      "pos": [
+        250,
+        180
+      ],
+      "size": [
+        150,
+        60
+      ]
+    },
+    {
+      "id": "base-cat",
+      "type": "backend",
+      "label": "BaseCategorizedJsonSelector",
+      "sublabel": "Dual-dropdown + category",
+      "pos": [
+        250,
+        310
+      ],
+      "size": [
+        190,
+        60
+      ]
+    },
+    {
+      "id": "selectors-simple",
+      "type": "backend",
+      "label": "Simple Selectors",
+      "sublabel": "Style / EyeColors / Place / HairColor / PhotoType / Expression",
+      "pos": [
+        520,
+        40
+      ],
+      "size": [
+        200,
+        72
+      ]
+    },
+    {
+      "id": "selectors-cat",
+      "type": "backend",
+      "label": "Categorized Selectors",
+      "sublabel": "Clothing / Pose / Composition / Shoes / Hairstyles / BodyTypes / Background",
+      "pos": [
+        520,
+        220
+      ],
+      "size": [
+        200,
+        82
+      ]
+    },
+    {
+      "id": "string-joiner",
+      "type": "backend",
+      "label": "StringJoiner",
+      "sublabel": "Multi-string concatenation",
+      "pos": [
+        520,
+        380
+      ],
+      "size": [
+        170,
+        60
+      ]
+    },
+    {
+      "id": "json-files",
+      "type": "database",
+      "label": "JSON Data Files",
+      "sublabel": "13 files in json/ dir",
+      "pos": [
+        800,
+        80
+      ],
+      "size": [
+        160,
+        60
+      ]
+    },
+    {
+      "id": "js-widgets",
+      "type": "frontend",
+      "label": "js/widgets.js",
+      "sublabel": "Dual-dropdown front-end",
+      "pos": [
+        800,
+        260
+      ],
+      "size": [
+        160,
+        60
+      ]
+    },
+    {
+      "id": "output",
+      "type": "external",
+      "label": "Prompt Text Output",
+      "sublabel": "STRING to next node",
+      "pos": [
+        1040,
+        130
+      ],
+      "size": [
+        140,
+        70
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "ComfyUI_MyComfyuiTools Plugin",
+      "wraps": [
+        "init",
+        "base-simple",
+        "base-cat",
+        "selectors-simple",
+        "selectors-cat",
+        "string-joiner",
+        "json-files",
+        "js-widgets"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "Base Class Layer",
+      "wraps": [
+        "base-simple",
+        "base-cat"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "Selector Node Layer",
+      "wraps": [
+        "selectors-simple",
+        "selectors-cat",
+        "string-joiner"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "load-plugin",
+      "from": "comfyui",
+      "to": "init",
+      "label": "import plugin",
+      "variant": "emphasis"
+    },
+    {
+      "id": "register-simple",
+      "from": "init",
+      "to": "base-simple",
+      "label": "class ref",
+      "labelDy": -14,
+      "labelAt": [
+        325,
+        134
+      ]
+    },
+    {
+      "id": "register-cat",
+      "from": "init",
+      "to": "base-cat",
+      "label": "class ref",
+      "fromSide": "right",
+      "route": "orthogonal-v",
+      "via": [
+        [
+          480,
+          90
+        ],
+        [
+          480,
+          340
+        ],
+        [
+          345,
+          340
+        ]
+      ],
+      "labelAt": [
+        480,
+        300
+      ]
+    },
+    {
+      "id": "register-joiner",
+      "from": "init",
+      "to": "string-joiner",
+      "label": "class ref",
+      "fromSide": "right",
+      "route": "orthogonal-v",
+      "via": [
+        [
+          420,
+          90
+        ],
+        [
+          420,
+          30
+        ],
+        [
+          740,
+          30
+        ],
+        [
+          740,
+          410
+        ],
+        [
+          605,
+          410
+        ]
+      ],
+      "labelAt": [
+        740,
+        316
+      ]
+    },
+    {
+      "id": "base-to-simple",
+      "from": "base-simple",
+      "to": "selectors-simple",
+      "label": "inherit",
+      "labelDy": -14
+    },
+    {
+      "id": "base-to-cat",
+      "from": "base-cat",
+      "to": "selectors-cat",
+      "label": "inherit",
+      "labelDy": -14
+    },
+    {
+      "id": "simple-load-json",
+      "from": "selectors-simple",
+      "to": "json-files",
+      "label": "read JSON",
+      "variant": "dashed",
+      "labelDy": -14
+    },
+    {
+      "id": "cat-load-json",
+      "from": "selectors-cat",
+      "to": "json-files",
+      "label": "read JSON (cat)",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "route": "orthogonal-v",
+      "via": [
+        [
+          620,
+          170
+        ],
+        [
+          880,
+          170
+        ]
+      ],
+      "labelDy": 40
+    },
+    {
+      "id": "js-cat-link",
+      "from": "selectors-cat",
+      "to": "js-widgets",
+      "label": "category filter",
+      "variant": "security",
+      "labelDy": -14
+    },
+    {
+      "id": "simple-output",
+      "from": "selectors-simple",
+      "to": "output",
+      "label": "STRING",
+      "fromSide": "right",
+      "toSide": "top",
+      "route": "orthogonal-v",
+      "via": [
+        [
+          980,
+          76
+        ],
+        [
+          980,
+          165
+        ]
+      ],
+      "labelDy": -14
+    },
+    {
+      "id": "cat-output",
+      "from": "selectors-cat",
+      "to": "output",
+      "label": "STRING",
+      "fromSide": "bottom",
+      "route": "orthogonal-v",
+      "via": [
+        [
+          620,
+          302
+        ],
+        [
+          620,
+          350
+        ],
+        [
+          980,
+          350
+        ],
+        [
+          980,
+          165
+        ],
+        [
+          1040,
+          165
+        ]
+      ],
+      "labelDy": 22
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Runtime Flow",
+      "items": [
+        "ComfyUI imports __init__.py at startup",
+        "All nodes register into NODE_CLASS_MAPPINGS",
+        "User places a node > Base INPUT_TYPES builds menu",
+        "process_text() returns STRING prompt output"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "7 Categorized Nodes",
+      "items": [
+        "Dual-dropdown: category_select + item_select",
+        "BaseCategorizedJsonSelector builds _category_items_map",
+        "js/widgets.js filters items by selected category",
+        "Supports random selection within category"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "6 Simple Nodes",
+      "items": [
+        "Single flat dropdown menu (None / Random / Custom / JSON)",
+        "Random mode supports keyword filtering",
+        "3 output modes: Key / Keyword / Desc+Keyword",
+        "No front-end JS involvement needed"
+      ]
+    }
+  ]
+}
