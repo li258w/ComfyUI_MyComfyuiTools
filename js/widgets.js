@@ -7,7 +7,8 @@ app.registerExtension({
 
     async beforeRegisterNodeDef(nodeType, nodeData, app) {
         // 处理ClothingSelector、CompositionSelector、PoseSelector、ShoesSelector、HairstylesSelector、BodyTypesSelector和BackgroundSelector节点
-        if (nodeData.name !== "JsonClothingSelector" && nodeData.name !== "JsonCompositionSelector" && nodeData.name !== "JsonPoseSelector" && nodeData.name !== "JsonShoesSelector" && nodeData.name !== "JsonHairstylesSelector" && nodeData.name !== "JsonBodyTypesSelector" && nodeData.name !== "JsonBackgroundSelector") {
+        const categorizedNodes = ["JsonClothingSelector", "JsonCompositionSelector", "JsonPoseSelector", "JsonShoesSelector", "JsonHairstylesSelector", "JsonBodyTypesSelector", "JsonBackgroundSelector"];
+        if (!categorizedNodes.includes(nodeData.name)) {
             return;
         }
 

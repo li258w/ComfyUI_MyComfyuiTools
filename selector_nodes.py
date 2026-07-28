@@ -138,13 +138,10 @@ class BaseJsonSelector:
             if not filter_terms:
                 candidates = list(data.keys())
             else:
-                candidates = []
-                for key, content in data.items():
-                    description = content.get("描述", "")
-                    for term in filter_terms:
-                        if term in description:
-                            candidates.append(key)
-                            break 
+                candidates = [
+                    key for key, content in data.items()
+                    if any(term in content.get("描述", "") for term in filter_terms)
+                ]
             
             if candidates:
                 # 使用局部随机实例避免全局种子污染
@@ -455,34 +452,21 @@ class StringJoiner:
 
     def join_strings(self, string_1, string_2="", string_3="", string_4="", string_5="", string_6="", string_7="", string_8="", separator_select="", custom_separator=""):
         # 1. 确定最终联结符
-        separator = ""
-        if separator_select == ", (逗号+空格)":
-            separator = ", "
-        elif separator_select == ". (句号+空格)":
-            separator = ". "
-        elif separator_select == "| (竖线+空格)":
-            separator = " | "
-        elif separator_select == "\\n (回车/换行)":
-            separator = "\n"
-        elif separator_select == "Custom (自定义)":
+        # 使用字典查表提高可维护性
+        SEPARATOR_MAP = {
+            ", (逗号+空格)": ", ",
+            ". (句号+空格)": ". ",
+            "| (竖线+空格)": " | ",
+            "\\n (回车/换行)": "\n",
+        }
+        separator = SEPARATOR_MAP.get(separator_select, "")
+        if separator_select == "Custom (自定义)":
             separator = custom_separator.replace("\\n", "\n") 
 
-        # 2. 收集所有输入
-        input_strings = [
-            string_1, string_2, string_3, string_4, string_5, 
-            string_6, string_7, string_8
-        ]
-
-        # 3. 过滤掉 None/空值
-        cleaned_list = []
-        for s in input_strings:
-            if s is None:
-                continue 
-            
-            stripped_s = s.strip()
-            
-            if stripped_s:
-                cleaned_list.append(stripped_s)
+        # 3. 收集并过滤掉 None/空值
+        all_strings = [string_1, string_2, string_3, string_4, string_5,
+                       string_6, string_7, string_8]
+        cleaned_list = [s.strip() for s in all_strings if s and s.strip()]
         
         # 4. 联结字符串
         result = separator.join(cleaned_list)

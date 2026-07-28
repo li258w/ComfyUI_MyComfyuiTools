@@ -3378,8 +3378,7 @@
     "描述": "开胸高领衫（keyhole turtleneck）",
     "关键词": "开胸高领衫（keyhole turtleneck），高领包覆颈部，胸部中央有大范围开口，露出女性的胸部上半以及乳沟，凸显女性魅力",
     "分类": [
-      "上装",
-      "性感"
+      "上装"
     ]
   },
   "hanfu style white spaghetti strap dress": {
@@ -3434,8 +3433,7 @@
     "描述": "半透明蓝色碎花连衣裙（高开叉）",
     "关键词": "半透明的蓝色碎花连衣裙，高领、短袖、高开叉，半透明面料下若隐若现的肌肤纹理以及精致耳环的金属反光均被清晰呈现",
     "分类": [
-      "连衣裙",
-      "性感"
+      "连衣裙"
     ]
   },
   "beige knitwear, light blue shirt, navy pleated skirt, stockings, leather shoes": {
@@ -3445,6 +3443,83 @@
       "套装（有鞋）",
       "学院风",
       "优雅风格"
+    ]
+  },
+  "black leather biker jacket, white crewneck t-shirt, blue ripped jeans, black combat boots": {
+    "描述": "黑色皮夹克+白T恤+浅蓝破洞牛仔裤+黑色马丁靴",
+    "关键词": "黑色皮质机车夹克内搭白色圆领T恤，下穿浅蓝色做旧破洞牛仔裤，脚踩黑色系带马丁靴，斜挎黑色单肩包，金色圆形耳环点缀，整体是硬朗利落的暗黑街头风格",
+    "分类": [
+      "套装（有鞋）",
+      "街头风",
+      "皮革材质"
+    ]
+  },
+  "white tank top, brown cardigan, white pleated maxi skirt, elegant casual": {
+    "描述": "白色背心，棕色开衫，白色百褘长裙，优雅休闲",
+    "关键词": "白色修身背心外搭薄款棕色针织开衫，下配一条飘逸的白色百褘长裙，色调柔和干净，层次通透，散发倰懒优雅的度假气息",
+    "分类": [
+      "全身组合",
+      "休闲风格"
+    ]
+  },
+  "yellow chiffon shirt, denim shorts, clear heels, summer street style": {
+    "描述": "黄色雪纺衬衫，牛仔短裤，透明高跟鞋，夏日街头",
+    "关键词": "亮黄色雪纺长袖衬衫轻盈飘逸，下搭浅色水洗牛仔短裤，脚踩透明高跟凉鞋，色彩明快清爽，充满夏日街头的活力感",
+    "分类": [
+      "套装（有鞋）",
+      "街头风",
+      "雪纺材质"
+    ]
+  },
+  "caramel v-neck top, black denim pencil skirt, white heels, chic style": {
+    "描述": "焦糖色V领上衣，黑色牛仔包臀裙，白色高跟鞋，时髦风格",
+    "关键词": "焦糖橘色V领短袖上衣贴身显身材，下穿黑色牛仔包臀中裙，脚踩白色细跟高跟鞋，配色沉稳对比鲜明，尽显成熟利落的都市女人味",
+    "分类": [
+      "套装（有鞋）",
+      "优雅风格",
+      "牛仔材质"
+    ]
+  },
+  "light yellow floral bodycon mini dress, off shoulder, sweet style": {
+    "描述": "浅黄色印花修身短裙，单肩设计，甜美风格",
+    "关键词": "浅鹅黄色长袖修身连衣裙，点缀蓝色花朵印花，一侧露肩设计俏皮性感，紧贴身形勾勒曲线，清新甜美又不失魅力",
+    "分类": [
+      "连衣裙",
+      "甜美风"
+    ]
+  },
+  "charcoal long sleeve top, grey mini skirt, white sneakers, sporty casual": {
+    "描述": "深灰长袖上衣，灰色短裙，白色运动鞋，运动休闲",
+    "关键词": "深灰色修身长袖上衣搭配浅灰色针织短裙，脚穿白色厚底运动鞋与短袜，色调冷静利落，混搭出街头运动的休闲感",
+    "分类": [
+      "套装（有鞋）",
+      "运动风"
+    ]
+  },
+  "white floral cami top, green denim shorts, studded belt, street style": {
+    "描述": "白色印花吊带，绿色牛仔短裤，铆钉腰带，街头风",
+    "关键词": "白色碎花吊带上衣清新甜美，下搭做旧绿色牛仔短裤，系上白色铆钉腰带增添硬朗感，甜辣混搭尽显街头个性",
+    "分类": [
+      "全身组合",
+      "街头风",
+      "牛仔材质"
+    ]
+  },
+  "white cami top, white polka dot wide-leg pants, red sandals, casual chic": {
+    "描述": "白色吊带，白色波点阔腿裤，红色凉鞋，休闲时髦",
+    "关键词": "白色系带吊带上衣搭配白底黑波点阔腿长裤，飘逸垂坠，脚踩一抹亮红色凉鞋点睛，清爽中带俏皮，倰懒又有格调",
+    "分类": [
+      "套装（有鞋）",
+      "休闲风格"
+    ]
+  },
+  "brown tank top, leopard mini skirt, strappy heels, sexy style": {
+    "描述": "棕色背心，豹纹短裙，细带高跟鞋，性感风格",
+    "关键词": "深棕色修身背心搭配豹纹雪纺短裙，脚踩细带高跟凉鞋，动物纹理性感张扬，勾勒纤细身形，散发倰懒诱惑的女人味",
+    "分类": [
+      "套装（有鞋）",
+      "复古风格",
+      "雪纺材质"
     ]
   }
 }
