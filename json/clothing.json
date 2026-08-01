@@ -3857,5 +3857,176 @@
       "街头风",
       "休闲风格"
     ]
+  },
+  "light grey blazer dress, white lace inner top, white lace thigh-high socks": {
+    "描述": "浅灰西装连衣裙，白色蕾丝内搭衬衫，白色蕾丝过膝袜",
+    "关键词": "浅灰色长款西装连衣裙有光泽感面料挺括，经典翻领长袖袖口黑色纽扣点缀，腰部收腰劾勒曲线前侧开叉，内搭纯白蕾丝衬衫从领口与下摆探出增添柔美层次，腿穿白色蕾丝宽边过膝长袜，西装干练与蕾丝性感碰撞",
+    "分类": [
+      "连衣裙",
+      "优雅风格",
+      "职业装"
+    ]
+  },
+  "black high-neck silk long dress, white embroidered veil": {
+    "描述": "黑色高领丝绸修身长裙，白色刺绣头纱",
+    "关键词": "黑色高领七分袖修身长裙丝绸缎面光泽紧裹身形，高腰收腰A字大裙摆垂坠飘逸，头披白色长款刺绣头纱如披风般垂至地面，胸前叠戴金色细链与金色十字架吊坠，哥特修女风庄重神秘又冷艳华丽",
+    "分类": [
+      "连衣裙",
+      "哥特风格",
+      "优雅风格"
+    ]
+  },
+  "white ruched tube top, blue white color block parachute pants, cream sneakers": {
+    "描述": "白色褶窚抹胸，蓝白拼色降落伞裤，米白做旧运动鞋",
+    "关键词": "白色褶窚抹胸紧身贴合，外披白色长袖衬衫褶至手臂堆积成堆堆袖随性倰懒，下搭蓝白拼色尼龙宽松降落伞阔腿裤抽绳腰头，脚踩米白做旧复古运动鞋，配双层金色粗链项链，90年代嘻哈运动风",
+    "分类": [
+      "套装（有鞋）",
+      "街头风",
+      "运动风"
+    ]
+  },
+  "black sports bra, white distressed mesh off-shoulder top, white leggings, white buckle knee-high boots": {
+    "描述": "黑色运动内衣，白色破洞网眼斜肩罩衫，白色紧身裤，白金属扣长靴",
+    "关键词": "黑色短款运动内衣露脊设计，外搭白色不对称斜肩破洞镂空网眼罩衫长袖覆盖手背，下穿白色高腰紧身裤银灰拼接条纹，脚踩白色搭扣细高跟长筒靴，配黑色项圈银环耳环，赛博朋克战斗少女风",
+    "分类": [
+      "套装（有鞋）",
+      "cosplay",
+      "街头风"
+    ]
+  },
+  "white bralette top, silver sequin oversized blazer, white high-waist bikini bottoms, silver sequin slouchy boots": {
+    "描述": "白色抹胸比基尼，银色亮片宽松西装，白色高腰三角内裤，银色亮片堆堆靴",
+    "关键词": "白色比基尼式抹胸露脊上衣配白色高腰三角内裤套装感十足，外披银色亮片垫肩Oversize西装半披随性，腰间银色镶钻宽腰封闪耀，脚踩银色亮片及膝堆堆细高跟长靴，舞台级下衣失踪造型",
+    "分类": [
+      "套装（有鞋）",
+      "cosplay",
+      "优雅风格"
+    ]
+  },
+  "green crop top, white baseball jacket, green stripe wide-leg track pants": {
+    "描述": "绿色露脊运动背心，白色棒球夹克，绿色条纹阔腿运动裤",
+    "关键词": "草绿色运动风露脊背心白边包边，外披白色棒球夹克袖子绿条纹半脱至肘部露肩随意，下搭绿色宽松阔腿运动裤白色竖条侧边，配白色宽皮带银色金属裤链，大银环耳环银色古巴链，Y2K千年运动活力风",
+    "分类": [
+      "全身组合",
+      "运动风",
+      "街头风"
+    ]
+  },
+  "white button-down shirt, white drawstring shorts": {
+    "描述": "白色长袖纽扣衬衫，白色抽绳运动短裤",
+    "关键词": "纯白色长袖纽扣衬衫轻薄柔软V领敞开随性，袖口卷至前臂，下搭同色纯白松紧抽绳运动热裤紧裹臀部，全白极简纯欲风居家出街皆宜",
+    "分类": [
+      "全身组合",
+      "休闲风格",
+      "甜美风"
+    ]
+  },
+  "black long sleeve mini dress, white lace apron, black sheer pantyhose, black platform heels": {
+    "描述": "黑色长袖百褸短裙，白色蕾丝围裙，黑透肉丝袜，黑色厚底高跟鞋",
+    "关键词": "黑色修身长袖连衣百褸短裙微泡泡袖袖口白色蕾丝翻边纽扣，外系白色蕾丝半截围裙背部巨大缎面蝴蝶结裙摆拼接白蕾丝花边，腿穿黑色透肉后缝线丝袜，脚踩黑色厚底粗跟高跟鞋，经典黑白改良女仆装",
+    "分类": [
+      "套装（有鞋）",
+      "cosplay",
+      "甜美风"
+    ]
+  },
+  "white oversized shirt, black tie, black backseam pantyhose": {
+    "描述": "白色宽松衬衫，黑色领带，黑色后缝线丝袜",
+    "关键词": "白色Oversize长袖翻领衬衫长度盖过臀部前侧开叉下衣失踪穿法，黑色领带松散系在领口外垂在胸前，腿穿黑色透肉复古后缝线丝袜拉长腿部线条，黑白配色干练又充满倰懒性感魅力",
+    "分类": [
+      "连衣裙",
+      "休闲风格",
+      "优雅风格"
+    ]
+  },
+  "dark green and gold cross-collar dress, sheer green outer robe": {
+    "描述": "深绿浅金交领高开叉长裙，浅绿半透明广袖纱衣",
+    "关键词": "深绿色与浅金色拼接交领深V紧身长裙缎面光泽，高开叉设计露腿，腰间深紫金色浮雕宽腰封收腰，外罩浅灰绿色半透明广袖纱衣飘飘如仙，配金色头冠步摇臂钝脚链，东方仙侠玄幻风",
+    "分类": [
+      "连衣裙",
+      "cosplay",
+      "优雅风格"
+    ]
+  },
+  "white button-down shirt, beige high-waist pencil skirt, nude pointed pumps": {
+    "描述": "白色长袖衬衫，米色高腰包臀长裙，裸色尖头高跟鞋",
+    "关键词": "白色长袖衬衫挺括垂坠袖口卷至肘下塞进裙腰利落干练，下穿米色高腰包臀迷笛长裙后侧高开叉露出修长双腿，脚踩裸色漆皮尖头细高跟鞋同色系延伸腿线，配细框金属眼镜知性温柔职场OL风",
+    "分类": [
+      "套装（有鞋）",
+      "职业装",
+      "优雅风格"
+    ]
+  },
+  "dark brown crop tank top, beige high-waist pleated shorts, dark brown knee-high boots": {
+    "描述": "深棕短款背心+独立袖套，米色高腰褶窚短裤，深棕过膝高跟长靴",
+    "关键词": "深咖啡色紧身露脊短款背心配同色独立长袖套从大臂延伸至手腕设计感十足，下搭米色高腰宽松褶窚西装短裤灯笼廓形，脚踩同色深咖啡过膝绒面粗跟长靴脚踝金属搭扣，大地色系高级层次分明",
+    "分类": [
+      "套装（有鞋）",
+      "优雅风格",
+      "休闲风格"
+    ]
+  },
+  "camel oversized turtleneck sweater, dark blue skinny jeans, camel knee-high slouchy boots": {
+    "描述": "驼色Oversize高领毛衣，深蓝紧身牛仔裤，驼色及膝堆堆靴",
+    "关键词": "驼色高领宽松Oversize针织毛衣竖坑条纹理蝙蝠袖不规则下摆倰懒随性，下搭深蓝色修身紧身牛仔裤形成上宽下窄对比，脚踩同色驼色及膝粗跟堆堆长靴靴口皮带扣装饰，手提深棕复古包，秋冬经典大地色系",
+    "分类": [
+      "套装（有鞋）",
+      "休闲风格",
+      "秋冬"
+    ]
+  },
+  "chocolate brown fluffy sweater, cream scarf, cream pleated mini skirt, cream leg warmers, beige snow boots": {
+    "描述": "深棕毛绒宽松毛衣，米白围巾，米白百褸短裙，米白堆堆袜，浅驼雪地靴",
+    "关键词": "深棕色宽松Oversize毛绒感马海毛毛衣厚实温暖，颈绕米白色长款流苏针织围巾，下搭米白色百褸A字短裙青春学院风，小腿穿米白针织堆堆袜及膝，脚踩浅驼色绒面雪地靴，全身大地色三明治搭配层次温暖甜美",
+    "分类": [
+      "套装（有鞋）",
+      "学院风",
+      "秋冬"
+    ]
+  },
+  "burgundy fuzzy off-shoulder sweater, black plaid pleated mini skirt, black chunky combat boots": {
+    "描述": "酒红毛绒露肩毛衣，黑白格纹百褸迷你裙，黑色厚底马丁靴",
+    "关键词": "深红色毛绒感宽松Oversize露肩针织毛衣印有白色字母复古摇滚感，下搭经典黑白格纹百褸迷你短裙学院风十足，白条纹中筒袜配黑色厚底系带马丁靴金属扣环，红黑撞色甜酷美式校园风",
+    "分类": [
+      "套装（有鞋）",
+      "学院风",
+      "街头风"
+    ]
+  },
+  "white shirt layered under black graphic tee, black fishnet tights, black platform combat boots": {
+    "描述": "白衬衫叠穿黑图案T恤，黑渔网袜，黑色厚底板鞋战斗靴",
+    "关键词": "白色长袖衬衫外叠黑色宽松短袖图案T恤外短内长层次分明下衣失踪效果，腿穿黑色大网眼渔网袜配黑色绑带腿环，腰间黑色铆钉皮带收腰，脚踩黑色厚底高筒系带战斗靴，经典黑白朋克叛逆风",
+    "分类": [
+      "套装（有鞋）",
+      "朋克风",
+      "街头风"
+    ]
+  },
+  "light blue denim jacket, black high-neck crop top, black faux leather pleated mini skirt, black fishnet socks, black platform martin boots": {
+    "描述": "浅蓝牛仔夹克，黑高领露脊上衣，黑皮百褸短裙，黑渔网袜，黑厚底马丁靴",
+    "关键词": "浅蓝色宽松Oversize牛仔夹克灯笼袖金属纽扣，内搭黑色高领紧身露脊针织上衣，下穿黑色皮质光泽百褸超短裙，腿穿黑色渔网中筒袜，脚踩黑色厚底系带马丁靴，蓝黑甜酷朋克少女风",
+    "分类": [
+      "套装（有鞋）",
+      "朋克风",
+      "街头风"
+    ]
+  },
+  "newspaper print halter neck crop top, plaid pleated mini skirt, brown wide belt": {
+    "描述": "报纸印花挂脖露脊背心，格纹百褸开叉短裙，棕色宽皮带",
+    "关键词": "米白色底报纸印花高领挂脖露脊紧身背心胸前复古插图印字，下搭米灰底多色格纹百褸超短裙侧开叉设计，腰间棕色皮质宽腰带银色方扣收腰，配白色珍珠耳坠银色宽手镯，Y2K复古学院辣妹风",
+    "分类": [
+      "全身组合",
+      "学院风",
+      "复古风格"
+    ]
+  },
+  "khaki zip hoodie, white lace camisole, cream pleated mini skirt, grey leg warmers, khaki chunky sneakers": {
+    "描述": "卡其拉链卫衣，白蕾丝吊带，米白百褸短裙，灰堆堆袜，卡其厚底老爹鞋",
+    "关键词": "浅卡其色拉链连帽卫衣敞开休闲，内搭白色蕾丝V领吊带背心甜美感，下穿米白色百褸短裙腰间银色心形链条腰带点缀，腿穿灰色针织堆堆袜至膝下，脚踩卡其色厚底老爹鞋与外套色彩呼应，温柔大地色系甜酷休闲风",
+    "分类": [
+      "套装（有鞋）",
+      "休闲风格",
+      "甜美风"
+    ]
   }
 }
