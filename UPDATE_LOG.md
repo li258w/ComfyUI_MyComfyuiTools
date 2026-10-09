@@ -1,62 +1,221 @@
-# 更新记录 - 2026年4月9日
+# 更新记录
 
-## 问题修复总结
+---
+
+## [2026-10-09] v2.4 - 随机筛选器增强 + 索引性能 + 数组字段崩溃修复
+
+### 🔧 增强：random_filter 匹配范围从 1 个字段扩展到 4 个
+
+**问题**：`random_filter` 只匹配「描述」字段。用户的 JSON 数据约定是
+「英文写在 key 上、关键词字段写中文」，所以输入英文关键词或分类名几乎筛不到结果。
+
+**改动**：新增 `_collect_search_text(key, content)` 与 `_match_filter(key, content, lower_terms)`，
+搜索范围扩大为 **key + 描述 + 关键词 + 分类标签**，英文大小写不敏感
+（对中文无副作用）。多个筛选词维持原有「任一命中」（OR）语义，未改变既有行为。
+
+**顺带修复**：分类节点选择 `*全部* (随机)` 时，`random_filter` 此前被**完全忽略**
+——它只在 `category_select = 随机 (Random)` 的全局随机分支生效。
+现在分类内随机会先按筛选词缩小候选池，无匹配时打印警告并降级为只输出 prefix。
+
+**提示文案**：三处硬编码的 placeholder 提取为模块级常量 `FILTER_PLACEHOLDER`。
+
+### ⚡ 性能：描述反查改用索引
+
+**问题**：`process_text` 里靠遍历全表比对 `content["描述"] == style_select` 来反查 Key，
+O(n) 且每次执行都要重跑一遍。
+
+**改动**：新增 `get_desc_index(file_path)`，返回 `{描述: Key}` 映射。
+索引存放在 JSON 缓存条目内，随文件指纹变化自动重建，无需额外失效逻辑。
+重复描述时保留「首次出现」的 Key，与原先线性查找（命中即 break）行为完全一致。
+
+**实测**：clothing.json（480 条）上快约 **460 倍**（10.1ms → 0.02ms / 40×60 次查询）。
+
+### 🐛 修复：数组型「关键词」字段导致节点崩溃
+
+**问题**：`json/styles.json` 的 `ForestCinematicSoftLight` 条目把「关键词」写成数组：
+
+```json
+"ForestCinematicSoftLight": {
+  "描述": "绿色电影色调、软自然光...",
+  "关键词": ["greenish-gray cinematic tone", "soft natural light", ...]
+}
+```
+
+其余 1500+ 条目都是逗号拼接的字符串。选中该条目 + 「关键词」输出模式时，
+列表被直接送进 `check_and_add_comma()`，抛出：
+
+```
+AttributeError: 'list' object has no attribute 'strip'
+```
+
+**改动**：新增 `_as_text(value)` 把数组/元组规整为 `", "` 拼接的字符串，
+在三处做兜底：输出提取（`关键词` / `描述`）、筛选文本收集、`check_and_add_comma` 入口。
+**未修改任何 JSON 数据文件**——如需把该条目改成字符串形式，请手工确认后再改。
+
+### 🧹 整理
+
+* `_json_file_path()` 从 `BaseCategorizedJsonSelector` 上提到 `BaseJsonSelector`，
+  单级节点也能复用；顺带消除基类 `INPUT_TYPES` / `process_text` 里重复计算路径的
+  两处内联代码。
+* `.gitignore` 补充 `output/`、`tmp/`、`image/`、`*.bmp|tiff|webp`、`*_b64.txt`
+  以及架构分析产物 `comfyui-selector-architecture.*`、`.code-review-graph/`。
+  效果：仓库未跟踪文件数从数十降到 0。
+
+### 🧪 验证
+
+* **回归基线**（重构前后逐项一致）：Style 下拉 35、Clothing category 33 / item 1213 / 分类 30
+* **索引等价性**：与旧线性查找逐条比对结果完全一致
+* **筛选正确性**：9 个筛选词 × 200 次抽样，命中集合 100% 落在四字段匹配池内
+  （cosplay 7/7、连衣裙 86/97、长袖 44/45、皮革 18/18、街头 87/100、
+  dragon 3/3、wuxia 1/1、robe 10/10、无匹配 0/0 降级）
+* **分类内随机**：遵循筛选、seed 可复现、无匹配降级、具体项选择不受筛选影响
+* **崩溃修复**：三种 output_mode 全部正常输出
+* **全部 13 个节点**的选项数量与分类映射无回归
+
+### 📁 本次改动文件
+
+- `selector_nodes.py` — 筛选器扩展、描述索引、`_as_text` 兜底、`_json_file_path` 上提
+- `.gitignore` — 忽略运行/调试产物
+- `readme.md` / `UPDATE_LOG.md` / `AGENTS.md` — 同步 v2.4
+
+### ⚠️ 遗留项（需用户决定）
+
+* `image/` 下约 4.4MB 临时测试文件与 552KB 的架构分析 HTML **已被 git 跟踪**，
+  `.gitignore` 对已跟踪文件无效。若要移出版本控制需执行 `git rm --cached`，
+  属于会改动 git 索引的操作，未擅自执行。
+* `place.json` 仍只有 1 条数据。
+* `json/styles.json` 的 `ForestCinematicSoftLight` 建议把「关键词」改成字符串，
+  与其余条目保持一致（代码已能兼容，不改也不影响使用）。
+
+---
+
+## [2026-10-09] v2.3 - JSON 热更新 + 分类映射稳定性修复
+
+本次是一次「体验修复」迭代，没有新增节点或数据，但解决了两个长期影响使用的问题。
+
+### 🔥 新增：JSON 热更新
+
+**问题**：`_JSON_CACHE` 是无过期时间的永久字典缓存，且 `INPUT_TYPES()` 只在 ComfyUI
+启动时调用一次。导致修改任何 JSON 数据文件后，都必须重启 ComfyUI 才能看到新内容。
+
+**解决方案**：三层改动。
+
+1. **缓存指纹化** — `BaseJsonSelector._JSON_CACHE` 的结构由 `{path: data}` 改为
+   `{path: {"signature": (mtime, size), "data": {...}}}`。每次 `get_json_data()` 用
+   `os.stat` 比对指纹，文件一旦被修改就自动重新加载。文件被删除或改名时，
+   会自动丢弃残留缓存，避免读到过期数据。
+2. **新增刷新接口** — `__init__.py` 注册 `POST /mycomfyuitools/refresh`，
+   body 可选 `{node_class}`。作用是清空 JSON 缓存，并返回指定节点最新的
+   `INPUT_TYPES()` 结果。新增模块级函数 `serialize_input_types()`，负责把
+   `INPUT_TYPES()` 里的元组（`(选项列表, 配置字典)`）转成 JSON 安全的 `[值, 配置]`。
+3. **前端刷新按钮** — `js/widgets.js` 重写，给 13 个选择器节点加上「🔄 刷新 JSON」按钮。
+   点击后请求刷新接口、写回最新选项、重建分类映射并重跑 `onCategoryChange()`；
+   原选中值若已不存在会自动回落到第一项。
+
+**为什么这条路线可行**：ComfyUI `server.py` 的 `node_info()` 在每次 `/object_info` 请求时
+都会重新调用 `INPUT_TYPES()`，因此只要缓存会失效，新选项就能真正传到前端。
+
+**注意**：刷新是按节点生效的，刷新 Clothing 不会影响 Pose，需分别点击。
+改 `.py` / `.js` 代码本身仍然需要重启 ComfyUI。
+
+### 🐛 修复：分类映射可能不存在导致节点崩溃
+
+**问题**：`_category_items_map` 只在 `INPUT_TYPES()` 里被动态赋值。一旦 JSON 加载失败
+（文件缺失、JSON 语法错误、`TARGET_JSON_FILE` 为空等），这个属性根本不会被创建，
+而 `process_text()` 会直接访问 `self.__class__._category_items_map`，抛出：
+
+```
+AttributeError: type object 'XxxSelector' has no attribute '_category_items_map'
+```
+
+已用 `git show HEAD:selector_nodes.py` 导出旧版本对照，确认该异常真实存在。
+
+**解决方案**：
+
+1. 将 `_category_items_map = {}` 和 `_category_map_source = None` 声明为类属性作为兜底。
+2. 重构 `BaseCategorizedJsonSelector`，把原先埋在 `INPUT_TYPES()` 里约 60 行的
+   内联构建逻辑抽成四个方法：
+   * `_json_file_path()` — 统一的 JSON 路径解析
+   * `_build_category_items_map(data)` — 从 JSON 数据构建「分类 → 项目描述列表」映射
+   * `_category_options_and_items(category_map)` — 由映射派生两级下拉选项
+   * `_ensure_category_items_map()` — 返回最新映射，数据变化时自动重建
+3. `_ensure_category_items_map()` 以 `(文件路径, id(数据对象))` 作为来源指纹：
+   `get_json_data()` 在文件未变时返回同一个缓存对象，重新加载后则是新对象，
+   据此判断是否需要重建。构建过程包在 try/except 中，出错时降级为空映射。
+
+**附带收益**：
+
+* 下拉选项和分类映射现在由同一份数据派生，结构上杜绝了
+  `Value not in list: item_select: '*全部* (随机)'` 这类前后端不一致的验证错误。
+* 修复了「改了 JSON 但没点刷新按钮时，分类内随机仍使用过期条目列表」的问题。
+
+### 🧹 清理
+
+* 移除 `selector_nodes.py` 中从未使用的 `import folder_paths`，插件不再依赖 ComfyUI 内部模块，
+  可脱离 ComfyUI 环境直接导入测试。
+
+### 🧪 验证
+
+* **回归基线**（重构前后必须完全一致，已逐项核对）
+  | 指标 | 改前 | 改后 |
+  | --- | ---: | ---: |
+  | Style Selector 下拉选项 | 35 | 35 |
+  | Clothing category_select | 33 | 33 |
+  | Clothing item_select | 1213 | 1213 |
+  | Clothing 分类映射 | 30 | 30 |
+* **分类节点构建**：Pose 15 分类 / 693 项，Background 9 分类 / 850 项，均正常。
+* **异常场景**：JSON 文件缺失、`TARGET_JSON_FILE` 为空，均不再抛异常，降级输出错误提示文本。
+* **接口测试**：用 ComfyUI 自带的 aiohttp 环境实测 `/mycomfyuitools/refresh`，
+  返回 200 与正确的 `INPUT_TYPES()`；未知 `node_class` 与空 body 均优雅处理。
+* **输出回归**：无 / 具体项 / 随机可复现 / 随机+筛选 / 自定义 / 分类内随机 /
+  分类+具体项 / StringJoiner 共 12 个用例全部正常。
+
+### 📁 本次改动文件
+
+- `selector_nodes.py` — 缓存指纹化、`serialize_input_types()`、分类映射重构
+- `__init__.py` — 新增 `POST /mycomfyuitools/refresh` 路由与路由注册函数
+- `js/widgets.js` — 重写，新增「🔄 刷新 JSON」按钮，抽出 `buildCategoryItemMap()` / `applyFreshOptions()`
+- `readme.md` — 节点数、分类数、数据统计全面校准，新增热更新说明与 v2.3 日志
+- `AGENTS.md` — 同步架构说明与版本信息
+
+### 🚀 下一步
+
+* `random_filter` 目前只匹配「描述」字段，建议扩展到「关键词」和「分类」标签，
+  这样可以直接用英文关键词或分类名筛选。
+* 目前靠「描述」字符串反查 Key（O(n) 全表扫描），若 JSON 中出现重复描述会永远命中第一条，
+  建议建立「描述 → Key」索引。
+* `place.json` 仅 1 条数据，Place Selector 待补充。
+* `image/` `output/` `tmp/` 下约 4MB 临时测试文件尚未纳入 `.gitignore`。
+
+---
+
+## [2026-04-09] v2.1 修复总结
 
 ### 🔧 **修复的问题：**
 
 1. **Body Types Selector 验证错误** (`fb537a1`)
    - **问题**: `Value not in list: item_select: '*全部* (随机)' not in (list of length 50)`
-   - **原因**: 前端widgets.js动态添加"*全部* (随机)"选项，但后端验证时该选项不在item_select列表中
-   - **解决方案**: 在BaseCategorizedJsonSelector的item_select选项中包含"*全部* (随机)"选项
+   - **原因**: 前端 widgets.js 动态添加"*全部* (随机)"选项，但后端验证时该选项不在 item_select 列表中
+   - **解决方案**: 在 BaseCategorizedJsonSelector 的 item_select 选项中包含"*全部* (随机)"选项
 
 2. **分类选择器显示问题** (`a422815`)
    - **问题**: "*全部* (随机)"选项重复和显示混乱
-   - **原因**: 后端在item_select中不包含"*全部* (随机)"，前端动态添加导致不一致
-   - **解决方案**: 
-     - 修正BaseCategorizedJsonSelector，在每个分类标题后添加"*全部* (随机)"选项
-     - 添加JSON缓存清除功能 (`BaseJsonSelector.clear_json_cache()`)
+   - **原因**: 后端在 item_select 中不包含"*全部* (随机)"，前端动态添加导致不一致
+   - **解决方案**: 修正 BaseCategorizedJsonSelector，在每个分类标题后添加"*全部* (随机)"选项；添加 JSON 缓存清除功能
 
 3. **Body Types 分类系统实现** (`bf58414`)
-   - **新增**: Body Types Selector 分类系统
-   - **功能**: 双级下拉菜单（分类+项目），支持分类内随机选择
+   - **新增**: 双级下拉菜单（分类+项目），支持分类内随机选择
    - **分类**: 纤细/瘦小、丰满/曲线、运动/健美、强壮/敦实、中性/其他、极端/夸张、其他/状态
 
 ### ✅ **验证结果：**
 
-所有分类选择器现在都正确工作：
-1. **ClothingSelector** - 16个分类，597个项目 ✓
-2. **CompositionSelector** - 10个分类，267个项目 ✓  
-3. **PoseSelector** - 15个分类，709个项目 ✓
-4. **ShoesSelector** - 14个分类，122个项目 ✓
-5. **HairstylesSelector** - 33个分类，144个项目 ✓
-6. **BodyTypesSelector** - 7个分类，57个项目 ✓
-
-### 🧪 **测试验证：**
-
-1. **功能测试**: 所有分类选择器process_text方法正常工作
-2. **验证测试**: "*全部* (随机)"选项现在包含在item_select列表中
-3. **一致性测试**: 前后端逻辑匹配，分类标题格式正确
-4. **格式检查**: 所有JSON文件分类字段格式正确
+所有分类选择器当时均正确工作（此为当时统计，条目数后续有增长）：
+ClothingSelector、CompositionSelector、PoseSelector、ShoesSelector、HairstylesSelector、BodyTypesSelector
 
 ### 📋 **使用说明：**
 
-1. **重启ComfyUI**后，所有分类选择器应正常工作
-2. **Body Types Selector**现在支持：
-   - 选择体型分类（7个分类）
-   - 在分类内选择具体项目
-   - 使用"*全部* (随机)"在分类内随机选择
-3. **缓存管理**: 如需清除JSON缓存，可调用`BaseJsonSelector.clear_json_cache()`
+1. 重启 ComfyUI 后，所有分类选择器应正常工作
+2. 缓存管理：如需清除 JSON 缓存，可调用 `BaseJsonSelector.clear_json_cache()`
 
-### 🔄 **文件更改：**
-
-- `selector_nodes.py`: 修正分类选择器逻辑，添加缓存清除功能
-- `js/widgets.js`: 更新注释，保持前端动态过滤逻辑
-- `json/shoes.json`: 内容更新
-- `json/styles.json`: 内容更新
-
-### 🚀 **下一步：**
-
-所有问题已修复，分类选择器系统现在稳定可靠。建议用户：
-1. 重启ComfyUI服务
-2. 测试Body Types Selector及其他分类选择器
-3. 如有问题，运行`python fix_cache_issues.py`清除缓存
+> 📌 说明：本次更新日志中「重启 ComfyUI 后生效」的约定已在 v2.3 被热更新机制取代，
+> 详见上方 [2026-10-09] 条目。

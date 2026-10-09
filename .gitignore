@@ -19,3 +19,17 @@ __pycache__/
 backup/
 .qoder/
 CLAUDE.md
+
+# 插件运行/调试产生的临时目录与中间产物
+output/
+tmp/
+image/
+*.bmp
+*.tiff
+*.webp
+*_b64.txt
+
+# 架构分析产物（552KB HTML + JSON），按需重新生成
+comfyui-selector-architecture.html
+comfyui-selector-architecture.json
+.code-review-graph/

@@ -12,13 +12,13 @@ This file provides guidance to Codex (codex.ai) when working with code in this r
 - **基类模式**: 使用 `BaseJsonSelector` 基类，所有具体选择器节点都继承自此基类
 - **分类基类**: `BaseCategorizedJsonSelector` 继承 `BaseJsonSelector`，提供双级下拉菜单（分类+项目）通用逻辑
 - **模块化设计**: 每个节点对应一个 JSON 文件，互不干扰
-- **热更新**: 修改 JSON 文件后，重启 ComfyUI 即可生效
+- **热更新**: 修改 JSON 数据文件后，点击节点上的「🔄 刷新 JSON」按钮即可生效，无需重启 ComfyUI
 
 ### 文件结构
 ```text
 ComfyUI_MyComfyuiTools/        # 插件根目录
-├── __init__.py                 # 节点注册文件（含 WEB_DIRECTORY）
-├── selector_nodes.py           # 主要实现文件（423行）
+├── __init__.py                 # 节点注册文件（含 WEB_DIRECTORY 与刷新路由）
+├── selector_nodes.py           # 主要实现文件（约 540 行）
 ├── readme.md                   # 项目文档
 ├── AGENTS.md                   # 本文件
 ├── UPDATE_LOG.md               # 更新日志
@@ -53,6 +53,16 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
   - 提示词选择器节点分类为 "MyCustomNodes/prompt"（所有继承 `BaseJsonSelector` 的节点）
   - 工具节点分类为 "MyCustomNodes/Utils"（`StringJoiner` 节点）
 
+### 热更新接口
+- `__init__.py` 中的 `_register_refresh_route()` 注册了 `POST /mycomfyuitools/refresh`
+- body 可选 `{node_class}`：清空 JSON 缓存，并返回该节点最新的 `INPUT_TYPES()` 结果
+- 由 `serialize_input_types(node_class)` 负责序列化，元组 `(选项列表, 配置字典)` 会转成 `[值, 配置]`
+- **为什么可行**：ComfyUI `server.py` 的 `node_info()` 每次 `/object_info` 请求都会重新调用
+  `INPUT_TYPES()`，因此只要缓存会失效，新选项就能真正传到前端
+- **注册时机的安全性**：`main.py` 中自定义节点导入（`init_extra_nodes`）早于
+  `prompt_server.add_routes()`，因此在 `__init__.py` 里往 `PromptServer.instance.routes`
+  添加路由是有效的
+
 ## JSON 数据格式
 
 所有 JSON 文件使用统一格式：
@@ -83,31 +93,54 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 - `prefix`: 前置文本（如 "masterpiece, best quality"）
 - `style_select`（非分类节点）或 `category_select` + `item_select`（分类节点）: 选择菜单
 - `output_mode`: 输出模式（"Key"、"关键词"、"描述+关键词"）
-- `random_filter`: 随机模式筛选词（逗号分隔）
+- `random_filter`: 随机筛选词（逗号分隔）。匹配 **key + 描述 + 关键词 + 分类标签**，
+  英文大小写不敏感，多个词之间是「任一命中」（OR）语义
 - `custom_text`: 自定义模式下的输入文本
 - `seed`: 随机种子（支持 Fixed/Randomize/Increment）
 
 **支持分类系统的选择器特殊参数**（ClothingSelector、PoseSelector、CompositionSelector、ShoesSelector、HairstylesSelector、BodyTypesSelector、BackgroundSelector）：
 - `category_select`: 分类选择菜单（包含"无"、"随机"、"自定义"和所有分类）
 - `item_select`: 项目选择菜单，根据 `category_select` 动态过滤
-  - 包含特殊选项 `*全部* (随机)`：在所选分类内随机选择
+  - 包含特殊选项 `*全部* (随机)`：在所选分类内随机选择，**同样遵循 `random_filter`**
 
 ### 输出逻辑
 **通用输出逻辑**：
 1. **无 (None)**: 仅输出前置文本
 2. **自定义 (Custom)**: 输出 `custom_text` 内容
 3. **随机 (Random)**: 从JSON中随机选择，支持关键词筛选
-4. **具体选项**: 输出对应JSON条目的内容
+4. **具体选项**: 输出对应JSON条目的内容（通过 `get_desc_index()` 索引反查 Key）
 
-**支持分类系统的选择器特殊输出逻辑**（所有 `BaseCategorizedJsonSelector` 子类）：
+### BaseJsonSelector 主要工具方法
+| 方法 | 作用 |
+| --- | --- |
+| `_json_file_path()` | 返回本节点 JSON 文件的绝对路径 |
+| `_file_signature(path)` | 生成 (mtime, size) 指纹，用于缓存失效判定 |
+| `get_json_data(path)` | 读取 JSON，文件变更自动重载 |
+| `get_desc_index(path)` | `{描述: Key}` 索引，重复描述保留首个；随缓存自动失效 |
+| `_as_text(value)` | 字段值规整为字符串，数组会被 `", "` 拼接 |
+| `_collect_search_text(key, content)` | 收集可被筛选命中的文本：key + 描述 + 关键词 + 分类 |
+| `_match_filter(key, content, terms)` | 判断条目是否命中筛选词（OR 语义，大小写不敏感） |
+| `clear_json_cache(path=None)` | 手动清缓存（正常情况下缓存会自动失效） |
+
+### 数据字段约定
+* `描述`：下拉菜单显示的中文描述
+* `关键词`：实际输出的提示词。**本插件数据中该字段多为中文**，英文写在 JSON 的 `key` 上
+* `分类`：字符串数组，一个条目可挂多个分类标签；缺失时归入自动生成的「其他」
+* ⚠️ 已知个别条目把 `关键词` 写成数组（`json/styles.json` 的 `ForestCinematicSoftLight`），
+  代码已通过 `_as_text()` 兼容，但建议统一改成字符串
+
+**支持分类的系统选择器特殊输出逻辑**（所有 `BaseCategorizedJsonSelector` 子类）：
 1. **分类选择流程**：
    - `category_select` 和 `item_select` 共同决定最终选择的项目
    - 当 `item_select` 为 `*全部* (随机)` 时，在 `category_select` 指定的分类内随机选择
    - 当 `item_select` 为空或为分类标题时，选择该分类下的第一个项目
 2. **分类到项目的映射**：
-   - 使用类属性 `_category_items_map` 存储分类到项目的映射
-   - 在 `INPUT_TYPES` 中构建映射关系
-   - 在 `process_text` 中根据映射进行选择
+   - 使用类属性 `_category_items_map` 存储分类到项目的映射，**声明为类属性 `{}` 作兜底**，
+     避免 JSON 加载失败时 `process_text` 抛 `AttributeError`
+   - 通过 `_ensure_category_items_map()` 访问，该方法以 `(文件路径, id(数据对象))` 为来源指纹，
+     JSON 重载后自动重建映射
+   - `_category_options_and_items()` 由同一份映射派生两级下拉选项，
+     保证选项与映射结构上永远一致（避免 `Value not in list` 验证错误）
 
 ### 文本处理
 - `check_and_add_comma` 方法自动检查并添加末尾标点符号
@@ -162,7 +195,23 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 ## 开发注意事项
 
 ### 版本管理
-- `selector_nodes.py` 是当前主版本（v2.2+）
+- `selector_nodes.py` 是当前主版本（v2.4）
+- **v2.4 新增功能**：
+  - `random_filter` 匹配范围从「描述」扩展到 **key + 描述 + 关键词 + 分类标签**，
+    英文大小写不敏感；纳入 key 是因为本插件数据约定是「英文写在 key 上」
+  - 分类节点的 `*全部* (随机)` 现在也遵循 `random_filter`（此前被静默忽略）
+  - 新增 `get_desc_index()`，用 `{描述: Key}` 索引替代 O(n) 全表扫描（实测快约 460倍）
+  - 新增 `_as_text()`，修复数组型「关键词」字段导致的 `AttributeError` 崩溃
+  - `_json_file_path()` 上提到 `BaseJsonSelector`，单级节点也能复用
+  - `random_filter` 的 placeholder 提取为模块级常量 `FILTER_PLACEHOLDER`
+- **v2.3 新增功能**：
+  - **JSON 热更新**：`get_json_data()` 改用「修改时间 + 文件大小」指纹判定缓存失效，文件变更自动重载
+  - 新增 `POST /mycomfyuitools/refresh` 接口与 `serialize_input_types()` 辅助函数
+  - `js/widgets.js` 给 13 个选择器节点新增「🔄 刷新 JSON」按钮
+  - `_category_items_map` 增加类属性默认值 `{}` 兜底，修复 `AttributeError`
+  - 分类映射构建逻辑抽成 `_build_category_items_map()` / `_category_options_and_items()` /
+    `_ensure_category_items_map()` / `_json_file_path()` 四个方法
+  - 移除未使用的 `import folder_paths`，插件可脱离 ComfyUI 环境直接导入测试
 - **v2.2 新增功能**：
   - 新增 `ShoesSelector` 节点（鞋子选择器，BaseCategorizedJsonSelector）
   - 新增 `ExpressionSelector` 节点（表情选择器，BaseJsonSelector）
@@ -193,32 +242,41 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 ## 测试和调试
 
 ### 开发流程
-1. 修改代码后需要重启 ComfyUI 才能生效
-2. JSON 文件修改后也需要重启 ComfyUI
-3. 使用 ComfyUI 的节点面板测试功能
-4. 如需清除 JSON 缓存，调用 `BaseJsonSelector.clear_json_cache()`
+1. 修改 Python 代码或 JS 代码后需要重启 ComfyUI 才能生效
+2. **修改 JSON 数据文件不需要重启**——点击节点上的「🔄 刷新 JSON」按钮即可（刷新按节点生效）
+3. JSON 缓存由文件指纹自动失效，正常情况下无需手动清缓存；
+   如需强制清空可调用 `BaseJsonSelector.clear_json_cache()`
+4. 单独导入 `selector_nodes.py` 做测试时无需 ComfyUI 环境（已移除 `folder_paths` 依赖）：
+   `sys.path.insert(0, 插件目录)` 后 `from selector_nodes import ...` 即可
 
 ### 常见问题
 - 确保 JSON 文件格式正确（UTF-8编码，正确的中文标点）
 - 节点名称在 `__init__.py` 中正确注册
 - 文件路径使用 `os.path.dirname(os.path.realpath(__file__))` 获取当前目录
 - 分类节点 name 需添加到 `js/widgets.js` 的节点列表中
+- 新的分类节点若没加进 `js/widgets.js` 的 `CATEGORIZED_NODES`，双级联动会静默失效
 
 ## 扩展建议
 
 ### 添加新类别：
 1. 创建新的 JSON 文件放入 `json/` 目录（如 `lighting.json`）
 2. 在 `selector_nodes.py` 中添加新的选择器类（继承 `BaseJsonSelector` 或 `BaseCategorizedJsonSelector`）
-3. 在 `__init__.py` 中注册新节点和显示名称
-4. 如使用分类系统，在 `js/widgets.js` 的节点名数组中加入新节点名
+3. 在 `__init__.py` 的 `NODE_CLASS_MAPPINGS` 和 `NODE_DISPLAY_NAME_MAPPINGS` 中注册
+4. 在 `js/widgets.js` 中登记节点名：分类节点加进 `CATEGORIZED_NODES`，
+   单级节点加进 `PLAIN_NODES`（两者都会自动获得「🔄 刷新 JSON」按钮）
 5. 重启 ComfyUI 测试
 
 ### 为现有节点添加分类系统：
 1. **JSON数据准备**：
    - 在JSON条目中添加 `"分类"` 字段，格式为字符串数组：`"分类": ["标签1", "标签2"]`
-   - 可以使用类似 `classify_clothing.py` 的脚本自动分类
+   - 可以使用类似 `backup/classify_clothing.py` 的脚本自动分类
 2. **Python后端修改**：将基类改为 `BaseCategorizedJsonSelector`（无需重写 `INPUT_TYPES` 或 `process_text`）
 3. **前端JavaScript修改**：
-   - 在 `js/widgets.js` 的节点名检查数组中添加新节点名
+   - 把节点名加入 `js/widgets.js` 的 `CATEGORIZED_NODES` 数组
    - 注意保存原始 callback 避免无限递归
 4. **注册前端资源**：确认 `__init__.py` 中已设置 `WEB_DIRECTORY = "./js"`
+
+### 修改 JSON 数据后的验证清单
+1. 点击该节点的「🔄 刷新 JSON」，确认下拉菜单里出现了新条目
+2. 分类节点还要确认第二级菜单能正常联动过滤
+3. 若条目带 `分类` 字段，检查它是否出现在预期的分类下（多标签条目会出现在多个分类里，这是预期行为）
