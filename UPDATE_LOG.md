@@ -2,6 +2,95 @@
 
 ---
 
+## [2026-10-09] v2.5 - 新增图片加载器模块（文件夹队列读图 + 确认后删除）
+
+新增 3 个节点，分类 `MyCustomNodes/Image`：
+
+| 节点类 | 显示名 |
+| --- | --- |
+| `LoadImageFromFolderQueue` | 加载图片·文件夹队列 (读完可删除) |
+| `ConfirmDeleteImage` | 确认删除图片 (收尾) |
+| `ImageQueueStatus` | 图片队列进度查询 |
+
+### 新增文件
+
+```text
+image_loader_core.py       # 扫描 / 排序 / 进度记录 / 删除（不依赖 ComfyUI 与 torch，可单独测）
+image_loader_nodes.py      # 3 个节点类
+js/image_loader.js         # 缩略图预览 + 文件夹浏览按钮 + 重置进度按钮
+selftest_image_loader.py   # 自测脚本（无需启动 ComfyUI）
+docs/图片加载器使用说明.md   # 完整接线与参数说明
+requirements.txt           # send2trash
+```
+
+`__init__.py` 里用 `NODE_CLASS_MAPPINGS.update(...)` 合并新节点，并新增
+`_register_image_loader_routes()`（路由前缀 `/mycomfyuitools/imageloader/*`）。
+
+### 关键设计决策
+
+**1. 两种删除模式互斥**
+
+| 想要的效果 | 加载节点 `after_load` | 收尾节点 |
+| --- | --- | --- |
+| 读出来就删，不等结果 | `delete` | 不需要 |
+| 确认出图成功后再删 | **`keep`** | 必须接 |
+
+原因是执行顺序：加载节点一读到图就立刻执行 `after_load`。若设 `delete`，
+收尾节点拿到 `file_path` 时文件已经没了（跳过或报错），「确认后删」也就失去意义。
+
+**2. 收尾节点必须标记 `OUTPUT_NODE = True`**
+
+ComfyUI 只调度「输出节点及其祖先链」。普通节点没有下游就**根本不会执行**——
+你会以为删了其实没删。设为 OUTPUT_NODE 后，即使孤零零放在画布上也会执行。
+
+**3. `confirm_output` 用通配符而不是目录**
+
+填目录时判断的是「目录里有没有图片」，而目录里通常有以前生成的图，
+会导致**这次保存失败也误判成产物已生成照样删**。要真正确认这张存好了，
+应填带前缀的通配符，例如 `D:\out\前缀_*.png`。
+
+**4. `rollback_on_skip`**
+
+跳过删除时会把该文件从「已读记录」里撤回，下次运行重新读到它——
+不会因为一次失败就永久漏掉这张图。
+
+### 踩过的坑（重要，改代码前先看）
+
+**🐛 `send2trash` 在本机 Win11 上会误报 `FileNotFoundError`**
+
+现象：删除后文件确实进了回收站（已用 Shell COM 枚举回收站确认），
+但 `send2trash` 仍抛 `FileNotFoundError`。
+**原因**：它用 pywin32 的 `IFileOperation`（modern 实现），异步操作返回时抛异常，
+并不代表失败。
+**处理**：判定改为「**以文件是否还在原处为准**」，不再以是否抛异常为准。
+另外非 NTFS 卷（exFAT U盘 / 网络盘）没有回收站，自动降级为移到 `<源目录>/_trash/`。
+
+**🐛 不加 `IS_CHANGED` 时 ComfyUI 会缓存住，永远读同一张**
+
+加载节点用 `IS_CHANGED` 返回指纹强制每次运行真的推进，否则第二次运行会被缓存跳过。
+
+**🐛 本机有「两套 custom_nodes」，只有 V0.7.0 那份生效**
+
+```text
+V0.7.0\ComfyUI\custom_nodes                          ← 启动脚本用这个，实际生效
+ComfyUI_windows_portable\ComfyUI\custom_nodes        ← 不生效
+```
+
+只有 `models` / `output` 是符号链接共享的，`custom_nodes` 各自独立。
+**插件必须放在 V0.7.0 那份下面。**
+
+### 自测
+
+```bash
+D:\AI\ComfyUI_windows\V0.7.0\python_embeded\python.exe selftest_image_loader.py
+```
+
+覆盖 10 节：5 种排序、逐张推进、重置、删除与回收、张量形状、空目录报错、
+路径容错、输出数量匹配、收尾节点各分支（开关 / 产物确认 / 跳过回滚 / 备份 / 批量 / 缺失报错）。
+全部通过。
+
+---
+
 ## [2026-10-09] v2.4 - 随机筛选器增强 + 索引性能 + 数组字段崩溃修复
 
 ### 🔧 增强：random_filter 匹配范围从 1 个字段扩展到 4 个

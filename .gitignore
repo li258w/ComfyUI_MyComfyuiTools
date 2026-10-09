@@ -24,6 +24,7 @@ CLAUDE.md
 output/
 tmp/
 image/
+states/
 *.bmp
 *.tiff
 *.webp

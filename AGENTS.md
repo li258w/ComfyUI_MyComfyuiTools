@@ -37,7 +37,13 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 │   ├── photo_type.json
 │   └── expressions.json
 ├── js/                         # 前端JavaScript文件
-│   └── widgets.js              # 双下拉菜单联动逻辑
+│   ├── widgets.js              # 双下拉菜单联动逻辑
+│   └── image_loader.js         # 图片加载器：缩略图预览 / 文件夹浏览 / 重置进度
+├── image_loader_core.py        # 图片加载器核心逻辑（扫描·排序·进度·删除）
+├── image_loader_nodes.py       # 图片加载器节点定义（3 个节点）
+├── selftest_image_loader.py    # 图片加载器自测脚本（无需启动 ComfyUI）
+├── docs/                       # 文档
+│   └── 图片加载器使用说明.md
 ├── backup/                     # 备份文件夹
 │   ├── json/                   # JSON备份文件
 │   ├── classify_clothing.py      # 自动分类脚本
@@ -52,6 +58,10 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 - **节点分类结构**：
   - 提示词选择器节点分类为 "MyCustomNodes/prompt"（所有继承 `BaseJsonSelector` 的节点）
   - 工具节点分类为 "MyCustomNodes/Utils"（`StringJoiner` 节点）
+  - 图片加载器节点分类为 "MyCustomNodes/Image"（`image_loader_nodes.py` 的 3 个节点）
+- **节点合并方式**：`__init__.py` 里先定义选择器节点的 `NODE_CLASS_MAPPINGS`，
+  再用 `NODE_CLASS_MAPPINGS.update(_IMAGE_LOADER_NODE_CLASS_MAPPINGS)` 合并图片加载器，
+  避免两个模块各自的全量映射互相覆盖
 
 ### 热更新接口
 - `__init__.py` 中的 `_register_refresh_route()` 注册了 `POST /mycomfyuitools/refresh`
@@ -192,10 +202,32 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 ### 工具节点
 - **StringJoiner**: 多字符串联结工具，支持多种分隔符（逗号、句号、竖线、换行、自定义），最多8个输入
 
+### 图片加载器节点（v2.5 新增，分类 `MyCustomNodes/Image`）
+
+| 节点类 | 显示名 | 说明 |
+| --- | --- | --- |
+| `LoadImageFromFolderQueue` | 加载图片·文件夹队列 (读完可删除) | 逐张读图，`after_load` 选 `keep` / `delete` |
+| `ConfirmDeleteImage` | 确认删除图片 (收尾) | **OUTPUT_NODE**，确认产物生成后才删源文件 |
+| `ImageQueueStatus` | 图片队列进度查询 | 只输出进度，不读图 |
+
+要点（详见 `docs/图片加载器使用说明.md` 与 `UPDATE_LOG.md` 的 v2.5 条目）：
+
+- **两种删除模式互斥**：读完即删 → `after_load=delete`（不需要收尾节点）；
+  确认后删 → `after_load=keep` **且**必须接收尾节点
+- **删除走系统回收站**，非 NTFS 卷自动降级为移到 `<源目录>/_trash/`
+- 进度记在 `<源目录>/.comfy_imageloader_state.json`（存相对路径，中途加图/换排序不错位）
+- 路由前缀统一为 `/mycomfyuitools/imageloader/*`（`__init__.py` 的 `_register_image_loader_routes()`）
+- 依赖 `send2trash`（装在 portable 的 `python_embeded`）
+
 ## 开发注意事项
 
 ### 版本管理
 - `selector_nodes.py` 是当前主版本（v2.4）
+- **v2.5 新增功能**：
+  - 新增图片加载器模块（`image_loader_core.py` + `image_loader_nodes.py` + `js/image_loader.js`）
+  - 3 个节点：`LoadImageFromFolderQueue` / `ConfirmDeleteImage` / `ImageQueueStatus`
+  - `__init__.py` 新增 `_register_image_loader_routes()`，路由前缀 `/mycomfyuitools/imageloader/*`
+  - 新增自测脚本 `selftest_image_loader.py`（10 节，全部通过）
 - **v2.4 新增功能**：
   - `random_filter` 匹配范围从「描述」扩展到 **key + 描述 + 关键词 + 分类标签**，
     英文大小写不敏感；纳入 key 是因为本插件数据约定是「英文写在 key 上」
@@ -248,6 +280,12 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
    如需强制清空可调用 `BaseJsonSelector.clear_json_cache()`
 4. 单独导入 `selector_nodes.py` 做测试时无需 ComfyUI 环境（已移除 `folder_paths` 依赖）：
    `sys.path.insert(0, 插件目录)` 后 `from selector_nodes import ...` 即可
+5. **图片加载器有独立自测脚本**（10 节：排序 / 逐张推进 / 删除 / 收尾节点各分支）：
+   ```bash
+   D:\AI\ComfyUI_windows\V0.7.0\python_embeded\python.exe selftest_image_loader.py
+   ```
+   必须用 portable 的 `python_embeded`（自带 torch / PIL / send2trash），系统 Python 缺依赖。
+   脚本会把测试图送进**真实回收站**（图在临时目录下，无影响）
 
 ### 常见问题
 - 确保 JSON 文件格式正确（UTF-8编码，正确的中文标点）
@@ -255,6 +293,14 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 - 文件路径使用 `os.path.dirname(os.path.realpath(__file__))` 获取当前目录
 - 分类节点 name 需添加到 `js/widgets.js` 的节点列表中
 - 新的分类节点若没加进 `js/widgets.js` 的 `CATEGORIZED_NODES`，双级联动会静默失效
+- ⚠️ **本机有「两套 custom_nodes」，插件必须放在 V0.7.0 那份下面才生效**：
+  ```text
+  V0.7.0\ComfyUI\custom_nodes                       ← 启动脚本用这个，实际生效
+  ComfyUI_windows_portable\ComfyUI\custom_nodes     ← 不生效
+  ```
+  只有 `models` / `output` 是符号链接共享的，`custom_nodes` 各自独立
+- 显卡是 RTX 2060 SUPER / 8GB，启动要用 `Start_ComfyUI_8G.bat` 的参数
+  （`--async-offload --lowvram`），用 20G 的参数会爆显存
 
 ## 扩展建议
 
