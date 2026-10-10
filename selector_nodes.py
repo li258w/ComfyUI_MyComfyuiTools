@@ -1,9 +1,10 @@
 import os
 import json
 import random 
+import re
 
 # random_filter 输入框的提示文案（多处复用，避免不一致）
-FILTER_PLACEHOLDER = "随机筛选词 (逗号分隔, 匹配描述/关键词/分类, 例如: 裙子, film)"
+FILTER_PLACEHOLDER = "筛选词(逗号分隔) 例: 裙子, film"
 
 # --- 基础类：所有选择器节点的基类 ---
 class BaseJsonSelector:
@@ -173,13 +174,13 @@ class BaseJsonSelector:
 
         return {
             "required": {
-                "prefix": ("STRING", {"multiline": False, "default": "", "placeholder": "前置文本 (例如: style: )"}),
+                "prefix": ("STRING", {"multiline": True, "default": "", "placeholder": "前置文本 例: style: "}),
                 "style_select": (options,),
                 # 【修改点 1】新增“描述+关键词”选项
                 "output_mode": (["Key", "关键词", "描述+关键词"], {"default": "Key"}),
 
-                "random_filter": ("STRING", {"multiline": False, "default": "", "placeholder": FILTER_PLACEHOLDER}),
-                "custom_text": ("STRING", {"multiline": False, "default": "", "placeholder": "当上方选择'自定义'时，使用此文本"}),
+                "random_filter": ("STRING", {"multiline": True, "default": "", "placeholder": FILTER_PLACEHOLDER}),
+                "custom_text": ("STRING", {"multiline": True, "default": "", "placeholder": "自定义模式下使用"}),
                 "seed": ("INT", {
                     "default": 0,
                     "min": 0,
@@ -249,7 +250,8 @@ class BaseJsonSelector:
             if not data:
                 return (f"Error: JSON data in {self.TARGET_JSON_FILE} is empty.",)
 
-            filter_terms = [t.strip() for t in random_filter.split(",") if t.strip()]
+            # 筛选词可含换行（输入框是多行自增高的），需按逗号/换行/顿号统一切分
+            filter_terms = [t.strip() for t in re.split(r"[,\n、]", random_filter) if t.strip()]
 
             if not filter_terms:
                 candidates = list(data.keys())
@@ -398,12 +400,12 @@ class BaseCategorizedJsonSelector(BaseJsonSelector):
             print(f"[Node: {s.NODE_NAME}] Error: TARGET_JSON_FILE is empty")
             return {
                 "required": {
-                    "prefix": ("STRING", {"multiline": False, "default": "", "placeholder": "前置文本 (例如: style: )"}),
+                    "prefix": ("STRING", {"multiline": True, "default": "", "placeholder": "前置文本 例: style: "}),
                     "category_select": (["无 (None)"], {"default": "无 (None)"}),
                     "item_select": (["[隐藏]"], {"default": "[隐藏]"}),
                     "output_mode": (["Key", "关键词", "描述+关键词"], {"default": "Key"}),
-                    "random_filter": ("STRING", {"multiline": False, "default": "", "placeholder": FILTER_PLACEHOLDER}),
-                    "custom_text": ("STRING", {"multiline": False, "default": "", "placeholder": "当上方选择'自定义'时，使用此文本"}),
+                    "random_filter": ("STRING", {"multiline": True, "default": "", "placeholder": FILTER_PLACEHOLDER}),
+                    "custom_text": ("STRING", {"multiline": True, "default": "", "placeholder": "自定义模式下使用"}),
                     "seed": ("INT", {
                         "default": 0,
                         "min": 0,
@@ -419,12 +421,12 @@ class BaseCategorizedJsonSelector(BaseJsonSelector):
 
         return {
             "required": {
-                "prefix": ("STRING", {"multiline": False, "default": "", "placeholder": "前置文本 (例如: style: )"}),
+                "prefix": ("STRING", {"multiline": True, "default": "", "placeholder": "前置文本 例: style: "}),
                 "category_select": (category_options, {"default": "无 (None)"}),
                 "item_select": (all_items, {"default": "[隐藏]"}),
                 "output_mode": (["Key", "关键词", "描述+关键词"], {"default": "Key"}),
-                "random_filter": ("STRING", {"multiline": False, "default": "", "placeholder": FILTER_PLACEHOLDER}),
-                "custom_text": ("STRING", {"multiline": False, "default": "", "placeholder": "当上方选择'自定义'时，使用此文本"}),
+                "random_filter": ("STRING", {"multiline": True, "default": "", "placeholder": FILTER_PLACEHOLDER}),
+                "custom_text": ("STRING", {"multiline": True, "default": "", "placeholder": "自定义模式下使用"}),
                 "seed": ("INT", {
                     "default": 0,
                     "min": 0,
@@ -463,7 +465,7 @@ class BaseCategorizedJsonSelector(BaseJsonSelector):
                 # 在该分类内随机选择一个项目，使用局部随机实例避免全局种子污染
                 pool = category_items
                 # 分类内随机同样遵循 random_filter（此前会被静默忽略）
-                terms = [t.strip().lower() for t in random_filter.split(",") if t.strip()]
+                terms = [t.strip().lower() for t in re.split(r"[,\n、]", random_filter) if t.strip()]
                 if terms and pool:
                     data = self.get_json_data(self._json_file_path()) or {}
                     desc_index = self.get_desc_index(self._json_file_path())

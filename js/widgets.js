@@ -73,6 +73,82 @@ async function fetchFreshInput(nodeClass) {
     return data.input;
 }
 
+// ── custom_text 加高 2 行 ──────────────────────────────────
+// ComfyUI 给多行文本框预留固定高度（computeLayoutSize 约 60px ≈ 3 行）。
+// 要让 custom_text 多显示 2 行，正确做法是告诉框架「我这个 widget 需要更高」，
+// 由框架在布局时把节点一起撑开。
+// 注意：只声明一次高度即可，不要在事件里反复 node.setSize()，
+// 那会和框架的 computeSize 抢布局控制权，导致高度来回跳。
+const EXTRA_LINES = 2;                 // custom_text 比默认多显示几行
+const BASE_LINE_HEIGHT = 11 * 1.35;    // 与下面 CSS 的 font-size/line-height 保持一致
+const FRAME_SPACING = 4;               // 框架在每个 widget 高度外还会加的间距（y += t + 4）
+const VISUAL_GAP = 10;                 // 元素与下一个控件之间保留的空隙，对齐 prefix 的观感
+
+// 元素实际渲染高度（用户看到的框高）
+const CUSTOM_TEXT_BOX = Math.round(60 + EXTRA_LINES * BASE_LINE_HEIGHT);
+// 报给框架的槽位高度 = 框高 + 框架间距 + 视觉空隙
+// 两者分开算，框才不会把间距吃掉、压住下方控件。
+const CUSTOM_TEXT_SLOT = CUSTOM_TEXT_BOX + FRAME_SPACING + VISUAL_GAP;
+
+// 只对 custom_text 这个 widget 生效。
+//
+// 关键：框架的布局代码是
+//     if (e.computeSize)            t += e.computeSize(width)[1]
+//     else if (e.computeLayoutSize) { ... }
+// 只要 widget 上存在 computeSize，computeLayoutSize 就永远不会被调用，
+// 所以必须覆盖 computeSize（它返回 [宽, 高]）。
+function makeCustomTextTaller(node, widget) {
+    if (widget.__myTallerPatched) return;
+    widget.__myTallerPatched = true;
+
+    const origLayout = widget.computeLayoutSize?.bind(widget);
+    const origCompute = widget.computeSize?.bind(widget);
+
+    widget.computeLayoutSize = function (n) {
+        const r = origLayout ? origLayout(n) : { minWidth: 20, maxWidth: 1e6 };
+        return { ...r, minHeight: CUSTOM_TEXT_SLOT, maxHeight: CUSTOM_TEXT_SLOT };
+    };
+
+    widget.computeSize = function (width) {
+        const sz = origCompute ? origCompute(width) : [width ?? 0, CUSTOM_TEXT_SLOT];
+        return [sz[0], CUSTOM_TEXT_SLOT];
+    };
+
+    // 给元素打标记，便于排查（element 缺失时从节点 DOM 里找）
+    const el =
+        widget.element ||
+        (typeof widget.querySelector === "function" ? widget.querySelector("textarea") : null);
+    if (el && el.tagName === "TEXTAREA") {
+        el.classList.add("my-myct-textarea");
+    }
+}
+
+// ── 多行文本框样式 ──────────────────────────────────────────
+// ComfyUI 的 .comfy-multiline-input 默认按 placeholder 决定视觉高度，
+// 而我们的 placeholder 较长会折行，导致第二行压住下方控件。
+// 这里给一个与框架预留高度一致的固定高度，超出部分用滚动条。
+const MULTILINE_CSS = `
+/* 只作用于本插件的三个字段，避免影响其他插件的文本框 */
+textarea.comfy-multiline-input {
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-y: auto !important;
+}
+/* custom_text 比其他两个多显示 2 行 */
+textarea.comfy-multiline-input.my-myct-textarea {
+    height: ${CUSTOM_TEXT_BOX}px !important;
+    min-height: ${CUSTOM_TEXT_BOX}px !important;
+}
+`;
+if (typeof document !== "undefined" && !document.getElementById("mycomfyuitools-style")) {
+    const st = document.createElement("style");
+    st.id = "mycomfyuitools-style";
+    st.textContent = MULTILINE_CSS;
+    document.head.appendChild(st);
+}
+
 app.registerExtension({
     name: "ComfyUI_MyComfyuiTools.CategoryItemWidget",
 
@@ -93,6 +169,19 @@ app.registerExtension({
             }
 
             const node = this;
+
+            // custom_text 多显示 2 行：告知框架更高的布局高度。
+            // DOM 可能尚未挂载，最多重试 30 帧。
+            let tries = 0;
+            const applyTaller = () => {
+                const w = (node.widgets || []).find((x) => x.name === "custom_text");
+                if (w && w.element) {
+                    makeCustomTextTaller(node, w);
+                    return;
+                }
+                if (tries++ < 30) requestAnimationFrame(applyTaller);
+            };
+            applyTaller();
 
             let categoryItemMap = {};
             let onCategoryChange = null;
