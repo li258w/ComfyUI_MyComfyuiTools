@@ -6,6 +6,22 @@ import re
 # random_filter 输入框的提示文案（多处复用，避免不一致）
 FILTER_PLACEHOLDER = "筛选词(逗号分隔) 例: 裙子, film"
 
+# --- 输出模式 ---
+# JSON 里存提示词的字段叫 "提示词"（原名为 "关键词"，2026-10-11 全库改名）。
+# 旧工作流里保存的 output_mode 值是旧字符串，这里做一次归一化，保证不失效。
+OUT_MODE_KEY = "Key"
+OUT_MODE_PROMPT = "提示词"
+OUT_MODE_DESC_PROMPT = "描述+提示词"
+OUTPUT_MODES = [OUT_MODE_KEY, OUT_MODE_PROMPT, OUT_MODE_DESC_PROMPT]
+_LEGACY_OUTPUT_MODES = {
+    "关键词": OUT_MODE_PROMPT,
+    "描述+关键词": OUT_MODE_DESC_PROMPT,
+}
+
+def normalize_output_mode(mode):
+    """把 output_mode 归一化到当前取值（兼容旧工作流保存的旧值）。"""
+    return _LEGACY_OUTPUT_MODES.get(mode, mode)
+
 # --- 基础类：所有选择器节点的基类 ---
 class BaseJsonSelector:
     # 子类必须覆盖这两个属性
@@ -63,9 +79,9 @@ class BaseJsonSelector:
     def _collect_search_text(cls, key, content):
         """收集一个条目中可被 random_filter 命中的文本。
 
-        范围：JSON 的 key + 描述 + 关键词 + 分类标签。
+        范围：JSON 的 key + 描述 + 提示词 + 分类标签。
         把 key 也纳入搜索很关键——本插件的数据约定是「英文写在 key 上、
-        关键词字段写中文」，不搜 key 的话英文筛选几乎筛不到东西。
+        提示词字段写中文」，不搜 key 的话英文筛选几乎筛不到东西。
 
         之前只匹配"描述"，导致输入英文关键词或分类名筛选不到任何结果。
         """
@@ -73,7 +89,8 @@ class BaseJsonSelector:
         if isinstance(key, str):
             parts.append(key)
         if isinstance(content, dict):
-            for field in ("描述", "关键词"):
+            # "关键词" 是 "提示词" 的旧字段名，一并兼容
+            for field in ("描述", "提示词", "关键词"):
                 text = cls._as_text(content.get(field))
                 if text:
                     parts.append(text)
@@ -86,7 +103,7 @@ class BaseJsonSelector:
     def _as_text(value):
         """把字段值规整为字符串。
 
-        兼容个别条目把 "关键词" 写成数组的情况（json/styles.json 的
+        兼容个别条目把 "提示词" 写成数组的情况（json/styles.json 的
         ForestCinematicSoftLight 就是这样）——原先会把 Python 列表直接送进
         check_and_add_comma，导致节点抛 AttributeError 崩溃。
         """
@@ -176,8 +193,8 @@ class BaseJsonSelector:
             "required": {
                 "prefix": ("STRING", {"multiline": True, "default": "", "placeholder": "前置文本 例: style: "}),
                 "style_select": (options,),
-                # 【修改点 1】新增“描述+关键词”选项
-                "output_mode": (["Key", "关键词", "描述+关键词"], {"default": "Key"}),
+                # 【修改点 1】新增“描述+提示词”选项
+                "output_mode": (OUTPUT_MODES, {"default": OUT_MODE_KEY}),
 
                 "random_filter": ("STRING", {"multiline": True, "default": "", "placeholder": FILTER_PLACEHOLDER}),
                 "custom_text": ("STRING", {"multiline": True, "default": "", "placeholder": "自定义模式下使用"}),
@@ -256,7 +273,7 @@ class BaseJsonSelector:
             if not filter_terms:
                 candidates = list(data.keys())
             else:
-                # 匹配范围：描述 + 关键词 + 分类标签（英文大小写不敏感）
+                # 匹配范围：描述 + 提示词 + 分类标签（英文大小写不敏感）
                 lower_terms = [t.lower() for t in filter_terms]
                 candidates = [
                     key for key, content in data.items()
@@ -279,26 +296,30 @@ class BaseJsonSelector:
         else:
             selected_key = self.get_desc_index(target_path).get(style_select, "")
         
-        # --- 内容提取 【修改点 2】新增描述+关键词逻辑 ---
+        # --- 内容提取 【修改点 2】新增描述+提示词逻辑 ---
         if selected_key:
             item_data = data.get(selected_key, {})
 
-            if output_mode == "Key":
-                selected_content = selected_key
-            elif output_mode == "关键词":
-                # 用 _as_text 兜底数组型字段（见 _as_text 说明）
-                selected_content = self._as_text(item_data.get("关键词")) or selected_key
-            elif output_mode == "描述+关键词":
-                description = self._as_text(item_data.get("描述"))
-                keyword = self._as_text(item_data.get("关键词"))
+            # 旧工作流保存的是旧值（"关键词" / "描述+关键词"），先归一化
+            mode = normalize_output_mode(output_mode)
 
-                # 按照 "描述(关键词)" 格式输出
-                if description and keyword:
-                    selected_content = f"{description}({keyword})"
+            if mode == OUT_MODE_KEY:
+                selected_content = selected_key
+            elif mode == OUT_MODE_PROMPT:
+                # 用 _as_text 兜底数组型字段（见 _as_text 说明）
+                selected_content = self._as_text(item_data.get("提示词")) or selected_key
+            elif mode == OUT_MODE_DESC_PROMPT:
+                description = self._as_text(item_data.get("描述"))
+                # 兼容旧数据里仍写作 "关键词" 的条目
+                prompt = self._as_text(item_data.get("提示词")) or self._as_text(item_data.get("关键词"))
+
+                # 按照 "描述(提示词)" 格式输出
+                if description and prompt:
+                    selected_content = f"{description}({prompt})"
                 elif description:
                     selected_content = description
-                elif keyword:
-                    selected_content = keyword
+                elif prompt:
+                    selected_content = prompt
                 else:
                     selected_content = selected_key # 最终的fallback，输出Key
         
@@ -403,7 +424,7 @@ class BaseCategorizedJsonSelector(BaseJsonSelector):
                     "prefix": ("STRING", {"multiline": True, "default": "", "placeholder": "前置文本 例: style: "}),
                     "category_select": (["无 (None)"], {"default": "无 (None)"}),
                     "item_select": (["[隐藏]"], {"default": "[隐藏]"}),
-                    "output_mode": (["Key", "关键词", "描述+关键词"], {"default": "Key"}),
+                    "output_mode": (OUTPUT_MODES, {"default": OUT_MODE_KEY}),
                     "random_filter": ("STRING", {"multiline": True, "default": "", "placeholder": FILTER_PLACEHOLDER}),
                     "custom_text": ("STRING", {"multiline": True, "default": "", "placeholder": "自定义模式下使用"}),
                     "seed": ("INT", {
@@ -424,7 +445,7 @@ class BaseCategorizedJsonSelector(BaseJsonSelector):
                 "prefix": ("STRING", {"multiline": True, "default": "", "placeholder": "前置文本 例: style: "}),
                 "category_select": (category_options, {"default": "无 (None)"}),
                 "item_select": (all_items, {"default": "[隐藏]"}),
-                "output_mode": (["Key", "关键词", "描述+关键词"], {"default": "Key"}),
+                "output_mode": (OUTPUT_MODES, {"default": OUT_MODE_KEY}),
                 "random_filter": ("STRING", {"multiline": True, "default": "", "placeholder": FILTER_PLACEHOLDER}),
                 "custom_text": ("STRING", {"multiline": True, "default": "", "placeholder": "自定义模式下使用"}),
                 "seed": ("INT", {

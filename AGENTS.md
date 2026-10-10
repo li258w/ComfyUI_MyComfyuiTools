@@ -80,7 +80,7 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 {
   "unique_key_name": {
     "描述": "下拉菜单中显示的中文描述",
-    "关键词": "实际输出的英文提示词"
+    "提示词": "实际输出的中文提示词"
   }
 }
 ```
@@ -90,7 +90,7 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 {
   "unique_key_name": {
     "描述": "下拉菜单中显示的中文描述",
-    "关键词": "实际输出的英文提示词",
+    "提示词": "实际输出的中文提示词",
     "分类": ["上装（日常）", "街头", "运动休闲"]  // 可选字段，支持多分类标签
   }
 }
@@ -102,8 +102,8 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 **所有选择器节点的通用参数**：
 - `prefix`: 前置文本（如 "masterpiece, best quality"）
 - `style_select`（非分类节点）或 `category_select` + `item_select`（分类节点）: 选择菜单
-- `output_mode`: 输出模式（"Key"、"关键词"、"描述+关键词"）
-- `random_filter`: 随机筛选词（逗号分隔）。匹配 **key + 描述 + 关键词 + 分类标签**，
+- `output_mode`: 输出模式（"Key"、"提示词"、"描述+提示词"）；旧值 "关键词"/"描述+关键词" 自动兼容
+- `random_filter`: 随机筛选词（逗号分隔）。匹配 **key + 描述 + 提示词 + 分类标签**，
   英文大小写不敏感，多个词之间是「任一命中」（OR）语义
 - `custom_text`: 自定义模式下的输入文本
 - `seed`: 随机种子（支持 Fixed/Randomize/Increment）
@@ -128,15 +128,15 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 | `get_json_data(path)` | 读取 JSON，文件变更自动重载 |
 | `get_desc_index(path)` | `{描述: Key}` 索引，重复描述保留首个；随缓存自动失效 |
 | `_as_text(value)` | 字段值规整为字符串，数组会被 `", "` 拼接 |
-| `_collect_search_text(key, content)` | 收集可被筛选命中的文本：key + 描述 + 关键词 + 分类 |
+| `_collect_search_text(key, content)` | 收集可被筛选命中的文本：key + 描述 + 提示词 + 分类 |
 | `_match_filter(key, content, terms)` | 判断条目是否命中筛选词（OR 语义，大小写不敏感） |
 | `clear_json_cache(path=None)` | 手动清缓存（正常情况下缓存会自动失效） |
 
 ### 数据字段约定
 * `描述`：下拉菜单显示的中文描述
-* `关键词`：实际输出的提示词。**本插件数据中该字段多为中文**，英文写在 JSON 的 `key` 上
+* `提示词`：实际输出的提示词（原名 `关键词`，2026-10-11 全库改名）。**本插件数据中该字段多为中文**，英文写在 JSON 的 `key` 上
 * `分类`：字符串数组，一个条目可挂多个分类标签；缺失时归入自动生成的「其他」
-* ⚠️ 已知个别条目把 `关键词` 写成数组（`json/styles.json` 的 `ForestCinematicSoftLight`），
+* ⚠️ 已知个别条目把 `提示词` 写成数组（`json/styles.json` 的 `ForestCinematicSoftLight`），
   代码已通过 `_as_text()` 兼容，但建议统一改成字符串
 
 **支持分类的系统选择器特殊输出逻辑**（所有 `BaseCategorizedJsonSelector` 子类）：
@@ -229,11 +229,11 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
   - `__init__.py` 新增 `_register_image_loader_routes()`，路由前缀 `/mycomfyuitools/imageloader/*`
   - 新增自测脚本 `selftest_image_loader.py`（10 节，全部通过）
 - **v2.4 新增功能**：
-  - `random_filter` 匹配范围从「描述」扩展到 **key + 描述 + 关键词 + 分类标签**，
+  - `random_filter` 匹配范围从「描述」扩展到 **key + 描述 + 提示词 + 分类标签**，
     英文大小写不敏感；纳入 key 是因为本插件数据约定是「英文写在 key 上」
   - 分类节点的 `*全部* (随机)` 现在也遵循 `random_filter`（此前被静默忽略）
   - 新增 `get_desc_index()`，用 `{描述: Key}` 索引替代 O(n) 全表扫描（实测快约 460倍）
-  - 新增 `_as_text()`，修复数组型「关键词」字段导致的 `AttributeError` 崩溃
+  - 新增 `_as_text()`，修复数组型「提示词」字段导致的 `AttributeError` 崩溃
   - `_json_file_path()` 上提到 `BaseJsonSelector`，单级节点也能复用
   - `random_filter` 的 placeholder 提取为模块级常量 `FILTER_PLACEHOLDER`
 - **v2.3 新增功能**：
