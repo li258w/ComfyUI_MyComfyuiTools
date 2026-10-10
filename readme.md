@@ -28,7 +28,7 @@
 
 | 节点 | 数据文件 | 条目数 |
 | --- | --- | ---: |
-| **Style Selector** | `json/styles.json` | 32 |
+| **Style Selector** | `json/styles.json` | 38 |
 | **Eye Colors Selector** | `json/eye_colors.json` | 26 |
 | **Hair Color Selector** | `json/hair_color.json` | 38 |
 | **Photo Type Selector** | `json/photo_type.json` | 37 |
@@ -43,13 +43,13 @@
 
 | 节点 | 数据文件 | 条目数 | 分类数 |
 | --- | --- | ---: | ---: |
-| **Clothing Selector** | `json/clothing.json` | 480 | 30 |
+| **Clothing Selector** | `json/clothing.json` | 477 | 29 |
 | **Pose Selector** | `json/pose.json` | 272 | 15 |
 | **Background Selector** | `json/background.json` | 425 | 9 |
 | **Composition Selector** | `json/composition.json` | 94 | 10 |
-| **Shoes Selector** | `json/shoes.json` | 54 | 14 |
-| **Hairstyles Selector** | `json/hairstyles.json` | 55 | 33 |
-| **Body Types Selector** | `json/body_types.json` | 42 | 7 |
+| **Shoes Selector** | `json/shoes.json` | 57 | 14 |
+| **Hairstyles Selector** | `json/hairstyles.json` | 58 | 35 |
+| **Body Types Selector** | `json/body_types.json` | 43 | 7 |
 
 <details>
 <summary><b>点击展开各节点的分类清单</b></summary>

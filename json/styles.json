@@ -138,6 +138,65 @@
       "outdoor portrait",
       "calm atmosphere"
     ]
+  },
+  "minimalist_highkey_lookbook": {
+    "描述": "极简高调穿搭展示风格，浅色背景、柔和均匀布光、低饱和中性色调",
+    "提示词": "高调布光, 浅灰白背景, 柔和均匀光线, 低饱和, 中性微暖色调, 完整动态范围, 不过曝不死黑, 全身穿搭展示, 干净高级感"
+  },
+  "highkey_minimal_lookbook_en": {
+    "描述": "极简高调穿搭展示风格（英文提示词版），浅色背景与柔和均匀布光",
+    "提示词": [
+      "high-key lighting",
+      "soft even lighting",
+      "plain light grey background",
+      "low saturation",
+      "near-neutral subtle warm tone",
+      "full dynamic range",
+      "no blown highlights",
+      "no crushed blacks",
+      "full body outfit display",
+      "clean minimal lookbook",
+      "sharp focus"
+    ]
+  },
+  "fashion_ootd_breakdown_illustration": {
+    "描述": "社交媒体穿搭清单插画风，米白纸底、半写实厚涂人物、环绕单品标注与手写涂鸦装饰",
+    "提示词": "时尚插画, 半写实厚涂, 柔和喷枪上色, 编辑部级时装插画, 穿搭清单海报排版, 单品环绕标注, 手写体标签, 米白纸质背景, 细手绘边框, 涂鸦爱心与星星, 黑白灰低饱和配色, 全身站姿构图"
+  },
+  "ootd_breakdown_illustration_en": {
+    "描述": "社交媒体穿搭清单插画风（英文提示词版），米白纸底与环绕单品标注排版",
+    "提示词": [
+      "fashion illustration",
+      "semi-realistic painted style",
+      "soft airbrush shading",
+      "editorial fashion art",
+      "outfit breakdown poster layout",
+      "mood board collage",
+      "item callouts with handwritten labels",
+      "cream off-white paper texture background",
+      "thin hand-drawn border frame",
+      "doodle hearts and stars",
+      "monochrome black outfit",
+      "muted neutral palette",
+      "full body pose",
+      "centered composition"
+    ]
+  },
+  "fashion_painted_paper_texture": {
+    "描述": "半写实厚涂笔触配素纸底，仅保留画法与纸张质感，不含排版与文字",
+    "提示词": "半写实厚涂, 柔和喷枪上色, 平滑色彩过渡, 干净边缘, 素色纸张背景, 纸张纹理, 细手绘边框"
+  },
+  "painted_paper_texture_en": {
+    "描述": "半写实厚涂笔触配素纸底（英文提示词版），仅保留画法与纸张质感",
+    "提示词": [
+      "semi-realistic painting",
+      "soft airbrush shading",
+      "smooth color blending",
+      "clean edges",
+      "paper texture background",
+      "paper grain texture",
+      "thin hand-drawn border frame"
+    ]
   }   
 
 }
