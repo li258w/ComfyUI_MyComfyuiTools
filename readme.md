@@ -43,7 +43,7 @@
 
 | 节点 | 数据文件 | 条目数 | 分类数 |
 | --- | --- | ---: | ---: |
-| **Clothing Selector** | `json/clothing.json` | 484 | 29 |
+| **Clothing Selector** | `json/clothing.json` | 494 | 29 |
 | **Pose Selector** | `json/pose.json` | 272 | 15 |
 | **Background Selector** | `json/background.json` | 425 | 9 |
 | **Composition Selector** | `json/composition.json` | 94 | 10 |
