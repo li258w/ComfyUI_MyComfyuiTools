@@ -43,19 +43,19 @@
 
 | 节点 | 数据文件 | 条目数 | 分类数 |
 | --- | --- | ---: | ---: |
-| **Clothing Selector** | `json/clothing.json` | 494 | 29 |
+| **Clothing Selector** | `json/clothing.json` | 497 | 29 |
 | **Pose Selector** | `json/pose.json` | 272 | 15 |
 | **Background Selector** | `json/background.json` | 425 | 9 |
 | **Composition Selector** | `json/composition.json` | 94 | 10 |
-| **Shoes Selector** | `json/shoes.json` | 59 | 14 |
-| **Hairstyles Selector** | `json/hairstyles.json` | 59 | 37 |
+| **Shoes Selector** | `json/shoes.json` | 61 | 14 |
+| **Hairstyles Selector** | `json/hairstyles.json` | 43 | 7 |
 | **Body Types Selector** | `json/body_types.json` | 43 | 7 |
 
 <details>
 <summary><b>点击展开各节点的分类清单</b></summary>
 
-* **Clothing Selector**（30 类）
-  cosplay、上装、下装、丝绸材质、休闲风格、优雅风格、全身组合、内衣 / 泳装、哥特风格、复古风格、套装（有鞋）、学院风、居家休闲、户外、朋克风、正式场合、民族传统、泳装、海滩度假、牛仔材质、甜美风、皮革材质、秋冬、绸缎材质、职业装、街头风、运动风、连衣裙、雪纺材质、其他
+* **Clothing Selector**（29 类）
+  cosplay、上装、下装、丝绸材质、休闲风格、优雅风格、全身组合、内衣、哥特风格、复古风格、套装（有鞋）、学院风、居家休闲、户外、朋克风、正式场合、民族传统、泳装、海滩度假、牛仔材质、甜美风、皮革材质、秋冬、绸缎材质、职业装、街头风、运动风、连衣裙、雪纺材质
 * **Pose Selector**（15 类）
   互动姿势、侧面转身、其他、坐姿、手势动作、日常休闲、时尚摆拍、正式姿势、正面朝向、站姿、背面朝向、表情情绪、蹲跪姿、躺姿、运动动态
 * **Background Selector**（9 类）
@@ -65,8 +65,11 @@
   其他、商业摄影、夜景摄影、时尚大片、电影感构图、经典人像、自拍生活、艺术创作、街头纪实、风景建筑
 * **Shoes Selector**（14 类）
   休闲鞋、凉鞋、安全鞋、居家休闲、帆布鞋、户外鞋、拖鞋、时尚潮流、正装鞋、皮鞋、舞蹈鞋、运动鞋、靴子、高跟鞋
-* **Hairstyles Selector**（33 类）
-  休闲风格、俏皮风格、修饰脸型、创意剪裁、剪裁工艺、半扎发型、卷发、基础发型、复古风格、局部造型、层次剪裁、手工造型、扎发、摇滚风格、文化发型、日常风格、朋克风格、极简风格、正式场合、民族风、特殊质感、特殊造型、现代风格、盘发、直发、短发、经典发型、编发、自然特征、自然纹理、质感特征、运动风格、长发
+* **Hairstyles Selector**（7 类）
+  短发、中长发、直发、卷发、编发与脏辫、扎发与盘发、局部与修剪
+  *设计理念*：只按**发型本身的形态**（长短 / 直卷 / 编扎 / 修剪手法）分，不再掺入
+  "朋克风""复古风""日常"这类风格场景标签——那些更适合从 Style / Prompt 侧追加，
+  混在发型分类里会让同一个发型散落在七八个类目下、选起来没完。
 * **Body Types Selector**（7 类）
   中性/其他、丰满/曲线、其他/状态、强壮/敦实、极端/夸张、纤细/瘦小、运动/健美
 
