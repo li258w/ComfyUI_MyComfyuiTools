@@ -43,11 +43,11 @@
 
 | 节点 | 数据文件 | 条目数 | 分类数 |
 | --- | --- | ---: | ---: |
-| **Clothing Selector** | `json/clothing.json` | 522 | 29 |
+| **Clothing Selector** | `json/clothing.json` | 531 | 29 |
 | **Pose Selector** | `json/pose.json` | 319 | 9 |
 | **Background Selector** | `json/background.json` | 425 | 9 |
 | **Composition Selector** | `json/composition.json` | 94 | 10 |
-| **Shoes Selector** | `json/shoes.json` | 61 | 14 |
+| **Shoes Selector** | `json/shoes.json` | 73 | 14 |
 | **Hairstyles Selector** | `json/hairstyles.json` | 57 | 7 |
 | **Body Types Selector** | `json/body_types.json` | 43 | 7 |
 
