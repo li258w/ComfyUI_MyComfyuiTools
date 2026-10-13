@@ -574,6 +574,163 @@ class ExpressionSelector(BaseJsonSelector):
     NODE_NAME = "Expression Selector"
 
 
+# --- 饰品选择器：部位多选节点 ---
+# 一个节点同时佩戴多件饰品：每个部位一个下拉（同部位单选，避免戴两顶帽子），
+# 跨部位自由组合，后端按固定顺序把所有已选部位的提示词拼成一段输出。
+#
+# 部位列表由 accessories.json 的首个分类标签动态推导（与分类选择器同源机制）：
+# 往 JSON 里加新部位的数据，节点自动多一个下拉，代码零改动。
+ACCESSORY_SLOT_PARAMS = {
+    "帽子": "hat",
+    "发饰": "hair_ornament",
+    "耳饰": "earring",
+    "颈饰": "necklace",
+    "面部": "face",
+    "手部": "hand",
+    "腕饰": "wrist",
+    "腰饰": "waist",
+    "踝饰": "ankle",
+}
+# 拼接顺序：即使 JSON 里部位出现顺序变化，输出也保持稳定
+ACCESSORY_SLOT_ORDER = list(ACCESSORY_SLOT_PARAMS.keys())
+
+
+class AccessorySelector(BaseJsonSelector):
+    TARGET_JSON_FILE = "json/accessories.json"
+    NODE_NAME = "Accessory Selector"
+
+    @classmethod
+    def _accessory_slots(cls):
+        """返回 [(下拉参数名, 部位名)]，按 ACCESSORY_SLOT_ORDER 排；
+        数据里出现未知部位时排在已知部位之后（参数名 part_x1/2/3...），
+        这样即使删掉某个已知部位，已有部位的参数名也不会漂移。"""
+        data = cls.get_json_data(cls._json_file_path()) or {}
+        found = []
+        for _key, content in data.items():
+            if isinstance(content, dict) and "描述" in content:
+                cats = content.get("分类") or []
+                if cats and isinstance(cats[0], str) and cats[0] not in found:
+                    found.append(cats[0])
+        ordered = [p for p in ACCESSORY_SLOT_ORDER if p in found]
+        ordered += sorted(p for p in found if p not in ACCESSORY_SLOT_PARAMS)
+        slots = []
+        extra_n = 0
+        for part in ordered:
+            param = ACCESSORY_SLOT_PARAMS.get(part)
+            if not param:
+                extra_n += 1
+                param = "part_x%d" % extra_n
+            slots.append((param, part))
+        return slots
+
+    @classmethod
+    def _slot_pool(cls, data, part):
+        """某个部位下的全部描述（排序后），供下拉选项与随机池共用。"""
+        items = []
+        for _key, content in (data or {}).items():
+            if not isinstance(content, dict):
+                continue
+            cats = content.get("分类") or []
+            if cats and cats[0] == part and isinstance(content.get("描述"), str):
+                items.append(content["描述"])
+        return sorted(items)
+
+    @classmethod
+    def INPUT_TYPES(s):
+        slots = s._accessory_slots()
+        data = s.get_json_data(s._json_file_path())
+
+        required = {
+            "prefix": ("STRING", {"multiline": True, "default": "", "placeholder": "前置文本 例: wearing: "}),
+        }
+        # 部位下拉紧跟 prefix，随机/自定义之外与其它节点保持一致的观感
+        for param, part in slots:
+            options = ["无 (None)", "随机 (Random)"] + s._slot_pool(data, part)
+            required[param] = (options, {"default": "无 (None)"})
+        required["output_mode"] = (OUTPUT_MODES, {"default": OUT_MODE_PROMPT})
+        required["extra_text"] = ("STRING", {
+            "multiline": True, "default": "",
+            "placeholder": "追加饰品(每行一条描述) 例: 珍珠项链",
+        })
+        required["seed"] = ("INT", {
+            "default": 0,
+            "min": 0,
+            "max": 0xffffffffffffffff,
+            "control_after_generate": True
+        })
+        return {
+            "required": required,
+            "optional": {}
+        }
+
+    def _render_item(self, key, data, mode):
+        """按 output_mode 渲染单个条目，逻辑与基类保持一致。"""
+        item = data.get(key) or {}
+        if mode == OUT_MODE_KEY:
+            return key
+        prompt = self._as_text(item.get("提示词")) or key
+        if mode == OUT_MODE_DESC_PROMPT:
+            description = self._as_text(item.get("描述"))
+            if description:
+                return f"{description}({prompt})"
+        return prompt
+
+    def process_text(self, prefix, output_mode, extra_text="", seed=0, **slots):
+        mode = normalize_output_mode(output_mode)
+
+        data = self.get_json_data(self._json_file_path())
+        if data is None:
+            return (f"Error loading JSON file at {self.TARGET_JSON_FILE}: File not found or invalid",)
+
+        desc_index = self.get_desc_index(self._json_file_path())
+
+        # 1) 各部位下拉：按固定顺序解析，同部位天然单选，跨部位累积
+        segments = []
+        for param, part in self._accessory_slots():
+            value = slots.get(param)
+            if not value or value == "无 (None)":
+                continue
+            if value == "随机 (Random)":
+                pool = self._slot_pool(data, part)
+                if not pool:
+                    continue
+                # 局部随机实例 + 部位名派生种子：同一 seed 下结果稳定，
+                # 且各部位互不干扰（不会出现换一个部位全部重摇）
+                if seed != 0:
+                    value = random.Random("%s:%s" % (seed, part)).choice(pool)
+                else:
+                    value = random.choice(pool)
+            key = desc_index.get(value, "")
+            if not key:
+                # 旧工作流里存的条目被删/改名时兜底跳过，不让整个节点报错
+                print(f"[{self.NODE_NAME}] Warning: 未找到条目 '{value}'（部位 {part}），已跳过")
+                continue
+            text = self._render_item(key, data, mode)
+            if text:
+                segments.append(text)
+
+        # 2) 追加文本：每行/逗号/顿号分隔的描述，查表转提示词，查不到原样透传
+        for raw in re.split(r"[\n,、]", extra_text or ""):
+            desc = raw.strip()
+            if not desc:
+                continue
+            key = desc_index.get(desc, "")
+            if key:
+                segments.append(self._render_item(key, data, mode))
+            else:
+                print(f"[{self.NODE_NAME}] Warning: 追加饰品未匹配到条目 '{desc}'，按原文输出")
+                segments.append(desc)
+
+        # 3) 拼接：prefix 空格连接（与基类一致），各段之间由 check_and_add_comma 补逗号
+        if not segments:
+            return (self.check_and_add_comma(prefix),)
+        clean_prefix = prefix.strip()
+        result = f"{clean_prefix} " if clean_prefix else ""
+        for seg in segments:
+            result += self.check_and_add_comma(seg)
+        return (result,)
+
+
 def serialize_input_types(node_class):
     """把某个节点的 INPUT_TYPES() 转成可 JSON 序列化的结构，供前端热更新下拉菜单。
 

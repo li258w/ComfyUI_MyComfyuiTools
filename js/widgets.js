@@ -23,6 +23,7 @@ const PLAIN_NODES = [
     "JsonHairColorSelector",
     "JsonPhotoTypeSelector",
     "JsonExpressionSelector",
+    "JsonAccessorySelector",
 ];
 
 // 所有带"刷新"按钮的节点（不含 StringJoiner，它没有 JSON 选项）

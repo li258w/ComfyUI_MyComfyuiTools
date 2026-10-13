@@ -5,6 +5,7 @@ from .selector_nodes import (
     CompositionSelector,
     ShoesSelector,
     ExpressionSelector,
+    AccessorySelector,
     StringJoiner,
     serialize_input_types
 )
@@ -32,6 +33,7 @@ NODE_CLASS_MAPPINGS = {
     "JsonCompositionSelector": CompositionSelector,
     "JsonShoesSelector": ShoesSelector,
     "JsonExpressionSelector": ExpressionSelector,
+    "JsonAccessorySelector": AccessorySelector,
     "StringJoiner": StringJoiner,
 }
 
@@ -50,6 +52,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "JsonCompositionSelector": "Composition Selector",
     "JsonShoesSelector": "Shoes Selector",
     "JsonExpressionSelector": "Expression Selector",
+    "JsonAccessorySelector": "Accessory Selector",
     "StringJoiner": "String Joiner",
 }
 
