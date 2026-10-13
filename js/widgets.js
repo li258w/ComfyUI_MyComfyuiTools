@@ -150,10 +150,94 @@ if (typeof document !== "undefined" && !document.getElementById("mycomfyuitools-
     document.head.appendChild(st);
 }
 
+// ── StringJoiner 接入点名：动态显示 + 自定义名 ──────────────────
+// 1) 输入口连上节点 → 标签显示所连节点的标题（过长截断），断开恢复
+// 2) slot_labels 每行一个自定义名（第 1 行对应 string_1），未连线的口显示自定义名
+// 3) 优先级：连上了显示源标题；没连显示自定义名；都没有显示默认 string_N
+// 4) label 只是前端展示，不参与序列化传值——旧工作流打开不受影响
+const JOINER_NODES = ["StringJoiner"];
+const SLOT_LABEL_MAX = 8;
+const INPUT_TYPE = (typeof LiteGraph !== "undefined" && LiteGraph.INPUT) || 1;
+
+function setupStringJoiner(nodeType) {
+    // onConnectionsChange 在 nodeType 级只包装一次（每次 onNodeCreated 再包会叠罗汉）
+    const origOcc = nodeType.prototype.onConnectionsChange;
+    nodeType.prototype.onConnectionsChange = function (type, index, connected, linkInfo) {
+        if (origOcc) origOcc.apply(this, arguments);
+        if (type !== INPUT_TYPE) return;
+        const input = this.inputs && this.inputs[index];
+        if (input && /^string_\d+$/.test(input.name) && this.__joinerRefreshInput) {
+            this.__joinerRefreshInput(input, connected);
+        }
+    };
+
+    const origOnNodeCreated = nodeType.prototype.onNodeCreated;
+    nodeType.prototype.onNodeCreated = function () {
+        if (origOnNodeCreated) origOnNodeCreated.apply(this, arguments);
+
+        const node = this;
+        const slotInputs = (node.inputs || []).filter((i) => /^string_\d+$/.test(i.name));
+        const labelWidget = (node.widgets || []).find((w) => w.name === "slot_labels");
+
+        const truncate = (s) => {
+            const t = String(s || "").trim();
+            return t.length > SLOT_LABEL_MAX ? t.slice(0, SLOT_LABEL_MAX) + "…" : t;
+        };
+
+        // slot_labels 第 i 行 → 第 i 个输入口的自定义名
+        const customLabelOf = (input) => {
+            if (!labelWidget) return "";
+            const lines = String(labelWidget.value || "").split("\n");
+            const idx = slotInputs.indexOf(input);
+            return idx >= 0 && idx < lines.length ? lines[idx].trim() : "";
+        };
+
+        node.__joinerRefreshInput = (input, connected) => {
+            const custom = customLabelOf(input);
+            if (connected) {
+                let title = "";
+                if (input.link != null && node.graph) {
+                    const link = node.graph.links[input.link];
+                    const origin = link && node.graph.getNodeById(link.origin_id);
+                    // origin.title 默认就是节点的显示名（用户改过标题则用自定义标题）
+                    title = origin ? truncate(origin.title) : "";
+                }
+                input.label = title || custom || input.name;
+            } else {
+                input.label = custom || input.name;
+            }
+        };
+
+        const refreshAll = () => {
+            for (const input of slotInputs) {
+                node.__joinerRefreshInput(input, input.link != null);
+            }
+        };
+        node.__joinerRefreshAll = refreshAll;
+
+        if (labelWidget) {
+            const origCb = labelWidget.callback;
+            labelWidget.callback = function (v) {
+                if (origCb) origCb.call(this, v);
+                refreshAll();
+            };
+        }
+
+        // 兜底：等节点挂上 graph 后补一次（重开工作流时连线事件可能已过）
+        requestAnimationFrame(() => requestAnimationFrame(refreshAll));
+    };
+}
+
 app.registerExtension({
     name: "ComfyUI_MyComfyuiTools.CategoryItemWidget",
 
     async beforeRegisterNodeDef(nodeType, nodeData, app) {
+        // StringJoiner 有独立的接入点标签逻辑，不走选择器分支
+        if (JOINER_NODES.includes(nodeData.name)) {
+            setupStringJoiner(nodeType);
+            return;
+        }
+
         if (!ALL_SELECTOR_NODES.includes(nodeData.name)) {
             return;
         }

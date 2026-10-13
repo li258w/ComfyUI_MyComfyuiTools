@@ -786,6 +786,15 @@ class StringJoiner:
                 "string_8": ("STRING", {"forceInput": True, "multiline": True, "default": ""}),
                 
                 "custom_separator": ("STRING", {"multiline": False, "default": "", "placeholder": "仅在选择Custom时生效"}),
+                # 自定义接入点名（纯展示用，不影响拼接）：
+                # 每行一个名称，第 1 行对应 string_1；未连线的输入口显示自定义名，
+                # 连上线的口优先显示所连节点的标题（由前端动态设置）。
+                # 放在 optional 里 + widget 值随工作流序列化，
+                # 比直接改参数名安全——旧工作流不会失效。
+                "slot_labels": ("STRING", {
+                    "multiline": True, "default": "",
+                    "placeholder": "自定义接入点名(每行一个,第1行对应string_1,可选)",
+                }),
             }
         }
 
@@ -794,7 +803,8 @@ class StringJoiner:
     FUNCTION = "join_strings"
     CATEGORY = "MyCustomNodes/Utils"
 
-    def join_strings(self, string_1, string_2="", string_3="", string_4="", string_5="", string_6="", string_7="", string_8="", separator_select="", custom_separator=""):
+    # slot_labels 仅用于前端展示输入口名称，拼接逻辑不读它，加在签名末尾保证向后兼容
+    def join_strings(self, string_1, string_2="", string_3="", string_4="", string_5="", string_6="", string_7="", string_8="", separator_select="", custom_separator="", slot_labels=""):
         # 1. 确定最终联结符
         # 使用字典查表提高可维护性
         SEPARATOR_MAP = {

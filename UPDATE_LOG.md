@@ -2,6 +2,23 @@
 
 ---
 
+## [2026-10-13] StringJoiner 增强：接入点名动态显示 + 自定义名
+
+二哥需求：String Joiner 的接入点名字固定为 string_1/2/…，希望连上节点后能看出
+连的是谁；退而求其次是支持自己改接入点名。
+
+* **动态显示**：输入口连上节点后，`input.label` 自动设为所连节点的标题
+  （超过 8 字符截断加…）；断开恢复默认名。前端 `onConnectionsChange` 驱动，
+  `onNodeCreated` 里做双 rAF 兜底（重开工作流时连线事件可能已过）
+* **自定义名**：后端新增可选参数 `slot_labels`（多行，第 1 行对应 string_1），
+  未连线的输入口显示自定义名；连线的口优先显示源标题。参数值随工作流序列化，
+  **不改参数名**，旧工作流零影响
+* 优先级：连上了→源节点标题；没连→自定义名；都没有→默认 string_N
+* 拼接逻辑零改动；`join_strings` 签名末尾加 `slot_labels=""`，旧式调用照旧工作
+* 验证：`node --check` JS 语法过；Python 侧新旧调用行为一致、INPUT_TYPES 可序列化
+* ⚠️ 前端 label 渲染依赖 litegraph 的 slot label 绘制，若实测不显示， fallback 方案是
+  改在节点标题栏/提示条上展示（待二哥在 ComfyUI 里验证后定）
+
 ## [2026-10-13] 新增饰品模块：Accessory Selector 部位多选节点（`json/accessories.json` 0 → 36）
 
 二哥需求：同一个人要能**同时戴帽子、挂耳坠、戴项链**——即跨部位多选，
