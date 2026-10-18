@@ -43,7 +43,7 @@
 
 | 节点 | 数据文件 | 条目数 | 分类数 |
 | --- | --- | ---: | ---: |
-| **Clothing Selector** | `json/clothing.json` | 531 | 29 |
+| **Clothing Selector** | `json/clothing.json` | 539 | 30 |
 | **Pose Selector** | `json/pose.json` | 319 | 9 |
 | **Background Selector** | `json/background.json` | 425 | 9 |
 | **Composition Selector** | `json/composition.json` | 94 | 10 |
@@ -54,8 +54,8 @@
 <details>
 <summary><b>点击展开各节点的分类清单</b></summary>
 
-* **Clothing Selector**（29 类）
-  cosplay、上装、下装、丝绸材质、休闲风格、优雅风格、全身组合、内衣、哥特风格、复古风格、套装（有鞋）、学院风、居家休闲、户外、朋克风、正式场合、民族传统、泳装、海滩度假、牛仔材质、甜美风、皮革材质、秋冬、绸缎材质、职业装、街头风、运动风、连衣裙、雪纺材质
+* **Clothing Selector**（30 类）
+  cosplay、上装、下装、丝绸材质、休闲风格、优雅风格、全身组合、内衣、哥特风格、复古风格、套装（有鞋）、学院风、居家休闲、户外、朋克风、正式场合、民族传统、泳装、海滩度假、牛仔材质、甜美风、皮革材质、秋冬、绸缎材质、职业装、街头风、运动风、连衣裙、雪纺材质、丝绒材质
 * **Pose Selector**（9 类）
   站姿、坐姿、蹲跪姿、躺姿、正面朝向、侧面转身、背面朝向、手势动作、运动动态
   *设计理念*：只按**姿势本身的形态**分——身体姿态（站 / 坐 / 蹲跪 / 躺）、镜头朝向
@@ -89,7 +89,7 @@
 
 | 节点 | 数据文件 | 条目数 | 部位数 |
 | --- | --- | ---: | ---: |
-| **Accessory Selector** | `json/accessories.json` | 36 | 9 |
+| **Accessory Selector** | `json/accessories.json` | 43 | 9 |
 
 * 部位下拉：帽子 / 发饰 / 耳饰 / 颈饰 / 面部 / 手部 / 腕饰 / 腰饰 / 踝饰，
   默认「无 (None)」，可选「随机 (Random)」或具体条目
