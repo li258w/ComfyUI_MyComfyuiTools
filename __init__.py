@@ -16,6 +16,12 @@ from .image_loader_nodes import (
     NODE_DISPLAY_NAME_MAPPINGS as _IMAGE_LOADER_NODE_DISPLAY_NAME_MAPPINGS,
 )
 
+# --- 随机整数模块（v2.6 新增）：随机 / 顺序(带步长) / 固定 ---
+from .random_int_nodes import (
+    NODE_CLASS_MAPPINGS as _RANDOM_INT_NODE_CLASS_MAPPINGS,
+    NODE_DISPLAY_NAME_MAPPINGS as _RANDOM_INT_NODE_DISPLAY_NAME_MAPPINGS,
+)
+
 WEB_DIRECTORY = "./js"
 
 # 注册所有节点类
@@ -59,6 +65,10 @@ NODE_DISPLAY_NAME_MAPPINGS = {
 # 合并图片加载器的节点（加载图片·文件夹队列 / 确认删除图片 / 图片队列进度查询）
 NODE_CLASS_MAPPINGS.update(_IMAGE_LOADER_NODE_CLASS_MAPPINGS)
 NODE_DISPLAY_NAME_MAPPINGS.update(_IMAGE_LOADER_NODE_DISPLAY_NAME_MAPPINGS)
+
+# 合并随机整数节点（Random Int (随机整数)）
+NODE_CLASS_MAPPINGS.update(_RANDOM_INT_NODE_CLASS_MAPPINGS)
+NODE_DISPLAY_NAME_MAPPINGS.update(_RANDOM_INT_NODE_DISPLAY_NAME_MAPPINGS)
 
 
 # --- 热更新接口 ---

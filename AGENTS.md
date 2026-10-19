@@ -38,7 +38,10 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 │   └── expressions.json
 ├── js/                         # 前端JavaScript文件
 │   ├── widgets.js              # 双下拉菜单联动逻辑
-│   └── image_loader.js         # 图片加载器：缩略图预览 / 文件夹浏览 / 重置进度
+│   ├── image_loader.js         # 图片加载器：缩略图预览 / 文件夹浏览 / 重置进度
+│   └── random_int.js           # 随机整数节点：按 mode 显示/隐藏对应控件
+├── random_int_nodes.py         # 随机整数节点（随机 / 顺序带步长 / 固定）
+├── selftest_random_int.py      # 随机整数节点自测脚本（无需启动 ComfyUI）
 ├── image_loader_core.py        # 图片加载器核心逻辑（扫描·排序·进度·删除）
 ├── image_loader_nodes.py       # 图片加载器节点定义（3 个节点）
 ├── selftest_image_loader.py    # 图片加载器自测脚本（无需启动 ComfyUI）
@@ -159,7 +162,7 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 
 ## 包含的节点
 
-插件包含以下 13 个选择器节点 + 1 个工具节点：
+插件包含以下 13 个选择器节点 + 2 个工具节点（另见图片加载器 3 个）：
 
 1. **JsonStyleSelector** - 风格 (`json/styles.json`) | 基类: `BaseJsonSelector`
 2. **JsonClothingSelector** - 服装 (`json/clothing.json`) | 基类: `BaseCategorizedJsonSelector`
@@ -201,6 +204,14 @@ ComfyUI_MyComfyuiTools/        # 插件根目录
 
 ### 工具节点
 - **StringJoiner**: 多字符串联结工具，支持多种分隔符（逗号、句号、竖线、换行、自定义），最多8个输入
+- **RandomIntSelector** (`Random Int (随机整数)`，v2.6 新增，`random_int_nodes.py`)
+  - 给 `min_value` / `max_value` 一个整数范围，按 `mode` 取一个整数：
+    **随机**（`seed=0` 每次换，固定 seed 可复现）／**顺序**（从最小值起按 `step` 递增）／**固定**（`fixed_value`，越界自动夹到边界）
+  - 输出三路同值不同类型：`INT` / `FLOAT` / `STRING`；并把当前值显示在节点上
+  - 顺序模式进度存在类级字典 `_SEQ_STATE`，用 hidden 的 `unique_id` 做 key → 多实例互不干扰；
+    参数组合变化或 `reset_sequence=True` 时自动从头开始；`on_end` 控制到尾后循环还是停住
+  - **不走执行缓存**：`IS_CHANGED` 对随机/顺序返回单调递增计数器（`_COUNTER`），
+    否则 ComfyUI 会因「输入没变」复用旧输出，顺序就永远停在第一个数
 
 ### 图片加载器节点（v2.5 新增，分类 `MyCustomNodes/Image`）
 
