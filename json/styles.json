@@ -197,6 +197,21 @@
       "paper grain texture",
       "thin hand-drawn border frame"
     ]
-  }   
-
+  },
+  "wong_kar_wai_style": {
+    "描述": "王家卫电影风格，霓虹夜色、抽帧动态模糊、高饱和红绿蓝、潮湿孤独的九十年代香港氛围",
+    "提示词": "Wong Kar-wai cinematic style, step-printing motion blur, neon-lit rain-slick streets, saturated red green and blue color palette, moody shadows, handheld camera movement, shallow depth of field, 1990s Hong Kong nightlife, lonely melancholic mood, dramatic color grading"
+  },
+  "zhang_yimou_style": {
+    "描述": "张艺谋电影风格，浓烈原色对比、大红大绿的民俗色彩、戏剧化构图、东方乡土美学",
+    "提示词": "Zhang Yimou cinematic style, highly saturated primary colors, bold red and green contrast, folk symbolism, dramatic centered composition, rich Chinese rural aesthetics, intense color blocking, theatrical lighting, lyrical passionate mood"
+  },
+  "german_expressionism": {
+    "描述": "德国表现主义电影风格，黑白高反差、尖锐斜射阴影、倾斜扭曲构图、风格化布景",
+    "提示词": "German Expressionism, high-contrast black and white, sharp diagonal shadows cast on walls, tilted distorted angles, stylized surreal sets, dramatic chiaroscuro lighting, gothic ominous atmosphere, 1920s silent film aesthetic, psychological tension"
+  },
+  "photorealistic_comic_inkwash_hybrid": {
+    "描述": "照片级写实漫画水墨混合风，锐利墨线结构叠照片级写实渲染",
+    "提示词": "A meticulously detailed comic-illustration style built on crisp, confident inked structure providing the underlying graphic clarity, layered painterly rendering fills that structure with convincing photoreal depth and tonal nuance, dramatic directional lighting reinforcing form through both linework and rendered shadow simultaneously, a technically disciplined balance between graphic boldness and painterly subtlety, and a polished, high-production comic-illustration intensity that bridges traditional inking craft with photoreal rendering ambition. Influenced by: photorealistic comic-illustration tradition, ink-and-paint hybrid rendering technique, contemporary graphic-novel practice, painted-cover comic-art method"
+  }
 }

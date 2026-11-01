@@ -28,7 +28,7 @@
 
 | 节点 | 数据文件 | 条目数 |
 | --- | --- | ---: |
-| **Style Selector** | `json/styles.json` | 38 |
+| **Style Selector** | `json/styles.json` | 42 |
 | **Eye Colors Selector** | `json/eye_colors.json` | 26 |
 | **Hair Color Selector** | `json/hair_color.json` | 38 |
 | **Photo Type Selector** | `json/photo_type.json` | 37 |
@@ -43,7 +43,7 @@
 
 | 节点 | 数据文件 | 条目数 | 分类数 |
 | --- | --- | ---: | ---: |
-| **Clothing Selector** | `json/clothing.json` | 544 | 30 |
+| **Clothing Selector** | `json/clothing.json` | 545 | 30 |
 | **Pose Selector** | `json/pose.json` | 319 | 9 |
 | **Background Selector** | `json/background.json` | 425 | 9 |
 | **Composition Selector** | `json/composition.json` | 94 | 10 |
